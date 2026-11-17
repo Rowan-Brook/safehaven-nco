@@ -1,0 +1,45 @@
+:root {
+    --bg-main: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.88);
+    --card-border: rgba(16, 185, 129, 0.2);
+    --text-primary: #0f172a;
+    --text-muted: #334155; /* Улучшенный контраст для деталей */
+    --date-color: #065f46;
+    --accent-green: #059669;
+    --accent-glow: rgba(5, 150, 105, 0.15);
+    --tag-bg: rgba(5, 150, 105, 0.08);
+    --pill-bg: rgba(255, 255, 255, 0.8);
+    --pill-active-bg: #ffffff;
+    --pill-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --pill-border: rgba(16, 185, 129, 0.3);
+}
+
+body.theme-dark {
+    --bg-main: #030712;
+    --card-bg: rgba(17, 24, 39, 0.8);
+    --card-border: rgba(52, 211, 153, 0.25);
+    --text-primary: #f3f4f6;
+    --text-muted: #9ca3af; /* Четкий приглушенный текст в темноте без болотной каши */
+    --date-color: #34d399;
+    --accent-green: #34d399;
+    --accent-glow: rgba(52, 211, 153, 0.25);
+    --tag-bg: rgba(52, 211, 153, 0.12);
+    --pill-bg: rgba(17, 24, 39, 0.8);
+    --pill-active-bg: #1f2937;
+    --pill-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --pill-border: rgba(52, 211, 153, 0.3);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+    font-family: 'Lora', Georgia, serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 20px 16px 80px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.portfolio-container { max-width: 860px; margin: 0 auto; }
