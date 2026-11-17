@@ -1,52 +1,40 @@
-const navTabs = document.querySelectorAll('.nav-tab');
-const aboutSection = document.getElementById('section-about');
-const projectSection = document.getElementById('section-project');
-
-navTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        navTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        const target = tab.getAttribute('data-target');
-        if (target === 'about') {
-            aboutSection.style.display = 'block';
-            projectSection.style.display = 'none';
-        } else if (target === 'project') {
-            aboutSection.style.display = 'none';
-            projectSection.style.display = 'block';
-        }
-    });
-});
-
-function toggleDetails(btn) {
-    const content = btn.nextElementSibling;
-    const textSpan = btn.querySelector('span');
-    const isExpanded = content.classList.toggle('expanded');
-    btn.classList.toggle('open', isExpanded);
-    textSpan.textContent = isExpanded ? (translations[currentLang]?.btn_hide || 'Hide details') : (translations[currentLang]?.btn_show || 'Show details');
+function toggleDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    const isOpen = dropdown.classList.contains('show');
+    
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+    
+    if (!isOpen) {
+        dropdown.classList.add('show');
+    }
 }
 
-function setTheme(mode) {
-    document.body.classList.remove('theme-dark');
-    if (mode === 'dark') document.body.classList.add('theme-dark');
-    document.getElementById('activeThemeIcon').textContent = mode === 'dark' ? '🌙' : '☀️';
-    document.getElementById('activeThemeName').textContent = mode === 'dark' ? 'Dark' : 'Light';
-    localStorage.setItem('portfolio_theme', mode);
-    closeAllMenus();
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+    }
 }
 
-function toggleLangMenu() {
-    document.getElementById('langMenu').classList.toggle('show');
-}
-function toggleThemeMenu() {
-    document.getElementById('themeMenu').classList.toggle('show');
-}
-function closeAllMenus() {
-    document.getElementById('langMenu').classList.remove('show');
-    document.getElementById('themeMenu').classList.remove('show');
+function switchTab(tab) {
+    const aboutBtn = document.getElementById('navAbout');
+    const projectBtn = document.getElementById('navProject');
+    const aboutSec = document.getElementById('aboutSection');
+    const projectSec = document.getElementById('projectSection');
+
+    if (tab === 'about') {
+        aboutBtn.classList.add('active');
+        projectBtn.classList.remove('active');
+        aboutSec.classList.add('active');
+        projectSec.classList.remove('active');
+    } else {
+        projectBtn.classList.add('active');
+        aboutBtn.classList.remove('active');
+        projectSec.classList.add('active');
+        aboutSec.classList.remove('active');
+    }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    setLanguage(localStorage.getItem('portfolio_lang') || 'en');
-    setTheme(localStorage.getItem('portfolio_theme') || 'light');
-});
+function setTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    document.getElementById('currentThemeLabel').innerText = theme === 'light' ? '☀️ Light' : '🌙 Dark';
+}
