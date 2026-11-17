@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodirjon Tolipov</title>
+    <!-- Подключаем шрифт Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Подключаем модульные стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/links.css">
+</head>
+<body>
+    <!-- Фоновые размытые 3D-сферы и паттерн контурных дудлов -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div id="doodlesBgContainer"></div>
+
+    <div class="portfolio-container">
+        <!-- Верхняя строка (Дата, Язык, Тема) -->
+        <div class="top-utility-row">
+            <span class="current-date" id="currentDate">Sunday, 15 November</span>
+
+            <div class="top-controls">
+                <!-- Выпадающий список языков -->
+                <div class="lang-dropdown-wrapper">
+                    <button class="lang-btn" id="langMenuBtn" onclick="toggleLangMenu()">
+                        <span id="activeLangText">EN</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="langMenu">
+                        <button class="dropdown-option" onclick="setLanguage('en')">English (EN)</button>
+                        <button class="dropdown-option" onclick="setLanguage('ru')">Русский (RU)</button>
+                        <button class="dropdown-option" onclick="setLanguage('uz')">Oʻzbekcha (UZ)</button>
+                        <button class="dropdown-option" onclick="setLanguage('es')">Español (ES)</button>
+                        <button class="dropdown-option" onclick="setLanguage('fr')">Français (FR)</button>
+                        <button class="dropdown-option" onclick="setLanguage('de')">Deutsch (DE)</button>
+                        <button class="dropdown-option" onclick="setLanguage('it')">Italiano (IT)</button>
+                        <button class="dropdown-option" onclick="setLanguage('zh')">中文 (ZH)</button>
+                        <button class="dropdown-option" onclick="setLanguage('ar')">العربية (AR)</button>
+                        <button class="dropdown-option" onclick="setLanguage('tr')">Türkçe (TR)</button>
+                    </div>
+                </div>
+
+                <!-- Выбор темы -->
+                <div class="theme-dropdown-wrapper">
+                    <button class="theme-btn" id="themeMenuBtn" onclick="toggleThemeMenu()">
+                        <span id="activeThemeIcon">☀️</span>
+                        <span id="activeThemeName">Light</span>
+                        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="themeMenu">
+                        <button class="dropdown-option" onclick="setTheme('light')"><span>☀️</span> <span data-i18n="theme_light">Light</span></button>
+                        <button class="dropdown-option" onclick="setTheme('dark')"><span>🌙</span> <span data-i18n="theme_dark">Dark</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навигация: только About и Project -->
+        <nav class="portfolio-nav">
+            <button class="nav-tab active" data-target="about" data-i18n="nav_about">About</button>
+            <button class="nav-tab" data-target="project" data-i18n="nav_project">Project</button>
+        </nav>
+
+        <!-- Раздел About (О себе, Опыт, Учеба, Навыки) -->
+        <div id="section-about" class="content-section">
+            <section id="hero" class="hero-clean">
+                <h1 data-i18n="hero_title">Hi, I'm Nodirjon!</h1>
+                <p class="hero-subtitle" data-i18n="hero_sub">Student at Westminster International University in Tashkent (WIUT)</p>
+                <div class="hero-bio">
+                    <p data-i18n="hero_p1">Interested in logic, patterns, and systemic relationships.</p>
+                    <p data-i18n="hero_p2">My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.</p>
+                    <p data-i18n="hero_p3">Dedicated to structured problem-solving and continuous professional growth.</p>
+                </div>
+            </section>
+
+            <main class="main-content-group">
+                <!-- Professional Experience -->
+                <section class="tab-section" data-section="experience">
+                    <h2 data-i18n="exp_heading">Professional Experience</h2>
+                    <div class="card-block">
+                        <div class="block-header">
+                            <h3 data-i18n="exp_title">Road Transport Health and Safety Manager</h3>
+                            <span class="block-date">Apr 2026 – Nov 2026</span>
+                        </div>
+                        <p class="block-sub" data-i18n="exp_sub">Safety &amp; Fleet Department (US Logistics)</p>
+
+                        <button class="details-toggle" onclick="toggleDetails(this)">
+                            <span data-i18n="btn_show">Show details</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+
+                        <div class="collapsible-content">
+                            <ul class="task-list">
+                                <li data-i18n="exp_li1">Monitored and audited driver Hours of Service (HOS) logs via Electronic Logging Device (ELD) systems to ensure 100% compliance with FMCSA and DOT regulations.</li>
+                                <li data-i18n="exp_li2">Conducted daily operational control of shifts, tracked target performance metrics, and managed active task statuses.</li>
+                                <li data-i18n="exp_li3">Prepared comprehensive shift-handover reports for management, ensuring complete business continuity and transparency.</li>
+                                <li data-i18n="exp_li4">Onboarded new employees on operational workflows, compliance SOPs, and ELD troubleshooting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education & Training -->
+                <section class="tab-section" data-section="education">
+                    <h2 data-i18n="edu_heading">Education &amp; Training</h2>
+                    <div class="dual-grid">
+                        <div class="card-block">
+                            <div class="block-header">
+                                <h3 data-i18n="edu_wiut_title">Westminster International University in Tashkent</h3>
+                                <span class="block-date">Sep 2026 – Present</span>
+                            </div>
+                            <p class="block-sub" data-i18n="edu_wiut_sub">Certificate of International Foundation Studies (CIFS)</p>
+
+                            <button class="details-toggle" onclick="toggleDetails(this)">
+                                <span data-i18n="btn_show">Show details</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="collapsible-content">
+                                <p class="regular-text" data-i18n="edu_wiut_text">Academic Communication Skills, Quantitative Methods, Critical Thinking, Professional Skills, Understanding Finance, Introduction to Business and Economics.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-block">
+                            <div class="block-header">
+                                <h3 data-i18n="edu_lyc_title">Academic Lyceum of WIUT</h3>
+                                <span class="block-date">Sep 2024 – Jun 2026</span>
+                            </div>
+                            <p class="block-sub" data-i18n="edu_lyc_sub">Exact Sciences (GPA: 4.0 / 5.0)</p>
+
+                            <button class="details-toggle" onclick="toggleDetails(this)">
+                                <span data-i18n="btn_show">Show details</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="collapsible-content">
+                                <p class="regular-text" data-i18n="edu_lyc_text">Specialized in advanced Mathematics, Algebra, Geometry, Statistics, and English.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills & Languages -->
+                <section class="tab-section" data-section="skills">
+                    <h2 data-i18n="skills_heading">Skills &amp; Competencies</h2>
+                    <div class="dual-grid">
+                        <div class="card-block">
+                            <h3 data-i18n="skills_analyt_title">Analytical &amp; Operational</h3>
+                            <p class="block-sub" style="margin-bottom: 0;" data-i18n="skills_analyt_sub">Data Analysis, Finance Basics &amp; Compliance</p>
+
+                            <button class="details-toggle" onclick="toggleDetails(this)">
+                                <span data-i18n="btn_show">Show details</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="collapsible-content">
+                                <p class="regular-text" data-i18n="skills_analyt_text">Quantitative Data Analysis, Finance Basics, SOP Compliance, Staff Onboarding, Shift-to-Shift Reporting, ELD Web Tracking.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-block">
+                            <h3 data-i18n="skills_lang_title">Languages</h3>
+                            <p class="block-sub" style="margin-bottom: 0;" data-i18n="skills_lang_sub">Russian &amp; English</p>
+
+                            <button class="details-toggle" onclick="toggleDetails(this)">
+                                <span data-i18n="btn_show">Show details</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="collapsible-content">
+                                <p class="regular-text" data-i18n="skills_lang_text">Russian (Native), English (B2 - IELTS certified).</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Раздел Project (Safe Haven) -->
+        <div id="section-project" class="content-section" style="display: none;">
+            <section class="tab-section">
+                <h2>Safe Haven</h2>
+                <div class="card-block">
+                    <div class="block-header">
+                        <h3>Social Enterprise & Educational Hub</h3>
+                        <span class="block-date">Incubating with INNOWIUT</span>
+                    </div>
+                    <p class="block-sub">Financial Literacy, Digital Literacy, English & IT Skills</p>
+                    <p class="regular-text" style="margin-bottom: 14px;">
+                        An innovative educational initiative utilizing an Income Share Agreement (ISA) model and a structured "6+2" curriculum to empower students and bridge practical skill gaps.
+                    </p>
+                    <a href="mailto:safehaven.nco@gmail.com" class="details-toggle" style="text-decoration: none;">
+                        <span>Contact Project Team &rarr;</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer и ссылки -->
+        <footer class="portfolio-footer">
+            <p>&copy; 2026 Nodirjon Tolipov</p>
+            <div class="portfolio-footer-links">
+                <a href="https://www.instagram.com/ridont_1?rpxt=MXNyMWthampiNTV1bg==" target="_blank">Instagram</a>
+                <a href="https://wa.me/qr/2EMGCNN7VPV6G1" target="_blank">WhatsApp</a>
+                <a href="https://www.facebook.com/share/1Ez2abHntJ/" target="_blank">Facebook</a>
+                <a href="https://www.linkedin.com/in/nodirjontolipov-finance-accounting238" target="_blank">LinkedIn</a>
+                <a href="mailto:ntolipov.work@gmail.com" data-i18n="footer_email">Email</a>
+                <a href="https://github.com/rowanb-sh" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Плавающая кнопка переключения хаоса внизу -->
+    <div class="glitch-toggle-bar" id="glitchToggleBtn" onclick="toggleGlitchMaster()">
+        <span id="glitchIcon">⚡</span>
+        <span id="glitchStatusText">Chaos Active</span>
+    </div>
+
+    <!-- Модульные скрипты -->
+    <script src="js/i18n.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/glitch.js"></script>
+</body>
+</html>
