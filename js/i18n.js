@@ -1,110 +1,203 @@
-const locales = {
-    en: 'en-US', ru: 'ru-RU', uz: 'uz-UZ', es: 'es-ES',
-    fr: 'fr-FR', de: 'de-DE', it: 'it-IT', zh: 'zh-CN',
-    ar: 'ar-SA', tr: 'tr-TR'
-};
-
-function updateDate(lang) {
-    const options = { weekday: 'long', day: 'numeric', month: 'long' };
-    const locale = locales[lang] || 'en-US';
-    let dateStr = new Date().toLocaleDateString(locale, options);
-    dateStr = dateStr.charAt(0).toUpperCase() + dateStr.slice(1);
-    document.getElementById('currentDate').textContent = dateStr;
-}
-
 const translations = {
     en: {
-        nav_about: "About", nav_project: "Project",
-        theme_light: "Light", theme_dark: "Dark",
-        hero_title: "Hi, I'm Nodirjon!",
-        hero_sub: "Student at Westminster International University in Tashkent (WIUT)",
-        hero_p1: "Interested in logic, patterns, and systemic relationships.",
-        hero_p2: "My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.",
-        hero_p3: "Dedicated to structured problem-solving and continuous professional growth.",
-        exp_heading: "Professional Experience",
-        exp_title: "Road Transport Health and Safety Manager",
-        exp_sub: "Safety & Fleet Department (US Logistics)",
-        btn_show: "Show details", btn_hide: "Hide details",
-        exp_li1: "Monitored and audited driver Hours of Service (HOS) logs via Electronic Logging Device (ELD) systems to ensure 100% compliance with FMCSA and DOT regulations.",
-        exp_li2: "Conducted daily operational control of shifts, tracked target performance metrics, and managed active task statuses.",
-        exp_li3: "Prepared comprehensive shift-handover reports for management, ensuring complete business continuity and transparency.",
-        exp_li4: "Onboarded new employees on operational workflows, compliance SOPs, and ELD troubleshooting.",
-        edu_heading: "Education & Training",
-        edu_wiut_title: "Westminster International University in Tashkent",
-        edu_wiut_sub: "Certificate of International Foundation Studies (CIFS)",
-        edu_wiut_text: "Academic Communication Skills, Quantitative Methods, Critical Thinking, Professional Skills, Understanding Finance, Introduction to Business and Economics.",
-        edu_lyc_title: "Academic Lyceum of WIUT",
-        edu_lyc_sub: "Exact Sciences (GPA: 4.0 / 5.0)",
-        edu_lyc_text: "Specialized in advanced Mathematics, Algebra, Geometry, Statistics, and English.",
-        skills_heading: "Skills & Competencies",
-        skills_analyt_title: "Analytical & Operational",
-        skills_analyt_sub: "Data Analysis, Finance Basics & Compliance",
-        skills_analyt_text: "Quantitative Data Analysis, Finance Basics, SOP Compliance, Staff Onboarding, Shift-to-Shift Reporting, ELD Web Tracking.",
-        skills_lang_title: "Languages", skills_lang_sub: "Russian & English",
-        skills_lang_text: "Russian (Native), English (B2 - IELTS certified).",
-        footer_email: "Email"
+        about: "About",
+        project: "Project",
+        heroTitle: "Hi, I'm Nodirjon!",
+        heroSubtitle: "Student at Westminster International University in Tashkent (WIUT)",
+        bio1: "Interested in logic, patterns, and systemic relationships.",
+        bio2: "My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.",
+        bio3: "Dedicated to structured problem-solving and continuous professional growth.",
+        expHeader: "Professional Experience",
+        expBadge1: "Management",
+        expTitle1: "Road Transport Health and Safety Manager",
+        expSub1: "Safety & Fleet Department (US Logistics)",
+        projMainTitle: "Safe Haven Initiative",
+        projMainSub: "International Social Mobility System & Systemic Poverty Alleviation Engine",
+        projCardTitle: "Breaking the Poverty Trap Through Applied Education & ISA",
+        projCardDesc: "Safe Haven is a systemic, self-sustaining model designed to transform socio-economic barriers into permanent economic independence. We combine high-density IT education, personal finance management, and ethical Income Share Agreements (ISA) to guarantee zero upfront cost for vulnerable beneficiaries.",
+        btnSponsor: "🤝 Become a Sponsor",
+        btnDonate: "❤️ Make a Donation",
+        btnJoin: "🚀 Join the Team"
     },
     ru: {
-        nav_about: "О себе", nav_project: "Проект",
-        theme_light: "Светлая", theme_dark: "Тёмная",
-        hero_title: "Привет, я Нодиржон!",
-        hero_sub: "Студент Международного Вестминстерского университета в Ташкенте (WIUT)",
-        hero_p1: "Увлечен логикой, паттернами и системными взаимосвязями.",
-        hero_p2: "Мои интересы охватывают аналитические системы, количественные методы, бизнес-администрирование и операционный комплаенс.",
-        hero_p3: "Стремлюсь к структурированному решению задач и непрерывному профессиональному росту.",
-        exp_heading: "Профессиональный опыт",
-        exp_title: "Менеджер по безопасности дорожного транспорта",
-        exp_sub: "Отдел безопасности и автопарка (Логистика США)",
-        btn_show: "Подробнее", btn_hide: "Скрыть",
-        exp_li1: "Мониторинг и аудит журналов рабочего времени водителей (HOS) через системы ELD для обеспечения 100% соответствия правилам FMCSA и DOT.",
-        exp_li2: "Ведение ежедневного операционного контроля смен, отслеживание целевых показателей и управление статусами задач.",
-        exp_li3: "Подготовка комплексных отчетов о сдаче смен для руководства, обеспечение непрерывности и прозрачности бизнеса.",
-        exp_li4: "Онбординг новых сотрудников по рабочим процессам, регламентам SOP и устранению неполадок ELD.",
-        edu_heading: "Образование и тренинги",
-        edu_wiut_title: "Международный Вестминстерский университет в Ташкенте",
-        edu_wiut_sub: "Сертификат международного фонда (CIFS)",
-        edu_wiut_text: "Академические коммуникативные навыки, Количественные методы, Критическое мышление, Профессиональные навыки, Основы финансов, Введение в бизнес и экономику.",
-        edu_lyc_title: "Академический лицей при WIUT",
-        edu_lyc_sub: "Точные науки (GPA: 4.0 / 5.0)",
-        edu_lyc_text: "Углубленное изучение математики, алгебры, геометрии, статистики и английского языка.",
-        skills_heading: "Навыки и компетенции",
-        skills_analyt_title: "Аналитика и операции",
-        skills_analyt_sub: "Анализ данных, основы финансов и комплаенс",
-        skills_analyt_text: "Количественный анализ данных, основы финансов, соблюдение SOP, онбординг персонала, отчетность по сменам, веб-трекинг ELD.",
-        skills_lang_title: "Языки", skills_lang_sub: "Русский и английский",
-        skills_lang_text: "Русский (родной), английский (B2 — сертификат IELTS).",
-        footer_email: "Почта"
+        about: "О себе",
+        project: "Проект",
+        heroTitle: "Привет, я Нодиржон!",
+        heroSubtitle: "Студент Международного Вестминстерского университета в Ташкенте (WIUT)",
+        bio1: "Увлекаюсь логикой, закономерностями и системными взаимосвязями.",
+        bio2: "Мои интересы охватывают аналитические системы, количественные методы, бизнес-администрирование и операционный комплаенс.",
+        bio3: "Стремлюсь к структурированному решению задач и непрерывному профессиональному росту.",
+        expHeader: "Профессиональный опыт",
+        expBadge1: "Менеджмент",
+        expTitle1: "Менеджер по охране труда и безопасности на автомобильном транспорте",
+        expSub1: "Отдел безопасности и автопарка (США, Логистика)",
+        projMainTitle: "Инициатива Safe Haven",
+        projMainSub: "Международная система социального лифта и ликвидации системной бедности",
+        projCardTitle: "Разрушение ловушки бедности через прикладное образование и ISA",
+        projCardDesc: "Safe Haven — это системная, самоподдерживающаяся модель, созданная для превращения социально-экономических барьеров в постоянную экономическую независимость. Мы объединяем интенсивное IT-образование, управление личными финансами и этичные соглашения о долевом участии в доходах (ISA) с нулевой предоплатой для уязвимых слоев населения.",
+        btnSponsor: "🤝 Стать спонсором",
+        btnDonate: "❤️ Сделать пожертвование",
+        btnJoin: "🚀 Вступить в команду"
     },
     uz: {
-        nav_about: "Men haqimda", nav_project: "Loyiha",
-        theme_light: "Yorug'", theme_dark: "Qorong'i",
-        hero_title: "Salom, men Nodirjon!",
-        hero_sub: "Toshkentdagi Xalqaro Vestminster Universiteti (WIUT) talabasi",
-        hero_p1: "Mantiq, naqshlar va tizimli aloqalar bilan qiziqaman.",
-        hero_p2: "Qiziqishlarim tahliliy tizimlar, miqdoriy usullar, biznesni boshqarish va operatsion muvofiqlikni o'z ichiga oladi.",
-        hero_p3: "Tuzilmali muammolarni hal qilish va doimiy professional o'sishga intilaman.",
-        exp_heading: "Kasbiy tajriba",
-        exp_title: "Yo'l transporti salomatligi va xavfsizligi menejeri",
-        exp_sub: "Xavfsizlik va avtopark bo'limi (AQSh logistikasi)",
-        btn_show: "Batafsil", btn_hide: "Yashirish",
-        exp_li1: "FMCSA va DOT qoidalariga 100% rioya etilishini ta'minlash uchun ELD tizimlari orqali haydovchilarning xizmat ko'rsatish soatlari (HOS) jurnallarini kuzatdim va tekshirdim.",
-        exp_li2: "Kunlik operatsion smenalarni nazorat qildim, maqsadli ko'rsatkichlarni kuzatib bordim va faol vazifa statuslarini boshqardim.",
-        exp_li3: "Biznesning uzluksizligi va shaffofligini ta'minlash uchun rahbariyatga har tomonlama smena topshirish hisobotlarini tayyorladim.",
-        exp_li4: "Yangi xodimlarni ish jarayonlari, muvofiqlik qoidalari va ELD nosozliklarini bartaraf etish bo'yicha o'qitdim.",
-        edu_heading: "Ta'lim va treninglar",
-        edu_wiut_title: "Toshkent shahridagi Xalqaro Vestminster Universiteti",
-        edu_wiut_sub: "Xalqaro poydevor ta'limi sertifikati (CIFS)",
-        edu_wiut_text: "Akademik muloqot ko'nikmalari, Miqdoriy usullar, Tanqidiy fikrlash, Professional ko'nikmalar, Moliyani tushunish, Biznes va iqtisodiyotga kirish.",
-        edu_lyc_title: "WIUT akademik litseyi",
-        edu_lyc_sub: "Aniq fanlar (GPA: 4.0 / 5.0)",
-        edu_lyc_text: "Chuqurlashtirilgan matematika, algebra, geometriya, statistika va ingliz tili.",
-        skills_heading: "Ko'nikmalar va malakalar",
-        skills_analyt_title: "Tahliliy va operatsion",
-        skills_analyt_sub: "Ma'lumotlar tahlili, Moliya asoslari va Muvofiqlik",
-        skills_analyt_text: "Miqdoriy ma'lumotlar tahlili, Moliya asoslari, SOP qoidalariga rioya qilish, Xodimlarni ishga tushirish, Smena hisobotlari, ELD veb-kuzatuvi.",
-        skills_lang_title: "Tillar", skills_lang_sub: "Rus va ingliz tillari",
-        skills_lang_text: "Rus tili (ona tili), Ingliz tili (B2 - IELTS sertifikati).",
-        footer_email: "Elektron pochta"
+        about: "Men haqimda",
+        project: "Loyiha",
+        heroTitle: "Salom, men Nodirjonman!",
+        heroSubtitle: "Toshkent shahridagi Xalqaro Vestminster Universiteti (WIUT) talabasi",
+        bio1: "Mantiq, qonuniyatlar va tizimli aloqalar bilan qiziqaman.",
+        bio2: "Qiziqishlarim tahliliy tizimlar, miqdoriy usullar, biznes boshqaruvi va operatsion muvofiqlikni qamrab oladi.",
+        bio3: "Tuzilmali muammolarni hal qilish va doimiy kasbiy o'sishga intilaman.",
+        expHeader: "Kasbiy tajriba",
+        expBadge1: "Boshqaruv",
+        expTitle1: "Avtomobil transporti salomatligi va xavfsizligi menejeri",
+        expSub1: "Xavfsizlik va flot departamenti (AQSh Logistika)",
+        projMainTitle: "Safe Haven tashabbusi",
+        projMainSub: "Xalqaro ijtimoiy lift tizimi va tizimli kambag'allikni bartaraf etish dvigateli",
+        projCardTitle: "Amaliy ta'lim va ISA orqali kambag'allik tuzog'ini yo'q qilish",
+        projCardDesc: "Safe Haven — ijtimoiy-iqtisodiy to'siqlarni doimiy iqtisodiy mustaqillikka aylantirish uchun mo'ljallangan tizimli model. Biz yuqori zichlikdagi IT ta'limi, shaxsiy moliya boshqaruvi va himoya qilingan daromad taqsimoti shartnomalarini (ISA) birlashtiramiz.",
+        btnSponsor: "🤝 Homiy bo'lish",
+        btnDonate: "❤️ Ehson qilish",
+        btnJoin: "🚀 Jamoaga qo'shilish"
+    },
+    es: {
+        about: "Sobre mí",
+        project: "Proyecto",
+        heroTitle: "¡Hola, soy Nodirjon!",
+        heroSubtitle: "Estudiante en la Universidad Internacional Westminster en Taskent (WIUT)",
+        bio1: "Interesado en la lógica, los patrones y las relaciones sistémicas.",
+        bio2: "Mi curiosidad abarca sistemas analíticos, métodos cuantitativos, administración de empresas y cumplimiento operativo.",
+        bio3: "Dedicado a la resolución estructurada de problemas y al crecimiento profesional continuo.",
+        expHeader: "Experiencia Profesional",
+        expBadge1: "Gestión",
+        expTitle1: "Gerente de Salud y Seguridad en el Transporte por Carretera",
+        expSub1: "Departamento de Seguridad y Flota (Logística EE. UU.)",
+        projMainTitle: "Iniciativa Safe Haven",
+        projMainSub: "Sistema de movilidad social internacional y motor de alivio de la pobreza sistémica",
+        projCardTitle: "Rompiendo la trampa de la pobreza mediante educación aplicada y ISA",
+        projCardDesc: "Safe Haven es un modelo sistémico diseñado para transformar barreras socioeconómicas en independencia económica permanente mediante educación IT y acuerdos de participación en ingresos (ISA).",
+        btnSponsor: "🤝 Ser Patrocinador",
+        btnDonate: "❤️ Donar",
+        btnJoin: "🚀 Unirse al Equipo"
+    },
+    fr: {
+        about: "À propos",
+        project: "Projet",
+        heroTitle: "Bonjour, je suis Nodirjon !",
+        heroSubtitle: "Étudiant à l'Université Internationale Westminster de Tachkent (WIUT)",
+        bio1: "Intéressé par la logique, les schémas et les relations systémiques.",
+        bio2: "Ma curiosité s'étend aux systèmes analytiques, aux méthodes quantitatives, à la gestion d'entreprise et à la conformité opérationnelle.",
+        bio3: "Dédié à la résolution structurée de problèmes et à la croissance professionnelle.",
+        expHeader: "Expérience Professionnelle",
+        expBadge1: "Gestion",
+        expTitle1: "Responsable de la santé et de la sécurité dans le transport routier",
+        expSub1: "Département Sécurité et Flotte (Logistique US)",
+        projMainTitle: "Initiative Safe Haven",
+        projMainSub: "Système international de mobilité sociale et moteur de lutte contre la pauvreté",
+        projCardTitle: "Briser le piège de la pauvreté grâce à l'éducation appliquée et l'ISA",
+        projCardDesc: "Safe Haven est un modèle systémique conçu pour transformer les obstacles socio-économiques en indépendance économique grâce à l'éducation IT et aux accords de partage des revenus (ISA).",
+        btnSponsor: "🤝 Devenir Sponsor",
+        btnDonate: "❤️ Faire un Don",
+        btnJoin: "🚀 Rejoindre l'Équipe"
+    },
+    de: {
+        about: "Über mich",
+        project: "Projekt",
+        heroTitle: "Hallo, ich bin Nodirjon!",
+        heroSubtitle: "Student an der Westminster International University in Taschkent (WIUT)",
+        bio1: "Interessiert an Logik, Mustern und systemischen Zusammenhängen.",
+        bio2: "Meine Neugier erstreckt sich auf analytische Systeme, quantitative Methoden, Betriebswirtschaft und operative Compliance.",
+        bio3: "Engagiert für strukturiertes Problemlösen und kontinuierliches professionelles Wachstum.",
+        expHeader: "Berufserfahrung",
+        expBadge1: "Management",
+        expTitle1: "Manager für Gesundheit und Sicherheit im Straßenverkehr",
+        expSub1: "Sicherheits- und Flottenabteilung (US-Logistik)",
+        projMainTitle: "Safe Haven Initiative",
+        projMainSub: "Internationales System für soziale Mobilität und Armutsbekämpfung",
+        projCardTitle: "Die Armutsfalle durch angewandte Bildung und ISA durchbrechen",
+        projCardDesc: "Safe Haven ist ein systemisches Modell zur Umwandlung sozioökonomischer Barrieren in dauerhafte wirtschaftliche Unabhängigkeit durch IT-Bildung und Income Share Agreements (ISA).",
+        btnSponsor: "🤝 Sponsor werden",
+        btnDonate: "❤️ Spenden",
+        btnJoin: "🚀 Dem Team beitreten"
+    },
+    it: {
+        about: "Chi sono",
+        project: "Progetto",
+        heroTitle: "Ciao, sono Nodirjon!",
+        heroSubtitle: "Studente presso la Westminster International University di Tashkent (WIUT)",
+        bio1: "Interessato alla logica, ai pattern e alle relazioni sistemiche.",
+        bio2: "La mia curiosità spazia dai sistemi analitici ai metodi quantitativi, dall'amministrazione aziendale alla conformità operativa.",
+        bio3: "Dedicato alla risoluzione strutturata dei problemi e alla crescita professionale continua.",
+        expHeader: "Esperienza Professionale",
+        expBadge1: "Management",
+        expTitle1: "Responsabile della Salute e Sicurezza nel Transporto Stradale",
+        expSub1: "Dipartimento Sicurezza e Flotta (Logistica USA)",
+        projMainTitle: "Iniziativa Safe Haven",
+        projMainSub: "Sistema internazionale di mobilità sociale e motore di riduzione della povertà",
+        projCardTitle: "Superare la trappola della povertà attraverso l'educazione applicata e ISA",
+        projCardDesc: "Safe Haven è un modello sistemico progettato per trasformare le barriere socio-economiche in indipendenza economica permanente attraverso l'educazione IT e gli accordi di condivisione delle entrate (ISA).",
+        btnSponsor: "🤝 Diventa Sponsor",
+        btnDonate: "❤️ Fai una Donazione",
+        btnJoin: "🚀 Unisciti al Team"
+    },
+    zh: {
+        about: "关于我",
+        project: "项目",
+        heroTitle: "你好，我是Nodirjon！",
+        heroSubtitle: "塔什干威斯敏斯特国际大学 (WIUT) 学生",
+        bio1: "对逻辑、模式和系统性关系充满热情。",
+        bio2: "我的兴趣涵盖分析系统、定量方法、企业管理和合规运营。",
+        bio3: "致力于结构化问题解决与持续的职业成长。",
+        expHeader: "专业经验",
+        expBadge1: "管理",
+        expTitle1: "道路运输健康与安全经理",
+        expSub1: "安全与车队部门（美国物流）",
+        projMainTitle: "Safe Haven 倡议",
+        projMainSub: "国际社会流动系统与系统性消除贫困引擎",
+        projCardTitle: "通过应用教育与收入分成协议（ISA）打破贫困陷阱",
+        projCardDesc: "Safe Haven 是一个系统的自可持续模型，旨在通过高密度 IT 教育、个人理财和道德 ISA 协议，将社会经济障碍转化为永久性经济独立。",
+        btnSponsor: "🤝 成为赞助商",
+        btnDonate: "❤️ 捐款支持",
+        btnJoin: "🚀 加入团队"
+    },
+    ar: {
+        about: "نبذة عني",
+        project: "المشروع",
+        heroTitle: "مرحباً، أنا نوديرجون!",
+        heroSubtitle: "طالب في جامعة ويستمينستر الدولية في طشقند (WIUT)",
+        bio1: "مهتم بالمنطق والأنماط والعلاقات النظامية.",
+        bio2: "يمتد شغفي إلى الأنظمة التحليلية، الطرق الكمية، إدارة الأعمال، والامتثال التشغيلي.",
+        bio3: "ملتزم بالحل المنظم للمشكلات والنمو المهني المستمر.",
+        expHeader: "الخبرة المهنية",
+        expBadge1: "إدارة",
+        expTitle1: "مدير الصحة والسلامة للنقل البري",
+        expSub1: "قسم السلامة والأسطول (اللوجستيات الأمريكية)",
+        projMainTitle: "مبادرة Safe Haven",
+        projMainSub: "نظام التنقل الاجتماعي الدولي ومحرك القضاء على الفقر المنهجي",
+        projCardTitle: "كسر مصيدة الفقر من خلال التدريب التطبيقي واتفاقيات تقاسم الدخل (ISA)",
+        projCardDesc: "Safe Haven هو نموذج منهجي مستدام مصمم لتحويل الحواجز الاجتماعية والاقتصادية إلى استقلال اقتصادي دائم من خلال تعليم تكنولوجيا المعلومات والإدارة المالية والتمويل الأخلاقي.",
+        btnSponsor: "🤝 كن راعياً",
+        btnDonate: "❤️ تبرع الآن",
+        btnJoin: "🚀 انضم إلى الفريق"
+    },
+    tr: {
+        about: "Hakkımda",
+        project: "Proje",
+        heroTitle: "Merhaba, ben Nodirjon!",
+        heroSubtitle: "Taşkent Westminster Uluslararası Üniversitesi (WIUT) Öğrencisi",
+        bio1: "Mantık, kalıplar ve sistemik ilişkilerle ilgileniyorum.",
+        bio2: "İlgi alanlarım analitik sistemler, nicel yöntemler, işletme yönetimi ve operasyonel uyumluluğu kapsamaktadır.",
+        bio3: "Yapılandırılmış problem çözmeye ve sürekli profesyonel gelişime adanmıştır.",
+        expHeader: "Profesyonel Deneyim",
+        expBadge1: "Yönetim",
+        expTitle1: "Karayolu Taşımacılığı Sağlık ve Güvenlik Yöneticisi",
+        expSub1: "Güvenlik ve Filo Departmanı (ABD Lojistik)",
+        projMainTitle: "Safe Haven Girişimi",
+        projMainSub: "Uluslararası Sosyal Hareketlilik Sistemi ve Sistemik Yoksulluğu Azaltma Motoru",
+        projCardTitle: "Uygulamalı Eğitim ve ISA ile Yoksulluk Tuzaklarını Aşmak",
+        projCardDesc: "Safe Haven, sosyo-ekonomik engelleri kalıcı ekonomik bağımsızlığa dönüştürmek için tasarlanmış sistemik bir modeldir. Bilişim eğitimi ve Gelir Paylaşımı Anlaşmalarını (ISA) birleştiriyoruz.",
+        btnSponsor: "🤝 Sponsor Ol",
+        btnDonate: "❤️ Bağış Yap",
+        btnJoin: "🚀 Ekibe Katıl"
     }
 };
 
@@ -112,14 +205,32 @@ let currentLang = 'en';
 
 function setLanguage(lang) {
     currentLang = lang;
-    document.getElementById('activeLangText').textContent = lang.toUpperCase();
-    localStorage.setItem('portfolio_lang', lang);
-    updateDate(lang);
+    document.getElementById('currentLangLabel').innerText = lang.toUpperCase();
+    if (lang === 'ar') {
+        document.dir = 'rtl';
+    } else {
+        document.dir = 'ltr';
+    }
 
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
+    const t = translations[lang];
+    if (!t) return;
+
+    document.getElementById('navAbout').innerText = t.about;
+    document.getElementById('navProject').innerText = t.project;
+    document.getElementById('heroTitle').innerText = t.heroTitle;
+    document.getElementById('heroSubtitle').innerText = t.heroSubtitle;
+    document.getElementById('bio1').innerText = t.bio1;
+    document.getElementById('bio2').innerText = t.bio2;
+    document.getElementById('bio3').innerText = t.bio3;
+    document.getElementById('expHeader').innerText = t.expHeader;
+    document.getElementById('expBadge1').innerText = t.expBadge1;
+    document.getElementById('expTitle1').innerText = t.expTitle1;
+    document.getElementById('expSub1').innerText = t.expSub1;
+    document.getElementById('projMainTitle').innerText = t.projMainTitle;
+    document.getElementById('projMainSub').innerText = t.projMainSub;
+    document.getElementById('projCardTitle').innerText = t.projCardTitle;
+    document.getElementById('projCardDesc').innerText = t.projCardDesc;
+    document.getElementById('btnSponsor').innerText = t.btnSponsor;
+    document.getElementById('btnDonate').innerText = t.btnDonate;
+    document.getElementById('btnJoin').innerText = t.btnJoin;
 }
