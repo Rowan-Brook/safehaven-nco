@@ -1,24 +1,75 @@
-.portfolio-footer { border-top: 1px solid var(--card-border); padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; color: var(--text-muted); font-size: 0.85rem; }
-.portfolio-footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
-.portfolio-footer-links a { color: var(--accent-green); text-decoration: none; font-weight: 500; }
-.portfolio-footer-links a:hover { text-decoration: underline; }
-
-/* Плавающая кнопка переключения хаоса */
-.glitch-toggle-bar {
-    position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 1000;
-    background: var(--card-bg); backdrop-filter: blur(12px); border: 1px solid var(--accent-green);
-    padding: 6px 14px; border-radius: 999px; display: flex; align-items: center; gap: 6px;
-    cursor: pointer; box-shadow: 0 4px 15px var(--accent-glow); font-size: 0.8rem; color: var(--text-primary);
+footer {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid var(--card-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
-/* Глитч-эффект (смена шрифта на засечки + неон) */
-.element-glitch {
-    position: relative;
-    font-family: 'Times New Roman', serif !important;
-    text-shadow: 2px 0 #059669, -2px 0 #34d399 !important;
-    animation: partialGlitchAnim 0.15s infinite alternate !important;
+.footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
-@keyframes partialGlitchAnim {
-    0% { transform: translate(0, 0) skewX(0deg); opacity: 0.9; }
-    100% { transform: translate(2px, -1px) skewX(2deg); opacity: 1; }
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-green);
+}
+
+.chaos-btn {
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-border);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, border-color 0.2s;
+    padding: 0;
+}
+
+.chaos-btn:hover {
+    border-color: var(--accent-green);
+    transform: scale(1.05);
+}
+
+.chaos-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .controls-wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-switch {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
