@@ -1,0 +1,13 @@
+.bg-orbs { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden; z-index: -2; pointer-events: none; }
+.orb { position: absolute; border-radius: 50%; filter: blur(120px); }
+.orb-1 { width: 400px; height: 400px; background: rgba(16, 185, 129, 0.18); top: -100px; left: -100px; }
+.orb-2 { width: 450px; height: 450px; background: rgba(5, 150, 105, 0.15); top: 40%; right: -120px; }
+
+/* Фоновые контурные дудлы (учеба, наука, финансы, логистика) */
+.doodle-pattern-svg {
+    position: absolute;
+    stroke: var(--accent-green);
+    fill: none;
+    opacity: 0.12;
+    pointer-events: none;
+}
