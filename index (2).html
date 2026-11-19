@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nodirjon Tolipov</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-emerald-500/30">
+  <!-- Subtle Chaos Scanlines -->
+  <div id="chaosOverlay" aria-hidden="true"></div>
+
+  <!-- Main Container -->
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-16">
+
+    <!-- TOP UTILITY BAR -->
+    <header class="flex flex-wrap items-start sm:items-center justify-between gap-4 pb-6">
+      <!-- Localized Date -->
+      <div id="liveDate" class="text-sm sm:text-base font-medium leading-snug whitespace-pre-line" style="color: var(--accent);">
+        Thursday,
+        November 19
+      </div>
+
+      <!-- Desktop Center Nav -->
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-3">
+        <button type="button" data-tab="about" class="tab-btn nav-pill-active px-6 py-2 rounded-full text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
+          About
+        </button>
+        <button type="button" data-tab="project" class="tab-btn nav-pill-inactive px-6 py-2 rounded-full text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
+          Project
+        </button>
+      </nav>
+
+      <!-- Right Controls: Language Dropdown, Theme Dropdown, Chaos Button -->
+      <div class="flex items-center gap-2 sm:gap-2.5 ms-auto md:ms-0">
+        <!-- Language Dropdown -->
+        <div class="relative" id="langDropdownWrap">
+          <button
+            type="button"
+            id="langToggleBtn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            class="pill-control h-10 px-3.5 rounded-full text-xs sm:text-sm font-medium flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="currentLangCode">EN</span>
+            <svg class="w-3.5 h-3.5 opacity-75 transition-transform duration-200" id="langChevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="langMenu" role="listbox" class="dropdown-panel dropdown-hidden absolute end-0 mt-2 w-64 sm:w-72 rounded-2xl p-2 z-50 grid grid-cols-2 gap-1"></div>
+        </div>
+
+        <!-- Theme Dropdown -->
+        <div class="relative" id="themeDropdownWrap">
+          <button
+            type="button"
+            id="themeToggleBtn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            class="pill-control h-10 px-3.5 rounded-full text-xs sm:text-sm font-medium flex items-center gap-1.5 cursor-pointer"
+          >
+            <span id="currentThemeIcon" class="text-sm leading-none">🌙</span>
+            <span id="currentThemeLabel">Dark</span>
+            <svg class="w-3.5 h-3.5 opacity-75 transition-transform duration-200" id="themeChevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="themeMenu" role="listbox" class="dropdown-panel dropdown-hidden absolute end-0 mt-2 w-36 rounded-2xl p-1.5 z-50 flex flex-col gap-1">
+            <button type="button" data-set-theme="light" class="theme-option w-full text-start px-3 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 hover:bg-emerald-500/15 transition-colors cursor-pointer">
+              <span>☀️</span><span data-i18n="themeLight">Light</span>
+            </button>
+            <button type="button" data-set-theme="dark" class="theme-option w-full text-start px-3 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 hover:bg-emerald-500/15 transition-colors cursor-pointer">
+              <span>🌙</span><span data-i18n="themeDark">Dark</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chaos Toggle Button -->
+        <button
+          type="button"
+          id="chaosToggleBtn"
+          aria-label="Toggle Chaos Mode"
+          aria-pressed="false"
+          title="Chaos Mode"
+          class="pill-control w-10 h-10 rounded-full flex items-center justify-center shrink-0 cursor-pointer group"
+        >
+          <svg id="chaosEmblemSvg" class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="10.5,3.5 21.5,3.5 28.5,10.5 28.5,21.5 21.5,28.5 10.5,28.5 3.5,21.5 3.5,10.5" stroke="#00f2ea" stroke-width="2" transform="translate(-1.3, -1)" opacity="0.85"/>
+            <polygon points="10.5,3.5 21.5,3.5 28.5,10.5 28.5,21.5 21.5,28.5 10.5,28.5 3.5,21.5 3.5,10.5" stroke="#ff0050" stroke-width="2" transform="translate(1.3, 1)" opacity="0.85"/>
+            <polygon points="10.5,3.5 21.5,3.5 28.5,10.5 28.5,21.5 21.5,28.5 10.5,28.5 3.5,21.5 3.5,10.5" stroke="currentColor" stroke-width="2"/>
+            <rect x="12.2" y="12.2" width="7.6" height="7.6" transform="rotate(45 16 16)" stroke="#00f2ea" stroke-width="1.6" opacity="0.9"/>
+            <rect x="12.2" y="12.2" width="7.6" height="7.6" transform="rotate(45 16 16) translate(0.9, 0.6)" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- TAB 1: ABOUT -->
+    <main id="view-about" class="space-y-12">
+      <section class="pt-2 sm:pt-6">
+        <div class="flex items-start justify-between gap-4">
+          <div class="flex-1 min-w-0">
+            <h1 data-i18n="heroTitle" class="hero-title font-serif-editorial text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+              Hi, I'm Nodirjon!
+            </h1>
+            <p data-i18n="heroSubtitle" class="mt-3 text-base sm:text-xl font-semibold leading-snug" style="color: var(--accent);">
+              Student at Westminster International University in Tashkent (WIUT)
+            </p>
+          </div>
+
+          <!-- Mobile Nav Stack -->
+          <nav aria-label="Mobile Navigation" class="flex md:hidden flex-col gap-2 shrink-0 pt-0.5">
+            <button type="button" data-tab="about" class="tab-btn nav-pill-active px-4 py-1.5 rounded-full text-xs font-semibold text-center cursor-pointer" data-i18n="navAbout">About</button>
+            <button type="button" data-tab="project" class="tab-btn nav-pill-inactive px-4 py-1.5 rounded-full text-xs font-semibold text-center cursor-pointer" data-i18n="navProject">Project</button>
+          </nav>
+        </div>
+
+        <div class="mt-6 space-y-3.5 text-sm sm:text-base leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
+          <p data-i18n="heroLine1">Interested in logic, patterns, and systemic relationships.</p>
+          <p data-i18n="heroLine2">My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.</p>
+          <p data-i18n="heroLine3">Dedicated to structured problem-solving and continuous professional growth.</p>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="space-y-4">
+        <h2 data-i18n="expSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold tracking-tight">Professional Experience</h2>
+        <article class="surface-card chaos-card-1 rounded-2xl p-5 sm:p-7">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+            <div>
+              <h3 data-i18n="expRoleTitle" class="font-serif-editorial text-lg sm:text-xl font-bold">Road Transport Health and Safety Manager</h3>
+              <p data-i18n="expRoleSub" class="mt-1 text-sm font-medium" style="color: var(--text-secondary);">Safety & Fleet Department (US Logistics)</p>
+            </div>
+            <span data-i18n="expDateRange" class="self-start inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold shrink-0" style="background: var(--accent-soft); color: var(--accent);">Apr 2026 – Nov 2026</span>
+          </div>
+
+          <div class="mt-4">
+            <button type="button" id="expDetailsToggle" aria-expanded="false" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold cursor-pointer hover:opacity-80 transition-opacity" style="color: var(--accent);">
+              <span id="expDetailsLabel" data-i18n="showDetails">Show details</span>
+              <svg id="expDetailsChevron" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="expDetailsBody" class="details-body">
+              <div class="details-inner pt-3 border-t" style="border-color: var(--border-subtle);">
+                <ul class="space-y-2 text-xs sm:text-sm leading-relaxed list-disc ps-5" style="color: var(--text-secondary);">
+                  <li data-i18n="expBullet1">Oversaw DOT & FMCSA regulatory compliance, driver safety audits, and electronic logging device (ELD) analytics across interstate fleet operations.</li>
+                  <li data-i18n="expBullet2">Designed structured risk-mitigation workflows and incident prevention protocols, reducing operational violations and improving fleet reliability.</li>
+                  <li data-i18n="expBullet3">Coordinated cross-functional safety reporting and quantitative performance tracking for dispatch and leadership teams.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Education & Core Competencies -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <article class="surface-card chaos-card-2 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span data-i18n="eduBadge" class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md" style="background: var(--accent-soft); color: var(--accent);">Education</span>
+              <span class="text-xs font-medium" style="color: var(--text-muted);">Tashkent</span>
+            </div>
+            <h3 data-i18n="eduUniTitle" class="font-serif-editorial text-lg font-bold leading-snug">Westminster International University in Tashkent (WIUT)</h3>
+            <p data-i18n="eduDegree" class="mt-1.5 text-sm" style="color: var(--text-secondary);">Business Administration & Analytical Systems</p>
+          </div>
+          <p data-i18n="eduNote" class="mt-4 pt-3 border-t text-xs leading-relaxed" style="border-color: var(--border-subtle); color: var(--text-muted);">Focus on quantitative modeling, organizational logic, and socio-economic systems.</p>
+        </article>
+
+        <article class="surface-card chaos-card-3 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span data-i18n="focusBadge" class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md" style="background: var(--accent-soft); color: var(--accent);">Core Focus</span>
+              <span class="text-xs font-medium" style="color: var(--text-muted);">Systems</span>
+            </div>
+            <h3 data-i18n="focusTitle" class="font-serif-editorial text-lg font-bold leading-snug">Logic, Compliance & Social Architecture</h3>
+            <p data-i18n="focusDesc" class="mt-1.5 text-sm" style="color: var(--text-secondary);">Bridging quantitative rigor with human-centered institutional design.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t flex flex-wrap gap-1.5" style="border-color: var(--border-subtle);">
+            <span data-i18n="tag1" class="text-xs px-2.5 py-0.5 rounded-full font-medium" style="background: var(--accent-soft); color: var(--accent);">Quantitative Methods</span>
+            <span data-i18n="tag2" class="text-xs px-2.5 py-0.5 rounded-full font-medium" style="background: var(--accent-soft); color: var(--accent);">Operational Compliance</span>
+            <span data-i18n="tag3" class="text-xs px-2.5 py-0.5 rounded-full font-medium" style="background: var(--accent-soft); color: var(--accent);">Social Impact</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- TAB 2: PROJECT (Safe Haven) -->
+    <main id="view-project" class="hidden space-y-10">
+      <section class="pt-2 sm:pt-6">
+        <div class="flex items-start justify-between gap-4">
+          <div class="flex-1 min-w-0">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background: var(--accent-soft); color: var(--accent);">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span data-i18n="projTagline">Social Elevator & Educational Hub</span>
+            </div>
+            <h1 class="hero-title font-serif-editorial text-3xl sm:text-5xl font-bold tracking-tight leading-tight">Safe Haven</h1>
+            <p data-i18n="projSubtitle" class="mt-3 text-base sm:text-xl font-semibold leading-snug" style="color: var(--accent);">
+              Breaking systemic poverty through free applied IT education, psychological resilience, and an ethical self-sustaining model.
+            </p>
+          </div>
+
+          <nav aria-label="Mobile Navigation" class="flex md:hidden flex-col gap-2 shrink-0 pt-0.5">
+            <button type="button" data-tab="about" class="tab-btn nav-pill-inactive px-4 py-1.5 rounded-full text-xs font-semibold text-center cursor-pointer" data-i18n="navAbout">About</button>
+            <button type="button" data-tab="project" class="tab-btn nav-pill-active px-4 py-1.5 rounded-full text-xs font-semibold text-center cursor-pointer" data-i18n="navProject">Project</button>
+          </nav>
+        </div>
+
+        <p data-i18n="projHook" class="mt-5 text-sm sm:text-base leading-relaxed max-w-3xl" style="color: var(--text-secondary);">
+          Talent is universal, yet opportunity is not. Safe Haven removes financial, housing, and psychological barriers for motivated individuals facing severe socio-economic hardship—transforming them from vulnerable survivors into independent digital professionals who pay opportunity forward.
+        </p>
+      </section>
+
+      <!-- 4 Pillars -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        <article class="surface-card chaos-card-1 rounded-2xl p-5 sm:p-6">
+          <h3 data-i18n="pillar1Title" class="font-serif-editorial text-lg font-bold">100% Barrier-Free Entry</h3>
+          <p data-i18n="pillar1Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Zero upfront tuition. Covers living stipends, safe housing, meals, and certified psychological support.</p>
+        </article>
+        <article class="surface-card chaos-card-2 rounded-2xl p-5 sm:p-6">
+          <h3 data-i18n="pillar2Title" class="font-serif-editorial text-lg font-bold">The "6 + 2" Acceleration Track</h3>
+          <p data-i18n="pillar2Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">6 months of intensive applied IT, followed by 2 months building real commercial software products with mentorship.</p>
+        </article>
+        <article class="surface-card chaos-card-3 rounded-2xl p-5 sm:p-6">
+          <h3 data-i18n="pillar3Title" class="font-serif-editorial text-lg font-bold">Ethical Recyclable ISA</h3>
+          <p data-i18n="pillar3Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Graduates contribute 10% of salary ONLY after securing employment above $450/month with hardship freeze.</p>
+        </article>
+        <article class="surface-card chaos-card-1 rounded-2xl p-5 sm:p-6">
+          <h3 data-i18n="pillar4Title" class="font-serif-editorial text-lg font-bold">Intimate Mini-Cohorts</h3>
+          <p data-i18n="pillar4Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Compact 10–12 student hubs targeting 80%+ placement with verified Behavioral & Hard-Skills Profiles.</p>
+        </article>
+      </section>
+
+      <!-- CTA Actions -->
+      <section class="surface-card rounded-2xl p-6 sm:p-8 border-2" style="border-color: var(--border-strong);">
+        <h2 data-i18n="ctaSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold">Build Safe Haven With Us</h2>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <button type="button" data-action="sponsor" class="action-cta-btn rounded-xl p-4 text-start transition-all cursor-pointer flex flex-col justify-between border" style="background: var(--accent); color: #ffffff; border-color: var(--accent);">
+            <div data-i18n="btnSponsor" class="font-bold text-sm sm:text-base">Become a Sponsor</div>
+            <div data-i18n="btnSponsorSub" class="text-xs opacity-90 mt-0.5">CSR, grants & equipment partners</div>
+          </button>
+          <button type="button" data-action="donate" class="action-cta-btn pill-control rounded-xl p-4 text-start transition-all cursor-pointer flex flex-col justify-between">
+            <div data-i18n="btnDonate" class="font-bold text-sm sm:text-base">Make a Donation</div>
+            <div data-i18n="btnDonateSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Fund housing, meals & laptops</div>
+          </button>
+          <button type="button" data-action="join" class="action-cta-btn pill-control rounded-xl p-4 text-start transition-all cursor-pointer flex flex-col justify-between">
+            <div data-i18n="btnJoin" class="font-bold text-sm sm:text-base">Join the Team</div>
+            <div data-i18n="btnJoinSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Mentors, educators & psychologists</div>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-14 pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
+      <div>© 2026 Nodirjon Tolipov</div>
+      <div class="flex items-center gap-4">
+        <button type="button" data-tab="about" class="tab-footer-link hover:underline cursor-pointer" data-i18n="navAbout">About</button>
+        <span>•</span>
+        <button type="button" data-tab="project" class="tab-footer-link hover:underline cursor-pointer" data-i18n="navProject">Project</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="connectModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="surface-card w-full max-w-md rounded-2xl p-6 relative" style="background: var(--bg-elevated); border-color: var(--border-strong);">
+      <button type="button" id="closeModalBtn" aria-label="Close modal" class="absolute top-4 end-4 w-8 h-8 rounded-full flex items-center justify-center hover:bg-emerald-500/15 cursor-pointer">✕</button>
+      <h3 id="modalTitle" class="font-serif-editorial text-xl font-bold">Become a Sponsor</h3>
+      <div class="mt-4 p-3 rounded-xl flex items-center justify-between gap-2 border" style="background: var(--bg-page); border-color: var(--border-subtle);">
+        <span id="modalEmailText" class="text-xs sm:text-sm font-mono font-semibold select-all" style="color: var(--accent);">safehaven.nco@gmail.com</span>
+        <button type="button" id="copyEmailBtn" class="px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer shrink-0" style="background: var(--accent); color: #ffffff;"><span id="copyBtnText" data-i18n="copyEmail">Copy Email</span></button>
+      </div>
+      <div class="mt-3">
+        <textarea id="modalTemplate" rows="4" class="w-full rounded-xl p-3 text-xs sm:text-sm border focus:outline-none" style="background: var(--bg-page); border-color: var(--border-subtle); color: var(--text-primary);"></textarea>
+      </div>
+      <div class="mt-4 flex items-center justify-end gap-2.5">
+        <a id="openMailtoLink" href="mailto:safehaven.nco@gmail.com" class="px-4 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5" style="background: var(--accent); color: #ffffff;"><span id="openMailtoLabel" data-i18n="openMailApp">Open Mail App</span> ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
