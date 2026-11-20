@@ -180,32 +180,118 @@ body::before {
   transform: scale(0.96);
 }
 
-/* Unified Capsule Container with Sliding Glider Pill */
-.nav-capsule {
-  position: relative;
+/* Unified Full-Width Top Bar with Bottom 3D Edge Only (No Top Border) */
+.top-header-bar {
+  width: 100%;
   background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  border-top: none;
+  border-bottom: 1px solid var(--border-strong);
+  box-shadow:
+    0 10px 26px -10px rgba(0, 0, 0, 0.45),
+    0 3px 0 0 var(--accent-soft),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  transition: background-color 0.65s var(--ease-silk), border-color 0.45s var(--ease-silk);
+  transition:
+    background-color 0.65s var(--ease-silk),
+    border-color 0.45s var(--ease-silk),
+    box-shadow 0.45s var(--ease-silk);
 }
 
-.nav-glider {
+[data-theme="light"] .top-header-bar {
+  box-shadow:
+    0 10px 24px -10px rgba(15, 23, 42, 0.14),
+    0 3px 0 0 var(--accent-soft),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.85);
+}
+
+.mobile-bottom-bar {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-strong);
+  box-shadow:
+    0 -8px 24px -10px rgba(0, 0, 0, 0.45),
+    0 -2px 0 0 var(--accent-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Sliding Underline Indicator Under About / Project */
+.nav-underline-glider {
   position: absolute;
-  top: 4px;
-  bottom: 4px;
-  left: 4px;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
   border-radius: 9999px;
-  background: var(--bg-elevated);
-  border: 1.5px solid var(--accent);
-  box-shadow: 0 0 16px -3px var(--accent-glow);
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
   transition:
-    transform 0.52s var(--ease-spring),
-    width 0.52s var(--ease-spring),
-    background-color 0.5s var(--ease-silk),
-    border-color 0.4s var(--ease-silk);
+    transform 0.48s var(--ease-spring),
+    width 0.48s var(--ease-spring),
+    background-color 0.4s var(--ease-silk);
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
+}
+
+.nav-tab-link {
+  background: transparent;
+  border: none;
+}
+
+/* Settings Links & Circular Theme-Matched Brand Icons */
+.settings-social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    transform 0.3s var(--ease-spring),
+    border-color 0.3s var(--ease-silk),
+    background-color 0.3s var(--ease-silk),
+    color 0.3s var(--ease-silk);
+}
+
+.settings-social-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.settings-social-link:active {
+  transform: scale(0.97);
+}
+
+.social-circle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: var(--accent-soft);
+  border: 1px solid var(--border-strong);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background-color 0.3s var(--ease-silk),
+    color 0.3s var(--ease-silk),
+    transform 0.3s var(--ease-spring);
+}
+
+.social-circle-icon svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.settings-social-link:hover .social-circle-icon {
+  background: var(--accent);
+  color: #ffffff;
 }
 
 .tab-btn {

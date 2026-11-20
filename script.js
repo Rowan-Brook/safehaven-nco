@@ -15,7 +15,7 @@ const LANGUAGES = [
 
 const TRANSLATIONS = {
   en: {
-    navAbout: "About", navProject: "Project", themeLight: "Light", themeDark: "Dark",
+    navAbout: "About", navProject: "Project", themeLight: "Light", themeDark: "Dark", footerEmail: "Help", settingsLabel: "Settings", settingsThemeTitle: "Theme", settingsLangTitle: "Language", settingsLinksTitle: "Connect & Help",
     heroTitle: "Hi, I'm Nodirjon!", heroSubtitle: "Student at Westminster International University in Tashkent (WIUT)",
     heroLine1: "Interested in logic, patterns, and systemic relationships.",
     heroLine2: "My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.",
@@ -50,7 +50,7 @@ const TRANSLATIONS = {
     tplJoin: "Hello Safe Haven Team,\n\nI would love to join the Safe Haven team as a mentor, educator, or specialist."
   },
   ru: {
-    navAbout: "Обо мне", navProject: "Проект", themeLight: "Светлая", themeDark: "Тёмная",
+    navAbout: "Обо мне", navProject: "Проект", themeLight: "Светлая", themeDark: "Тёмная", footerEmail: "Help", settingsLabel: "Настройки", settingsThemeTitle: "Тема", settingsLangTitle: "Язык", settingsLinksTitle: "Ссылки и помощь",
     heroTitle: "Привет, я Нодиржон!", heroSubtitle: "Студент Международного Вестминстерского университета в Ташкенте (WIUT)",
     heroLine1: "Увлечён логикой, закономерностями и системными взаимосвязями.",
     heroLine2: "Мои интересы охватывают аналитические системы, количественные методы, бизнес-администрирование и операционный комплаенс.",
@@ -85,7 +85,7 @@ const TRANSLATIONS = {
     tplJoin: "Здравствуйте, команда Safe Haven!\n\nХотел(а) бы присоединиться к команде проекта в качестве ментора, преподавателя или специалиста."
   },
   uz: {
-    navAbout: "Men haqimda", navProject: "Loyiha", themeLight: "Yorug‘", themeDark: "Qorong‘i",
+    navAbout: "Men haqimda", navProject: "Loyiha", themeLight: "Yorug‘", themeDark: "Qorong‘i", footerEmail: "Help", settingsLabel: "Sozlamalar", settingsThemeTitle: "Mavzu", settingsLangTitle: "Til", settingsLinksTitle: "Havolalar va yordam",
     heroTitle: "Salom, men Nodirjonman!", heroSubtitle: "Toshkentdagi Xalqaro Vestminster Universiteti (WIUT) talabasi",
     heroLine1: "Mantiq, qonuniyatlar va tizimli bog‘liqliklarga qiziqaman.",
     heroLine2: "Qiziqishlarim tahliliy tizimlar, miqdoriy usullar, biznes boshqaruvi va operatsion muvofiqlikni qamrab oladi.",
@@ -120,7 +120,7 @@ const TRANSLATIONS = {
     tplJoin: "Assalomu alaykum, Safe Haven jamoasi!\n\nLoyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchiman."
   },
   es: {
-    navAbout: "Sobre mí", navProject: "Proyecto", themeLight: "Claro", themeDark: "Oscuro",
+    navAbout: "Sobre mí", navProject: "Proyecto", themeLight: "Claro", themeDark: "Oscuro", footerEmail: "Help", settingsLabel: "Ajustes", settingsThemeTitle: "Tema", settingsLangTitle: "Idioma", settingsLinksTitle: "Enlaces y ayuda",
     heroTitle: "¡Hola, soy Nodirjon!", heroSubtitle: "Estudiante en la Universidad Internacional de Westminster en Taskent (WIUT)",
     heroLine1: "Me interesan la lógica, los patrones y las relaciones sistémicas.",
     heroLine2: "Mi curiosidad abarca sistemas analíticos, métodos cuantitativos, administración de empresas y cumplimiento operativo.",
@@ -155,7 +155,7 @@ const TRANSLATIONS = {
     tplJoin: "Hola equipo de Safe Haven,\n\nMe encantaría unirme al equipo de Safe Haven como mentor, educador o especialista."
   },
   fr: {
-    navAbout: "À propos", navProject: "Projet", themeLight: "Clair", themeDark: "Sombre",
+    navAbout: "À propos", navProject: "Projet", themeLight: "Clair", themeDark: "Sombre", footerEmail: "Help", settingsLabel: "Paramètres", settingsThemeTitle: "Thème", settingsLangTitle: "Langue", settingsLinksTitle: "Liens et aide",
     heroTitle: "Bonjour, je suis Nodirjon !", heroSubtitle: "Étudiant à l'Université internationale de Westminster à Tachkent (WIUT)",
     heroLine1: "Passionné par la logique, les schémas et les relations systémiques.",
     heroLine2: "Ma curiosité couvre les systèmes analytiques, les méthodes quantitatives, la gestion d'entreprise et la conformité opérationnelle.",
@@ -190,7 +190,7 @@ const TRANSLATIONS = {
     tplJoin: "Bonjour l'équipe Safe Haven,\n\nJe souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spécialiste."
   },
   de: {
-    navAbout: "Über mich", navProject: "Projekt", themeLight: "Hell", themeDark: "Dunkel",
+    navAbout: "Über mich", navProject: "Projekt", themeLight: "Hell", themeDark: "Dunkel", footerEmail: "Help", settingsLabel: "Einstellungen", settingsThemeTitle: "Design", settingsLangTitle: "Sprache", settingsLinksTitle: "Links & Hilfe",
     heroTitle: "Hallo, ich bin Nodirjon!", heroSubtitle: "Student an der Westminster International University in Taschkent (WIUT)",
     heroLine1: "Interessiert an Logik, Mustern und systemischen Zusammenhängen.",
     heroLine2: "Mein Interesse umfasst analytische Systeme, quantitative Methoden, Betriebswirtschaft und operative Compliance.",
@@ -225,7 +225,7 @@ const TRANSLATIONS = {
     tplJoin: "Hallo Safe-Haven-Team,\n\nich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterstützen."
   },
   it: {
-    navAbout: "Chi sono", navProject: "Progetto", themeLight: "Chiaro", themeDark: "Scuro",
+    navAbout: "Chi sono", navProject: "Progetto", themeLight: "Chiaro", themeDark: "Scuro", footerEmail: "Help", settingsLabel: "Impostazioni", settingsThemeTitle: "Tema", settingsLangTitle: "Lingua", settingsLinksTitle: "Link e aiuto",
     heroTitle: "Ciao, sono Nodirjon!", heroSubtitle: "Studente presso la Westminster International University di Tashkent (WIUT)",
     heroLine1: "Interessato a logica, schemi e relazioni sistemiche.",
     heroLine2: "La mia curiosità spazia tra sistemi analitici, metodi quantitativi, economia aziendale e conformità operativa.",
@@ -260,7 +260,7 @@ const TRANSLATIONS = {
     tplJoin: "Ciao team di Safe Haven,\n\nmi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
   },
   zh: {
-    navAbout: "关于我", navProject: "项目", themeLight: "浅色", themeDark: "深色",
+    navAbout: "关于我", navProject: "项目", themeLight: "浅色", themeDark: "深色", footerEmail: "Help", settingsLabel: "设置", settingsThemeTitle: "主题", settingsLangTitle: "语言", settingsLinksTitle: "链接与帮助",
     heroTitle: "你好，我是 Nodirjon！", heroSubtitle: "塔什干威斯敏斯特国际大学（WIUT）在读学生",
     heroLine1: "热衷于逻辑、规律与系统性关联。",
     heroLine2: "我的兴趣涵盖分析系统、定量方法、工商管理与运营合规。",
@@ -295,7 +295,7 @@ const TRANSLATIONS = {
     tplJoin: "你好 Safe Haven 团队：\n\n我希望作为导师、讲师或专业人员加入 Safe Haven 团队。"
   },
   ar: {
-    navAbout: "نبذة عني", navProject: "المشروع", themeLight: "فاتح", themeDark: "داكن",
+    navAbout: "نبذة عني", navProject: "المشروع", themeLight: "فاتح", themeDark: "داكن", footerEmail: "Help", settingsLabel: "الإعدادات", settingsThemeTitle: "المظهر", settingsLangTitle: "اللغة", settingsLinksTitle: "الروابط والمساعدة",
     heroTitle: "مرحبًا، أنا نوديرجون!", heroSubtitle: "طالب في جامعة وستمنستر الدولية في طشقند (WIUT)",
     heroLine1: "مهتم بالمنطق والأنماط والعلاقات النظامية.",
     heroLine2: "يمتد اهتمامي إلى الأنظمة التحليلية والأساليب الكمية وإدارة الأعمال والامتثال التشغيلي.",
@@ -330,7 +330,7 @@ const TRANSLATIONS = {
     tplJoin: "مرحبًا فريق Safe Haven،\n\nيسعدني الانضمام إلى فريق Safe Haven كمرشد أو معلم أو متخصص."
   },
   tr: {
-    navAbout: "Hakkımda", navProject: "Proje", themeLight: "Açık", themeDark: "Koyu",
+    navAbout: "Hakkımda", navProject: "Proje", themeLight: "Açık", themeDark: "Koyu", footerEmail: "Help", settingsLabel: "Ayarlar", settingsThemeTitle: "Tema", settingsLangTitle: "Dil", settingsLinksTitle: "Bağlantılar ve Yardım",
     heroTitle: "Merhaba, ben Nodirjon!", heroSubtitle: "Taşkent Westminster Uluslararası Üniversitesi (WIUT) öğrencisi",
     heroLine1: "Mantık, örüntüler ve sistemsel ilişkilerle ilgileniyorum.",
     heroLine2: "İlgi alanlarım analitik sistemler, nicel yöntemler, işletme yönetimi ve operasyonel uyumu kapsıyor.",
@@ -425,15 +425,15 @@ function updateLocalizedDate() {
   }
 }
 
-/* Position the sliding pill inside both Desktop and Mobile nav capsules */
+/* Position the sliding underline beneath the active About / Project tab */
 function updateNavGlider() {
-  document.querySelectorAll(".nav-capsule").forEach(capsule => {
-    const glider = capsule.querySelector(".nav-glider");
-    const activeBtn = capsule.querySelector(`.tab-btn[data-tab="${activeTab}"]`);
+  document.querySelectorAll("nav").forEach(nav => {
+    const glider = nav.querySelector(".nav-underline-glider");
+    const activeBtn = nav.querySelector(`.tab-btn[data-tab="${activeTab}"]`);
     if (!glider || !activeBtn) return;
     if (activeBtn.offsetWidth === 0) return;
     glider.style.width = `${activeBtn.offsetWidth}px`;
-    glider.style.transform = `translateX(${activeBtn.offsetLeft - 4}px)`;
+    glider.style.transform = `translateX(${activeBtn.offsetLeft}px)`;
   });
 }
 
@@ -447,6 +447,8 @@ function setLanguage(langCode) {
   document.documentElement.setAttribute("dir", langObj.dir);
   const currentLangCode = document.getElementById("currentLangCode");
   if (currentLangCode) currentLangCode.textContent = langCode.toUpperCase();
+  const currentLangBadge = document.getElementById("currentLangBadge");
+  if (currentLangBadge) currentLangBadge.textContent = langCode.toUpperCase();
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -478,16 +480,12 @@ function setLanguage(langCode) {
 function setTheme(theme) {
   currentTheme = theme;
   document.documentElement.setAttribute("data-theme", theme);
-  const dict = getDict(currentLang);
-  const currentThemeIcon = document.getElementById("currentThemeIcon");
-  const currentThemeLabel = document.getElementById("currentThemeLabel");
-  if (theme === "dark") {
-    if (currentThemeIcon) currentThemeIcon.textContent = "🌙";
-    if (currentThemeLabel) currentThemeLabel.textContent = dict.themeDark;
-  } else {
-    if (currentThemeIcon) currentThemeIcon.textContent = "☀️";
-    if (currentThemeLabel) currentThemeLabel.textContent = dict.themeLight;
-  }
+  document.querySelectorAll(".theme-option").forEach(btn => {
+    const isSelected = btn.getAttribute("data-set-theme") === theme;
+    btn.style.background = isSelected ? "var(--accent-soft)" : "transparent";
+    btn.style.color = isSelected ? "var(--accent)" : "var(--text-primary)";
+    btn.style.borderColor = isSelected ? "var(--border-strong)" : "var(--border-subtle)";
+  });
 }
 
 function switchTab(tabName) {
@@ -530,22 +528,15 @@ function switchTab(tabName) {
 }
 
 function closeAllDropdowns() {
-  const langMenu = document.getElementById("langMenu");
-  const langChevron = document.getElementById("langChevron");
-  const themeMenu = document.getElementById("themeMenu");
-  const themeChevron = document.getElementById("themeChevron");
-
-  if (langMenu) {
-    langMenu.classList.remove("dropdown-visible");
-    langMenu.classList.add("dropdown-hidden");
+  const settingsMenu = document.getElementById("settingsMenu");
+  const settingsToggleBtn = document.getElementById("settingsToggleBtn");
+  if (settingsMenu) {
+    settingsMenu.classList.remove("dropdown-visible");
+    settingsMenu.classList.add("dropdown-hidden");
   }
-  if (langChevron) langChevron.style.transform = "rotate(0deg)";
-
-  if (themeMenu) {
-    themeMenu.classList.remove("dropdown-visible");
-    themeMenu.classList.add("dropdown-hidden");
+  if (settingsToggleBtn) {
+    settingsToggleBtn.setAttribute("aria-expanded", "false");
   }
-  if (themeChevron) themeChevron.style.transform = "rotate(0deg)";
 }
 
 async function copyTextToClipboard(text) {
@@ -609,49 +600,32 @@ function triggerScrollReveals() {
 document.addEventListener("click", async (e) => {
   const target = e.target;
 
-  // Language toggle
-  if (target.closest("#langToggleBtn")) {
+  // Unified Settings toggle
+  if (target.closest("#settingsToggleBtn")) {
     e.stopPropagation();
-    const langMenu = document.getElementById("langMenu");
-    const langChevron = document.getElementById("langChevron");
-    const isOpen = langMenu && langMenu.classList.contains("dropdown-visible");
+    const settingsMenu = document.getElementById("settingsMenu");
+    const settingsToggleBtn = document.getElementById("settingsToggleBtn");
+    const isOpen = settingsMenu && settingsMenu.classList.contains("dropdown-visible");
     closeAllDropdowns();
-    if (!isOpen && langMenu) {
-      langMenu.classList.remove("dropdown-hidden");
-      langMenu.classList.add("dropdown-visible");
-      if (langChevron) langChevron.style.transform = "rotate(180deg)";
+    if (!isOpen && settingsMenu) {
+      settingsMenu.classList.remove("dropdown-hidden");
+      settingsMenu.classList.add("dropdown-visible");
+      if (settingsToggleBtn) settingsToggleBtn.setAttribute("aria-expanded", "true");
     }
     return;
   }
 
-  // Language option select
+  // Language option select inside Settings
   const langOption = target.closest(".lang-option");
   if (langOption) {
     setLanguage(langOption.getAttribute("data-lang"));
-    closeAllDropdowns();
     return;
   }
 
-  // Theme toggle
-  if (target.closest("#themeToggleBtn")) {
-    e.stopPropagation();
-    const themeMenu = document.getElementById("themeMenu");
-    const themeChevron = document.getElementById("themeChevron");
-    const isOpen = themeMenu && themeMenu.classList.contains("dropdown-visible");
-    closeAllDropdowns();
-    if (!isOpen && themeMenu) {
-      themeMenu.classList.remove("dropdown-hidden");
-      themeMenu.classList.add("dropdown-visible");
-      if (themeChevron) themeChevron.style.transform = "rotate(180deg)";
-    }
-    return;
-  }
-
-  // Theme option select
+  // Theme option select inside Settings
   const themeOption = target.closest(".theme-option");
   if (themeOption) {
     setTheme(themeOption.getAttribute("data-set-theme"));
-    closeAllDropdowns();
     return;
   }
 
@@ -716,8 +690,8 @@ document.addEventListener("click", async (e) => {
     return;
   }
 
-  // Click outside dropdowns
-  if (!target.closest("#langDropdownWrap") && !target.closest("#themeDropdownWrap")) {
+  // Click outside Settings menu
+  if (!target.closest("#settingsDropdownWrap")) {
     closeAllDropdowns();
   }
 });
