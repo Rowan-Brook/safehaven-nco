@@ -395,7 +395,7 @@ const LEGAL_DOCS = {
           h: "2. Какие данные могут обрабатываться",
           ul: [
             "Технические данные: при загрузке страницы ваш браузер автоматически передаёт стандартные сетевые параметры (IP-адрес, тип браузера и устройства) хостинг-провайдеру (например, GitHub Pages) и CDN-сервисам шрифтов/стилей исключительно для корректного отображения страницы.",
-            "Данные добровольной переписки: если вы самостоятельно напишете на электронную почту (ntolipov.work@gmail.com, ntolipovsite.help@gmail.com или safehaven.nco@gmail.com) либо перейдёте в мессенджеры и соцсети, мы получаем только те сведения, которые вы добровольно указали в сообщении."
+            "Данные добровольной переписки: если вы самостоятельно напишете на электронную почту (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com или safehaven.nco@gmail.com) либо перейдёте в мессенджеры и соцсети, мы получаем только те сведения, которые вы добровольно указали в сообщении."
           ]
         },
         {
@@ -404,7 +404,7 @@ const LEGAL_DOCS = {
         },
         {
           h: "4. Внешние сервисы и ваши права",
-          p: "На сайте размещены ссылки на внешние платформы (GitHub, LinkedIn, Instagram, WhatsApp, Facebook). При переходе по ним действуют политики конфиденциальности соответствующих сервисов. Вы вправе в любой момент запросить удаление вашей переписки и контактных данных, написав на ntolipovsite.help@gmail.com."
+          p: "На сайте размещены ссылки на внешние платформы (GitHub, LinkedIn, Instagram, WhatsApp, Facebook). При переходе по ним действуют политики конфиденциальности соответствующих сервисов. Вы вправе в любой момент запросить удаление вашей переписки и контактных данных, написав на ntolipov.site.help@gmail.com."
         }
       ]
     },
@@ -480,7 +480,7 @@ const LEGAL_DOCS = {
           h: "2. Information That May Be Processed",
           ul: [
             "Technical Connection Data: When you load this site, your browser automatically transmits standard network metadata (such as IP address and browser type) to the hosting provider (e.g., GitHub Pages) and font/style CDNs solely to deliver the webpage.",
-            "Voluntary Correspondence Data: If you choose to contact us via email (ntolipov.work@gmail.com, ntolipovsite.help@gmail.com, or safehaven.nco@gmail.com) or external social/messaging platforms, we only receive the information you voluntarily include in your message."
+            "Voluntary Correspondence Data: If you choose to contact us via email (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com, or safehaven.nco@gmail.com) or external social/messaging platforms, we only receive the information you voluntarily include in your message."
           ]
         },
         {
@@ -489,7 +489,7 @@ const LEGAL_DOCS = {
         },
         {
           h: "4. Third-Party Links & Your Rights",
-          p: "This website links to external services (GitHub, LinkedIn, Instagram, WhatsApp, Facebook), which are governed by their own privacy policies. You may request deletion of your prior email correspondence at any time by contacting ntolipovsite.help@gmail.com."
+          p: "This website links to external services (GitHub, LinkedIn, Instagram, WhatsApp, Facebook), which are governed by their own privacy policies. You may request deletion of your prior email correspondence at any time by contacting ntolipov.site.help@gmail.com."
         }
       ]
     },
