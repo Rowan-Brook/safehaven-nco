@@ -15,19 +15,20 @@
   <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-28 md:pb-16">
 
     <!-- TOP UTILITY BAR -->
-    <header class="flex items-center justify-between gap-4 pb-6">
+    <header class="flex items-center justify-between gap-4 pb-6 reveal-on-load" style="--delay: 0ms;">
       <!-- Localized Date -->
       <div id="liveDate" class="text-sm sm:text-base font-medium leading-snug whitespace-pre-line" style="color: var(--accent);">
         Friday,
         November 20
       </div>
 
-      <!-- Desktop Center Nav (Unified Pill Container) -->
-      <nav aria-label="Primary Navigation" class="hidden md:flex items-center p-1 rounded-full nav-capsule">
-        <button type="button" data-tab="about" class="tab-btn nav-pill-active px-6 py-1.5 rounded-full text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
+      <!-- Desktop Center Nav (Unified Pill Container with Sliding Indicator) -->
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center p-1 rounded-full nav-capsule relative">
+        <div class="nav-glider" aria-hidden="true"></div>
+        <button type="button" data-tab="about" class="tab-btn nav-pill-active relative z-10 px-6 py-1.5 rounded-full text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
           About
         </button>
-        <button type="button" data-tab="project" class="tab-btn nav-pill-inactive px-6 py-1.5 rounded-full text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
+        <button type="button" data-tab="project" class="tab-btn nav-pill-inactive relative z-10 px-6 py-1.5 rounded-full text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
           Project
         </button>
       </nav>
@@ -44,11 +45,12 @@
             class="pill-control h-10 px-3.5 rounded-full text-xs sm:text-sm font-medium flex items-center gap-1.5 cursor-pointer"
           >
             <span id="currentLangCode">EN</span>
-            <svg class="w-3.5 h-3.5 opacity-75 transition-transform duration-200" id="langChevron" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="w-3.5 h-3.5 opacity-75 chevron-smooth" id="langChevron" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="langMenu" role="listbox" class="dropdown-panel dropdown-hidden fixed inset-x-4 top-20 md:inset-x-auto md:absolute md:end-0 md:top-auto md:mt-2 md:w-72 rounded-2xl p-2 z-50 flex flex-row overflow-x-auto no-scrollbar gap-1.5 md:grid md:grid-cols-2 md:gap-1 md:overflow-visible"></div>
+          <!-- Vertical 1-column scrollable list on mobile (shows ~3.5 items, scroll up/down), 2-column grid on desktop -->
+          <div id="langMenu" role="listbox" class="dropdown-panel dropdown-hidden absolute end-0 mt-2 w-48 max-h-40 overflow-y-auto overscroll-contain md:w-72 md:max-h-none md:overflow-visible rounded-2xl p-1.5 z-50 flex flex-col gap-1 md:grid md:grid-cols-2"></div>
         </div>
 
         <!-- Theme Dropdown -->
@@ -62,15 +64,15 @@
           >
             <span id="currentThemeIcon" class="text-sm leading-none">🌙</span>
             <span id="currentThemeLabel">Dark</span>
-            <svg class="w-3.5 h-3.5 opacity-75 transition-transform duration-200" id="themeChevron" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="w-3.5 h-3.5 opacity-75 chevron-smooth" id="themeChevron" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
             </svg>
           </button>
           <div id="themeMenu" role="listbox" class="dropdown-panel dropdown-hidden absolute end-0 mt-2 w-36 rounded-2xl p-1.5 z-50 flex flex-col gap-1">
-            <button type="button" data-set-theme="light" class="theme-option w-full text-start px-3 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 transition-colors cursor-pointer">
+            <button type="button" data-set-theme="light" class="theme-option w-full text-start px-3 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 cursor-pointer">
               <span>☀️</span><span data-i18n="themeLight">Light</span>
             </button>
-            <button type="button" data-set-theme="dark" class="theme-option w-full text-start px-3 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 transition-colors cursor-pointer">
+            <button type="button" data-set-theme="dark" class="theme-option w-full text-start px-3 py-2 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 cursor-pointer">
               <span>🌙</span><span data-i18n="themeDark">Dark</span>
             </button>
           </div>
@@ -79,21 +81,22 @@
     </header>
 
     <!-- TAB 1: ABOUT -->
-    <main id="view-about">
+    <main id="view-about" class="tab-view tab-view-active">
       <!-- Editorial Hero with generous air below -->
       <section class="min-h-[54vh] sm:min-h-[58vh] flex flex-col justify-center pt-6 pb-20 sm:pt-10 sm:pb-28">
         <div class="max-w-2xl">
-          <h1 data-i18n="heroTitle" class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-            Hi, I'm Nodirjon!
+          <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight reveal-on-load" style="--delay: 80ms;">
+            <span data-i18n="heroTitle">Hi, I'm Nodirjon!</span>
+            <span class="block mt-1.5 text-lg sm:text-2xl font-normal italic tracking-normal" style="color: var(--text-muted);">Rowan Brook</span>
           </h1>
-          <p data-i18n="heroSubtitle" class="mt-4 text-base sm:text-xl font-semibold leading-snug" style="color: var(--accent);">
+          <p data-i18n="heroSubtitle" class="mt-4 text-base sm:text-xl font-semibold leading-snug reveal-on-load" style="color: var(--accent); --delay: 160ms;">
             Student at Westminster International University in Tashkent (WIUT)
           </p>
 
           <div class="mt-7 space-y-4 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
-            <p data-i18n="heroLine1">Interested in logic, patterns, and systemic relationships.</p>
-            <p data-i18n="heroLine2">My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.</p>
-            <p data-i18n="heroLine3">Dedicated to structured problem-solving and continuous professional growth.</p>
+            <p data-i18n="heroLine1" class="reveal-on-load" style="--delay: 240ms;">Interested in logic, patterns, and systemic relationships.</p>
+            <p data-i18n="heroLine2" class="reveal-on-load" style="--delay: 320ms;">My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.</p>
+            <p data-i18n="heroLine3" class="reveal-on-load" style="--delay: 400ms;">Dedicated to structured problem-solving and continuous professional growth.</p>
           </div>
         </div>
       </section>
@@ -101,7 +104,7 @@
       <!-- Main Information Sections -->
       <div class="space-y-12">
         <!-- Professional Experience -->
-        <section class="space-y-4">
+        <section class="space-y-4 reveal-scroll">
           <h2 data-i18n="expSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold tracking-tight">Professional Experience</h2>
           <article class="surface-card rounded-2xl p-5 sm:p-7">
             <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
@@ -115,7 +118,7 @@
             <div class="mt-4">
               <button type="button" id="expDetailsToggle" aria-expanded="false" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold cursor-pointer hover:opacity-80 transition-opacity" style="color: var(--accent);">
                 <span id="expDetailsLabel" data-i18n="showDetails">Show details</span>
-                <svg id="expDetailsChevron" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <svg id="expDetailsChevron" class="w-4 h-4 chevron-smooth" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                 </svg>
               </button>
@@ -133,7 +136,7 @@
         </section>
 
         <!-- Education & Core Competencies -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-5 reveal-scroll">
           <article class="surface-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between gap-2 mb-3">
@@ -166,7 +169,7 @@
     </main>
 
     <!-- TAB 2: PROJECT (Safe Haven) -->
-    <main id="view-project" class="hidden">
+    <main id="view-project" class="tab-view hidden">
       <!-- Project Hero with matching editorial air -->
       <section class="min-h-[48vh] sm:min-h-[52vh] flex flex-col justify-center pt-6 pb-16 sm:pt-10 sm:pb-24">
         <div class="max-w-3xl">
@@ -182,7 +185,7 @@
 
       <div class="space-y-10">
         <!-- 4 Pillars -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 reveal-scroll">
           <article class="surface-card rounded-2xl p-5 sm:p-6">
             <h3 data-i18n="pillar1Title" class="font-serif-editorial text-lg font-bold">100% Barrier-Free Entry</h3>
             <p data-i18n="pillar1Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Zero upfront tuition. Covers living stipends, safe housing, meals, and certified psychological support.</p>
@@ -202,18 +205,18 @@
         </section>
 
         <!-- CTA Actions -->
-        <section class="surface-card rounded-2xl p-6 sm:p-8 border" style="border-color: var(--border-strong);">
+        <section class="surface-card rounded-2xl p-6 sm:p-8 border reveal-scroll" style="border-color: var(--border-strong);">
           <h2 data-i18n="ctaSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold">Build Safe Haven With Us</h2>
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-            <button type="button" data-action="sponsor" class="action-cta-btn cta-primary rounded-xl p-4 text-start transition-all cursor-pointer flex flex-col justify-between">
+            <button type="button" data-action="sponsor" class="action-cta-btn cta-primary rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
               <div data-i18n="btnSponsor" class="font-bold text-sm sm:text-base">Become a Sponsor</div>
               <div data-i18n="btnSponsorSub" class="text-xs opacity-90 mt-0.5">CSR, grants & equipment partners</div>
             </button>
-            <button type="button" data-action="donate" class="action-cta-btn pill-control rounded-xl p-4 text-start transition-all cursor-pointer flex flex-col justify-between">
+            <button type="button" data-action="donate" class="action-cta-btn pill-control rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
               <div data-i18n="btnDonate" class="font-bold text-sm sm:text-base">Make a Donation</div>
               <div data-i18n="btnDonateSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Fund housing, meals & laptops</div>
             </button>
-            <button type="button" data-action="join" class="action-cta-btn pill-control rounded-xl p-4 text-start transition-all cursor-pointer flex flex-col justify-between">
+            <button type="button" data-action="join" class="action-cta-btn pill-control rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
               <div data-i18n="btnJoin" class="font-bold text-sm sm:text-base">Join the Team</div>
               <div data-i18n="btnJoinSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Mentors, educators & psychologists</div>
             </button>
@@ -223,9 +226,9 @@
     </main>
 
     <!-- FOOTER WITH SOCIALS & WORK EMAIL -->
-    <footer class="mt-20 pt-6 border-t flex flex-col gap-4 text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
+    <footer class="mt-20 pt-6 border-t flex flex-col gap-4 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-        <div>© 2026 Nodirjon Tolipov</div>
+        <div>© 2026 Nodirjon Tolipov · Rowan Brook</div>
         <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
           <a href="https://github.com/rowanb-sh" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
           <span aria-hidden="true">•</span>
@@ -245,27 +248,28 @@
     </footer>
   </div>
 
-  <!-- Floating Bottom Pill Nav for Mobile Only -->
+  <!-- Floating Bottom Pill Nav for Mobile Only (with Sliding Glider) -->
   <nav aria-label="Mobile Floating Navigation" class="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center p-1.5 rounded-full nav-capsule shadow-2xl">
-    <button type="button" data-tab="about" class="tab-btn nav-pill-active px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
+    <div class="nav-glider" aria-hidden="true"></div>
+    <button type="button" data-tab="about" class="tab-btn nav-pill-active relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
       About
     </button>
-    <button type="button" data-tab="project" class="tab-btn nav-pill-inactive px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
+    <button type="button" data-tab="project" class="tab-btn nav-pill-inactive relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
       Project
     </button>
   </nav>
 
-  <!-- Modal -->
-  <div id="connectModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/65 backdrop-blur-sm">
-    <div class="surface-card w-full max-w-md rounded-2xl p-6 relative" style="background: var(--bg-elevated); border-color: var(--border-strong);">
-      <button type="button" id="closeModalBtn" aria-label="Close modal" class="absolute top-4 end-4 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 cursor-pointer">✕</button>
+  <!-- Smooth Animated Modal -->
+  <div id="connectModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65">
+    <div class="modal-card surface-card w-full max-w-md rounded-2xl p-6 relative" style="background: var(--bg-elevated); border-color: var(--border-strong);">
+      <button type="button" id="closeModalBtn" aria-label="Close modal" class="absolute top-4 end-4 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">✕</button>
       <h3 id="modalTitle" class="font-serif-editorial text-xl font-bold">Become a Sponsor</h3>
       <div class="mt-4 p-3 rounded-xl flex items-center justify-between gap-2 border" style="background: var(--bg-page); border-color: var(--border-subtle);">
         <span id="modalEmailText" class="text-xs sm:text-sm font-mono font-semibold select-all" style="color: var(--accent);">safehaven.nco@gmail.com</span>
         <button type="button" id="copyEmailBtn" class="cta-primary px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer shrink-0"><span id="copyBtnText" data-i18n="copyEmail">Copy Email</span></button>
       </div>
       <div class="mt-3">
-        <textarea id="modalTemplate" rows="4" class="w-full rounded-xl p-3 text-xs sm:text-sm border focus:outline-none" style="background: var(--bg-page); border-color: var(--border-subtle); color: var(--text-primary);"></textarea>
+        <textarea id="modalTemplate" rows="4" class="w-full rounded-xl p-3 text-xs sm:text-sm border focus:outline-none transition-colors" style="background: var(--bg-page); border-color: var(--border-subtle); color: var(--text-primary);"></textarea>
       </div>
       <div class="mt-4 flex items-center justify-end gap-2.5">
         <a id="openMailtoLink" href="mailto:safehaven.nco@gmail.com" class="cta-primary px-4 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5"><span id="openMailtoLabel" data-i18n="openMailApp">Open Mail App</span> ↗</a>

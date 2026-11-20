@@ -1,0 +1,388 @@
+:root {
+  /* Custom Ultra-Smooth Cubic-Bezier Easing Curves */
+  --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.38, 0.64, 1);
+  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Clean Warm-Alabaster Light Theme */
+  --bg-page: #f8fafc;
+  --bg-surface: rgba(255, 255, 255, 0.94);
+  --bg-surface-solid: #ffffff;
+  --bg-elevated: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  /* Crisp Emerald Accent + Steel Slate Secondary */
+  --accent: #059669;
+  --accent-soft: rgba(5, 150, 105, 0.10);
+  --accent-glow: rgba(5, 150, 105, 0.22);
+
+  --secondary: #2563eb;
+  --secondary-soft: rgba(37, 99, 235, 0.09);
+
+  --border-subtle: rgba(15, 23, 42, 0.09);
+  --border-strong: rgba(5, 150, 105, 0.42);
+  --shadow-card: 0 12px 32px -12px rgba(15, 23, 42, 0.07);
+  --shadow-card-hover: 0 22px 44px -14px rgba(15, 23, 42, 0.12);
+  --ambient-top: rgba(37, 99, 235, 0.05);
+  --ambient-bottom: rgba(5, 150, 105, 0.04);
+}
+
+[data-theme="dark"] {
+  /* Pure Carbon-Obsidian Dark Theme */
+  --bg-page: #0a0b0e;
+  --bg-surface: rgba(20, 22, 28, 0.90);
+  --bg-surface-solid: #14161c;
+  --bg-elevated: #1a1d24;
+  --text-primary: #f4f4f6;
+  --text-secondary: #c4c7d0;
+  --text-muted: #7c8290;
+
+  /* Sharp Mint-Emerald Accent + Cool Ice-Blue Secondary */
+  --accent: #10b981;
+  --accent-soft: rgba(16, 185, 129, 0.12);
+  --accent-glow: rgba(16, 185, 129, 0.28);
+
+  --secondary: #60a5fa;
+  --secondary-soft: rgba(96, 165, 250, 0.12);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(16, 185, 129, 0.42);
+  --shadow-card: 0 18px 42px -16px rgba(0, 0, 0, 0.75);
+  --shadow-card-hover: 0 26px 52px -14px rgba(0, 0, 0, 0.9);
+  --ambient-top: rgba(59, 130, 246, 0.055);
+  --ambient-bottom: rgba(16, 185, 129, 0.04);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.65s var(--ease-silk), color 0.55s var(--ease-silk);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Living, gently breathing ambient light */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 75% 45% at 50% -10%, var(--ambient-top), transparent 70%),
+    radial-gradient(ellipse 65% 40% at 85% 105%, var(--ambient-bottom), transparent 70%);
+  animation: ambientBreath 14s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes ambientBreath {
+  0% { opacity: 0.75; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.04); }
+}
+
+.font-serif-editorial { font-family: 'Playfair Display', Georgia, serif; }
+
+/* Silky Entrance & Scroll Reveal Animations */
+.reveal-on-load {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: silkRise 0.95s var(--ease-fluid) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes silkRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease-fluid), transform 0.9s var(--ease-fluid);
+}
+
+.reveal-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Silky Tab Cross-Fade & Glide */
+.tab-view {
+  transition: opacity 0.45s var(--ease-silk), transform 0.45s var(--ease-silk);
+}
+
+.tab-view-entering {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.tab-view-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards with buttery hover lift */
+.surface-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition:
+    transform 0.55s var(--ease-silk),
+    border-color 0.45s var(--ease-silk),
+    box-shadow 0.55s var(--ease-silk),
+    background-color 0.65s var(--ease-silk);
+  will-change: transform;
+}
+
+.surface-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Interactive Pills & Tactile Press */
+.pill-control {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  backdrop-filter: blur(14px);
+  transition:
+    transform 0.35s var(--ease-spring),
+    border-color 0.35s var(--ease-silk),
+    background-color 0.45s var(--ease-silk),
+    box-shadow 0.35s var(--ease-silk);
+}
+
+.pill-control:hover {
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+  transform: translateY(-1.5px);
+}
+
+.pill-control:active,
+.cta-primary:active,
+.tab-btn:active {
+  transform: scale(0.96);
+}
+
+/* Unified Capsule Container with Sliding Glider Pill */
+.nav-capsule {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: background-color 0.65s var(--ease-silk), border-color 0.45s var(--ease-silk);
+}
+
+.nav-glider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 9999px;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 16px -3px var(--accent-glow);
+  transition:
+    transform 0.52s var(--ease-spring),
+    width 0.52s var(--ease-spring),
+    background-color 0.5s var(--ease-silk),
+    border-color 0.4s var(--ease-silk);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tab-btn {
+  transition: color 0.4s var(--ease-silk), transform 0.3s var(--ease-spring);
+}
+
+.nav-pill-active {
+  color: var(--text-primary);
+}
+
+.nav-pill-inactive {
+  color: var(--text-muted);
+}
+
+.nav-pill-inactive:hover {
+  color: var(--text-primary);
+}
+
+.chevron-smooth {
+  transition: transform 0.42s var(--ease-spring);
+}
+
+.badge-accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  transition: background-color 0.5s var(--ease-silk), color 0.5s var(--ease-silk);
+}
+
+.badge-secondary {
+  background: var(--secondary-soft);
+  color: var(--secondary);
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  transition: background-color 0.5s var(--ease-silk), color 0.5s var(--ease-silk);
+}
+
+.badge-neutral {
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.cta-primary {
+  background: var(--accent);
+  color: #ffffff;
+  border: 1px solid var(--accent);
+  box-shadow: 0 4px 16px -4px var(--accent-glow);
+  transition:
+    transform 0.38s var(--ease-spring),
+    filter 0.35s var(--ease-silk),
+    box-shadow 0.45s var(--ease-silk),
+    background-color 0.5s var(--ease-silk);
+}
+
+.cta-primary:hover {
+  filter: brightness(1.07);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -4px var(--accent-glow);
+}
+
+/* Silky Dropdown Opening & Closing */
+.dropdown-panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.5);
+  transform-origin: top right;
+  scroll-behavior: smooth;
+  transition:
+    opacity 0.36s var(--ease-fluid),
+    transform 0.42s var(--ease-spring),
+    visibility 0.36s var(--ease-fluid),
+    background-color 0.5s var(--ease-silk);
+}
+
+[dir="rtl"] .dropdown-panel {
+  transform-origin: top left;
+}
+
+.dropdown-hidden {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.dropdown-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lang-option, .theme-option {
+  transition: background-color 0.28s var(--ease-silk), color 0.28s var(--ease-silk), transform 0.28s var(--ease-spring);
+}
+
+.lang-option:hover, .theme-option:hover {
+  background: var(--accent-soft);
+}
+
+.lang-option:active, .theme-option:active {
+  transform: scale(0.97);
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-silk);
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Silky Accordion */
+.details-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 0.52s var(--ease-fluid),
+    opacity 0.45s var(--ease-silk),
+    margin-top 0.45s var(--ease-fluid);
+  opacity: 0;
+}
+
+.details-body.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.details-inner { overflow: hidden; }
+
+/* Silky Modal Backdrop & Card */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition:
+    opacity 0.4s var(--ease-silk),
+    visibility 0.4s var(--ease-silk),
+    backdrop-filter 0.45s var(--ease-silk);
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-card {
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+  transition:
+    opacity 0.42s var(--ease-fluid),
+    transform 0.48s var(--ease-spring);
+}
+
+.modal-backdrop.open .modal-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Custom sleek scrollbar for vertical language list */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 9999px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
