@@ -13,7 +13,7 @@
 <body class="antialiased">
   <!-- UNIFIED FULL-WIDTH 3D TOP HEADER BAR -->
   <header class="top-header-bar sticky top-0 z-40 reveal-on-load" style="--delay: 0ms;">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-3">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 h-16 sm:h-20 md:h-[84px] flex items-center justify-between gap-3">
       <!-- Left: Localized Date -->
       <div id="liveDate" class="text-xs sm:text-sm font-medium leading-tight whitespace-pre-line shrink-0" style="color: var(--accent);">
         Friday,
@@ -31,21 +31,20 @@
         </button>
       </nav>
 
-      <!-- Right: Unified Settings Button & Popover -->
+      <!-- Right: Gear-Only Settings Button & Popover -->
       <div class="relative shrink-0" id="settingsDropdownWrap">
         <button
           type="button"
           id="settingsToggleBtn"
           aria-haspopup="true"
           aria-expanded="false"
-          class="pill-control h-9 sm:h-10 px-3 sm:px-3.5 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2 cursor-pointer"
+          aria-label="Settings"
+          class="pill-control w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center cursor-pointer"
         >
-          <svg class="w-4 h-4 shrink-0" style="color: var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="w-5 h-5 shrink-0" style="color: var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="3" />
             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
           </svg>
-          <span data-i18n="settingsLabel">Settings</span>
-          <span id="currentLangBadge" class="text-[11px] font-semibold px-1.5 py-0.5 rounded-md badge-accent">EN</span>
         </button>
 
         <!-- Unified Settings Panel: Theme + Language + Links with Circular Brand Icons -->
@@ -115,7 +114,7 @@
                 <span class="social-circle-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 </span>
-                <span data-i18n="footerEmail">Help</span>
+                <span data-i18n="footerHelp">Help</span>
               </a>
             </div>
           </div>
@@ -271,24 +270,22 @@
       </div>
     </main>
 
-    <!-- CLEAN MINIMAL FOOTER -->
+    <!-- FOOTER: Email (ntolipov.work@gmail.com) for collaborations & talks -->
     <footer class="mt-20 pt-6 border-t flex items-center justify-between gap-4 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
       <div>© 2026 Nodirjon Tolipov · Rowan Brook</div>
-      <a href="mailto:ntolipovsite.help@gmail.com" data-i18n="footerEmail" class="footer-link font-medium">Help</a>
+      <a href="mailto:ntolipov.work@gmail.com" data-i18n="footerEmail" class="footer-link font-medium">Email</a>
     </footer>
   </div>
 
-  <!-- Mobile Bottom Underline Nav Bar (for small screens) -->
-  <nav aria-label="Mobile Navigation" class="sm:hidden fixed bottom-0 inset-x-0 z-40 mobile-bottom-bar">
-    <div class="max-w-md mx-auto px-8 h-14 flex items-center justify-around relative">
-      <div class="nav-underline-glider" aria-hidden="true"></div>
-      <button type="button" data-tab="about" class="tab-btn nav-tab-link nav-pill-active relative h-full inline-flex items-center px-3 text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
-        About
-      </button>
-      <button type="button" data-tab="project" class="tab-btn nav-tab-link nav-pill-inactive relative h-full inline-flex items-center px-3 text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
-        Project
-      </button>
-    </div>
+  <!-- Mobile Oval Capsule Navigation (for small screens) -->
+  <nav aria-label="Mobile Navigation" class="sm:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center p-1.5 rounded-full nav-oval-capsule shadow-2xl">
+    <div class="nav-oval-glider" aria-hidden="true"></div>
+    <button type="button" data-tab="about" class="tab-btn nav-oval-btn nav-pill-active relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
+      About
+    </button>
+    <button type="button" data-tab="project" class="tab-btn nav-oval-btn nav-pill-inactive relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
+      Project
+    </button>
   </nav>
 
   <!-- Smooth Animated Modal -->

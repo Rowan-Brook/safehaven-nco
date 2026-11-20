@@ -4,14 +4,14 @@
   --ease-spring: cubic-bezier(0.34, 1.38, 0.64, 1);
   --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Clean Warm-Alabaster Light Theme */
-  --bg-page: #f8fafc;
-  --bg-surface: rgba(255, 255, 255, 0.94);
-  --bg-surface-solid: #ffffff;
-  --bg-elevated: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
+  /* Soft Warm Milk & Beige Light Theme */
+  --bg-page: #f4efe6;
+  --bg-surface: rgba(250, 246, 238, 0.92);
+  --bg-surface-solid: #faf6ee;
+  --bg-elevated: #fdfaf4;
+  --text-primary: #1f2421;
+  --text-secondary: #434a45;
+  --text-muted: #6f7671;
 
   /* Crisp Emerald Accent + Steel Slate Secondary */
   --accent: #059669;
@@ -200,9 +200,9 @@ body::before {
 
 [data-theme="light"] .top-header-bar {
   box-shadow:
-    0 10px 24px -10px rgba(15, 23, 42, 0.14),
+    0 12px 26px -10px rgba(45, 39, 28, 0.14),
     0 3px 0 0 var(--accent-soft),
-    inset 0 -1px 0 0 rgba(255, 255, 255, 0.85);
+    inset 0 -1px 0 0 rgba(253, 250, 244, 0.8);
 }
 
 .mobile-bottom-bar {
@@ -230,6 +230,39 @@ body::before {
     background-color 0.4s var(--ease-silk);
   pointer-events: none;
   z-index: 2;
+}
+
+
+/* Mobile Oval Pill Capsule Navigation */
+.nav-oval-capsule {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 14px 32px -10px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="light"] .nav-oval-capsule {
+  box-shadow: 0 14px 30px -10px rgba(45, 39, 28, 0.18);
+}
+
+.nav-oval-glider {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  border-radius: 9999px;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 14px -3px var(--accent-glow);
+  transition:
+    transform 0.48s var(--ease-spring),
+    width 0.48s var(--ease-spring),
+    background-color 0.4s var(--ease-silk),
+    border-color 0.4s var(--ease-silk);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .nav-tab-link {
