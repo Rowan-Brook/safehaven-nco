@@ -1,14 +1,14 @@
 const LEGAL_DOCS_BY_LANG = {
   en: "https://drive.google.com/file/d/14VP51Jj712ht4Cb5mi_7Nr6xDlNuCAG8/view?usp=drivesdk",
   ru: "https://drive.google.com/file/d/164WkrYuOAirbKutfYoyNS0X7Sgb86qTt/view?usp=drivesdk",
-  uz: "https://drive.google.com/file/d/1Gh-QeuknlHx7voUX-ReQM9lLRi_Qovi7/view?usp=drivesdk",
-  es: "https://drive.google.com/file/d/1Rhh9Osbjyl3ITqYDV2ltUdZQTwbv1YNN/view?usp=drivesdk",
-  fr: "https://drive.google.com/file/d/1O1UQGmu8EOfx5kHRyGC0eV1J_qxm6fgw/view?usp=drivesdk",
-  de: "https://drive.google.com/file/d/1pKDaVaCsS5Sj5xjLQ7Q0wqN7QTZ2QbGS/view?usp=drivesdk",
-  it: "https://drive.google.com/file/d/1LVX8QhcuZFFGx2MKNM9G2QVCrg8WvOtt/view?usp=drivesdk",
-  zh: "https://drive.google.com/file/d/1ISUv4Cykl8Tidt7cp0g3XpnnLdGCmNPj/view?usp=drivesdk",
-  ar: "https://drive.google.com/file/d/1V-cbZP6hZufTAdurF7TyNTsh1BZSX-ST/view?usp=drivesdk",
-  tr: "https://drive.google.com/file/d/14WmXhKHgRxip9EgwGkPcR5ijPzHSuWZL/view?usp=drivesdk",
+  uz: "https://drive.google.com/file/d/1qvtnf3kLdVm4rSEBWCdMVjwwEY3Q18pe/view?usp=drivesdk",
+  es: "https://drive.google.com/file/d/1IM2-0qE8KsnHE20bzeHruO6w892Vv9Gr/view?usp=drivesdk",
+  fr: "https://drive.google.com/file/d/1I13hn0UQvDCtRtjNdalnCBzI2YHUs6pv/view?usp=drivesdk",
+  de: "https://drive.google.com/file/d/1VNhVjFI9_S1AEDpfx6Ixz2GaRmuIiHUv/view?usp=drivesdk",
+  it: "https://drive.google.com/file/d/1q5roGNh6p8e7G80nIDAvGTwz3d2VXZtn/view?usp=drivesdk",
+  zh: "https://drive.google.com/file/d/1K9bj2JOEW6XCMTHUxoIMlvFu5CshU4IX/view?usp=drivesdk",
+  ar: "https://drive.google.com/file/d/1XOUtdz8jRmVZ3OXIl7opyDy30QuTJPMp/view?usp=drivesdk",
+  tr: "https://drive.google.com/file/d/1qdG3P9wANgeC269reSWnGoRz-RaPxcLo/view?usp=drivesdk",
 };
 
 function getLegalDocUrl(langCode = currentLang) {
