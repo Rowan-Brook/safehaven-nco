@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nodirjon Tolipov</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Nodirjon Tolipov</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
-  <!-- UNIFIED FULL-WIDTH 3D TOP HEADER BAR -->
-  <header class="top-header-bar sticky top-0 z-40 reveal-on-load" style="--delay: 0ms;">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 h-16 sm:h-20 md:h-[84px] flex items-center justify-between gap-3">
-      <!-- Left: Localized Date -->
-      <div id="liveDate" class="text-xs sm:text-sm font-medium leading-tight whitespace-pre-line shrink-0" style="color: var(--accent);">
-        Friday,
-        November 20
-      </div>
+ <!-- UNIFIED FULL-WIDTH 3D TOP HEADER BAR -->
+ <header class="top-header-bar sticky top-0 z-40 reveal-on-load" style="--delay: 0ms;">
+ <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 h-16 sm:h-20 md:h-[84px] flex items-center justify-between gap-3">
+ <!-- Left: Localized Date -->
+ <div id="liveDate" class="text-xs sm:text-sm font-medium leading-tight whitespace-pre-line shrink-0" style="color: var(--accent);">
+ Friday,
+ November 20
+ </div>
 
-      <!-- Center: Clean Underline Navigation (Desktop & Tablet) -->
-      <nav aria-label="Primary Navigation" class="hidden sm:flex items-center gap-7 md:gap-9 relative h-full">
-        <div class="nav-underline-glider" aria-hidden="true"></div>
-        <button type="button" data-tab="about" class="tab-btn nav-tab-link nav-pill-active relative h-full inline-flex items-center text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
-          About
-        </button>
-        <button type="button" data-tab="project" class="tab-btn nav-tab-link nav-pill-inactive relative h-full inline-flex items-center text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
-          Project
-        </button>
-      </nav>
+ <!-- Center: Clean Underline Navigation (Desktop & Tablet) -->
+ <nav aria-label="Primary Navigation" class="hidden sm:flex items-center gap-7 md:gap-9 relative h-full">
+ <div class="nav-underline-glider" aria-hidden="true"></div>
+ <button type="button" data-tab="about" class="tab-btn nav-tab-link nav-pill-active relative h-full inline-flex items-center text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
+ About
+ </button>
+ <button type="button" data-tab="project" class="tab-btn nav-tab-link nav-pill-inactive relative h-full inline-flex items-center text-sm font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
+ Project
+ </button>
+ </nav>
 
-      <!-- Right: Gear-Only Settings Button & Popover -->
-      <div class="relative shrink-0" id="settingsDropdownWrap">
-        <button
+ <!-- Right: Gear-Only Settings Button & Popover -->
+ <div class="relative shrink-0" id="settingsDropdownWrap">
+ <button
           type="button"
           id="settingsToggleBtn"
           aria-haspopup="true"
@@ -41,311 +41,311 @@
           aria-label="Settings"
           class="pill-control w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center cursor-pointer"
         >
-          <svg class="w-5 h-5 shrink-0" style="color: var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-          </svg>
-        </button>
+ <svg class="w-5 h-5 shrink-0" style="color: var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+ <circle cx="12" cy="12" r="3" />
+ <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+ </svg>
+ </button>
 
-        <!-- Unified Settings Panel: Theme + Language + Links with Circular Brand Icons -->
-        <div id="settingsMenu" role="dialog" aria-label="Settings" class="dropdown-panel dropdown-hidden absolute end-0 mt-2.5 w-72 sm:w-80 rounded-2xl p-4 z-50 space-y-4">
-          <!-- Theme Section -->
-          <div>
-            <div data-i18n="settingsThemeTitle" class="text-[11px] font-semibold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Theme</div>
-            <div class="grid grid-cols-2 gap-2">
-              <button type="button" data-set-theme="light" class="theme-option w-full px-3 py-2 rounded-xl text-xs font-medium flex items-center justify-center gap-2 border cursor-pointer" style="border-color: var(--border-subtle);">
-                <span>☀️</span><span data-i18n="themeLight">Light</span>
-              </button>
-              <button type="button" data-set-theme="dark" class="theme-option w-full px-3 py-2 rounded-xl text-xs font-medium flex items-center justify-center gap-2 border cursor-pointer" style="border-color: var(--border-subtle);">
-                <span>🌙</span><span data-i18n="themeDark">Dark</span>
-              </button>
-            </div>
-          </div>
+ <!-- Unified Settings Panel: Theme + Language + Links with Circular Brand Icons -->
+ <div id="settingsMenu" role="dialog" aria-label="Settings" class="dropdown-panel dropdown-hidden absolute end-0 mt-2.5 w-72 sm:w-80 rounded-2xl p-4 z-50 space-y-4">
+ <!-- Theme Section -->
+ <div>
+ <div data-i18n="settingsThemeTitle" class="text-[11px] font-semibold uppercase tracking-wider mb-2" style="color: var(--text-muted);">Theme</div>
+ <div class="grid grid-cols-2 gap-2">
+ <button type="button" data-set-theme="light" class="theme-option w-full px-3 py-2 rounded-xl text-xs font-medium flex items-center justify-center gap-2 border cursor-pointer" style="border-color: var(--border-subtle);">
+ <span>☀️</span><span data-i18n="themeLight">Light</span>
+ </button>
+ <button type="button" data-set-theme="dark" class="theme-option w-full px-3 py-2 rounded-xl text-xs font-medium flex items-center justify-center gap-2 border cursor-pointer" style="border-color: var(--border-subtle);">
+ <span>🌙</span><span data-i18n="themeDark">Dark</span>
+ </button>
+ </div>
+ </div>
 
-          <!-- Language Section -->
-          <div class="pt-3 border-t" style="border-color: var(--border-subtle);">
-            <div class="flex items-center justify-between mb-2">
-              <span data-i18n="settingsLangTitle" class="text-[11px] font-semibold uppercase tracking-wider" style="color: var(--text-muted);">Language</span>
-              <span id="currentLangCode" class="text-[11px] font-semibold" style="color: var(--accent);">EN</span>
-            </div>
-            <div id="langMenu" role="listbox" class="max-h-36 overflow-y-auto overscroll-contain pe-1 grid grid-cols-2 gap-1"></div>
-          </div>
+ <!-- Language Section -->
+ <div class="pt-3 border-t" style="border-color: var(--border-subtle);">
+ <div class="flex items-center justify-between mb-2">
+ <span data-i18n="settingsLangTitle" class="text-[11px] font-semibold uppercase tracking-wider" style="color: var(--text-muted);">Language</span>
+ <span id="currentLangCode" class="text-[11px] font-semibold" style="color: var(--accent);">EN</span>
+ </div>
+ <div id="langMenu" role="listbox" class="max-h-36 overflow-y-auto overscroll-contain pe-1 grid grid-cols-2 gap-1"></div>
+ </div>
 
-          <!-- Quick Links with Circular Monochrome-Accent Icons -->
-          <div class="pt-3 border-t" style="border-color: var(--border-subtle);">
-            <div data-i18n="settingsLinksTitle" class="text-[11px] font-semibold uppercase tracking-wider mb-2.5" style="color: var(--text-muted);">Connect & Help</div>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="https://github.com/Rowan-Brook" target="_blank" rel="noopener noreferrer" class="settings-social-link">
-                <span class="social-circle-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </span>
-                <span>GitHub</span>
-              </a>
+ <!-- Quick Links with Circular Monochrome-Accent Icons -->
+ <div class="pt-3 border-t" style="border-color: var(--border-subtle);">
+ <div data-i18n="settingsLinksTitle" class="text-[11px] font-semibold uppercase tracking-wider mb-2.5" style="color: var(--text-muted);">Connect & Help</div>
+ <div class="grid grid-cols-2 gap-2">
+ <a href="https://github.com/Rowan-Brook" target="_blank" rel="noopener noreferrer" class="settings-social-link">
+ <span class="social-circle-icon" aria-hidden="true">
+ <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+ </span>
+ <span>GitHub</span>
+ </a>
 
-              <a href="https://www.linkedin.com/in/nodirjontolipov-finance-accounting238" target="_blank" rel="noopener noreferrer" class="settings-social-link">
-                <span class="social-circle-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
-                </span>
-                <span>LinkedIn</span>
-              </a>
+ <a href="https://www.linkedin.com/in/nodirjontolipov-finance-accounting238" target="_blank" rel="noopener noreferrer" class="settings-social-link">
+ <span class="social-circle-icon" aria-hidden="true">
+ <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+ </span>
+ <span>LinkedIn</span>
+ </a>
 
-              <a href="https://www.instagram.com/ridont_1?rpxt=MXNyMWthampiNTV1bg==" target="_blank" rel="noopener noreferrer" class="settings-social-link">
-                <span class="social-circle-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/></svg>
-                </span>
-                <span>Instagram</span>
-              </a>
+ <a href="https://www.instagram.com/ridont_1?rpxt=MXNyMWthampiNTV1bg==" target="_blank" rel="noopener noreferrer" class="settings-social-link">
+ <span class="social-circle-icon" aria-hidden="true">
+ <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/></svg>
+ </span>
+ <span>Instagram</span>
+ </a>
 
-              <a href="https://wa.me/qr/2EMGCNN7VPV6G1" target="_blank" rel="noopener noreferrer" class="settings-social-link">
-                <span class="social-circle-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/></svg>
-                </span>
-                <span>WhatsApp</span>
-              </a>
+ <a href="https://wa.me/qr/2EMGCNN7VPV6G1" target="_blank" rel="noopener noreferrer" class="settings-social-link">
+ <span class="social-circle-icon" aria-hidden="true">
+ <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/></svg>
+ </span>
+ <span>WhatsApp</span>
+ </a>
 
-              <a href="https://www.facebook.com/share/1Ez2abHntJ/" target="_blank" rel="noopener noreferrer" class="settings-social-link">
-                <span class="social-circle-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
-                </span>
-                <span>Facebook</span>
-              </a>
+ <a href="https://www.facebook.com/share/1Ez2abHntJ/" target="_blank" rel="noopener noreferrer" class="settings-social-link">
+ <span class="social-circle-icon" aria-hidden="true">
+ <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+ </span>
+ <span>Facebook</span>
+ </a>
 
-              <a href="mailto:ntolipov.site.help@gmail.com" class="settings-social-link">
-                <span class="social-circle-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </span>
-                <span data-i18n="footerHelp">Help</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+ <a href="mailto:ntolipov.site.help@gmail.com" class="settings-social-link">
+ <span class="social-circle-icon" aria-hidden="true">
+ <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+ </span>
+ <span data-i18n="footerHelp">Help</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </header>
 
-  <!-- Main Container -->
-  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-28 sm:pb-16">
-    <!-- TAB 1: ABOUT -->
-    <main id="view-about" class="tab-view tab-view-active">
-      <!-- Editorial Hero -->
-      <section class="min-h-[54vh] sm:min-h-[58vh] flex flex-col justify-center pt-4 pb-20 sm:pt-8 sm:pb-28">
-        <div class="max-w-2xl">
-          <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight reveal-on-load" style="--delay: 80ms;">
-            <span data-i18n="heroTitle">Hi, I'm Nodirjon!</span>
-            <span class="block mt-1.5 text-lg sm:text-2xl font-normal italic tracking-normal" style="color: var(--text-muted);">Rowan Brook</span>
-          </h1>
-          <p data-i18n="heroSubtitle" class="mt-4 text-base sm:text-xl font-semibold leading-snug reveal-on-load" style="color: var(--accent); --delay: 160ms;">
-            Student at Westminster International University in Tashkent (WIUT)
-          </p>
+ <!-- Main Container -->
+ <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-28 sm:pb-16">
+ <!-- TAB 1: ABOUT -->
+ <main id="view-about" class="tab-view tab-view-active">
+ <!-- Editorial Hero -->
+ <section class="min-h-[54vh] sm:min-h-[58vh] flex flex-col justify-center pt-4 pb-20 sm:pt-8 sm:pb-28">
+ <div class="max-w-2xl">
+ <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight reveal-on-load" style="--delay: 80ms;">
+ <span data-i18n="heroTitle">Hi, I'm Nodirjon!</span>
+ <span class="block mt-1.5 text-lg sm:text-2xl font-normal italic tracking-normal" style="color: var(--text-muted);">Rowan Brook</span>
+ </h1>
+ <p data-i18n="heroSubtitle" class="mt-4 text-base sm:text-xl font-semibold leading-snug reveal-on-load" style="color: var(--accent); --delay: 160ms;">
+ Student at Westminster International University in Tashkent (WIUT)
+ </p>
 
-          <div class="mt-7 space-y-4 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
-            <p data-i18n="heroLine1" class="reveal-on-load" style="--delay: 240ms;">Interested in logic, patterns, and systemic relationships.</p>
-            <p data-i18n="heroLine2" class="reveal-on-load" style="--delay: 320ms;">My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.</p>
-            <p data-i18n="heroLine3" class="reveal-on-load" style="--delay: 400ms;">Dedicated to structured problem-solving and continuous professional growth.</p>
-          </div>
-        </div>
-      </section>
+ <div class="mt-7 space-y-4 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
+ <p data-i18n="heroLine1" class="reveal-on-load" style="--delay: 240ms;">Interested in logic, patterns, and systemic relationships.</p>
+ <p data-i18n="heroLine2" class="reveal-on-load" style="--delay: 320ms;">My curiosity spans analytical systems, quantitative methods, business administration, and operational compliance.</p>
+ <p data-i18n="heroLine3" class="reveal-on-load" style="--delay: 400ms;">Dedicated to structured problem-solving and continuous professional growth.</p>
+ </div>
+ </div>
+ </section>
 
-      <!-- Main Information Sections -->
-      <div class="space-y-12">
-        <!-- Professional Experience -->
-        <section class="space-y-4 reveal-scroll">
-          <h2 data-i18n="expSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold tracking-tight">Professional Experience</h2>
-          <article class="surface-card rounded-2xl p-5 sm:p-7">
-            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-              <div>
-                <h3 data-i18n="expRoleTitle" class="font-serif-editorial text-lg sm:text-xl font-bold">Road Transport Health and Safety Manager</h3>
-                <p data-i18n="expRoleSub" class="mt-1 text-sm font-medium" style="color: var(--text-secondary);">Safety & Fleet Department (US Logistics)</p>
-              </div>
-              <span data-i18n="expDateRange" class="self-start inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold shrink-0 badge-accent">Apr 2026 – Nov 2026</span>
-            </div>
+ <!-- Main Information Sections -->
+ <div class="space-y-12">
+ <!-- Professional Experience -->
+ <section class="space-y-4 reveal-scroll">
+ <h2 data-i18n="expSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold tracking-tight">Professional Experience</h2>
+ <article class="surface-card rounded-2xl p-5 sm:p-7">
+ <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+ <div>
+ <h3 data-i18n="expRoleTitle" class="font-serif-editorial text-lg sm:text-xl font-bold">Road Transport Health and Safety Manager</h3>
+ <p data-i18n="expRoleSub" class="mt-1 text-sm font-medium" style="color: var(--text-secondary);">Safety & Fleet Department (US Logistics)</p>
+ </div>
+ <span data-i18n="expDateRange" class="self-start inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold shrink-0 badge-accent">Apr 2026 – Nov 2026</span>
+ </div>
 
-            <div class="mt-4">
-              <button type="button" id="expDetailsToggle" aria-expanded="false" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold cursor-pointer hover:opacity-80 transition-opacity" style="color: var(--accent);">
-                <span id="expDetailsLabel" data-i18n="showDetails">Show details</span>
-                <svg id="expDetailsChevron" class="w-4 h-4 chevron-smooth" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                </svg>
-              </button>
-              <div id="expDetailsBody" class="details-body">
-                <div class="details-inner pt-3 border-t" style="border-color: var(--border-subtle);">
-                  <ul class="space-y-2 text-xs sm:text-sm leading-relaxed list-disc ps-5" style="color: var(--text-secondary);">
-                    <li data-i18n="expBullet1">Oversaw DOT & FMCSA regulatory compliance, driver safety audits, and electronic logging device (ELD) analytics across interstate fleet operations.</li>
-                    <li data-i18n="expBullet2">Designed structured risk-mitigation workflows and incident prevention protocols, reducing operational violations and improving fleet reliability.</li>
-                    <li data-i18n="expBullet3">Coordinated cross-functional safety reporting and quantitative performance tracking for dispatch and leadership teams.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
-        </section>
+ <div class="mt-4">
+ <button type="button" id="expDetailsToggle" aria-expanded="false" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold cursor-pointer hover:opacity-80 transition-opacity" style="color: var(--accent);">
+ <span id="expDetailsLabel" data-i18n="showDetails">Show details</span>
+ <svg id="expDetailsChevron" class="w-4 h-4 chevron-smooth" viewBox="0 0 20 20" fill="currentColor">
+ <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+ </svg>
+ </button>
+ <div id="expDetailsBody" class="details-body">
+ <div class="details-inner pt-3 border-t" style="border-color: var(--border-subtle);">
+ <ul class="space-y-2 text-xs sm:text-sm leading-relaxed list-disc ps-5" style="color: var(--text-secondary);">
+ <li data-i18n="expBullet1">Oversaw DOT & FMCSA regulatory compliance, driver safety audits, and electronic logging device (ELD) analytics across interstate fleet operations.</li>
+ <li data-i18n="expBullet2">Designed structured risk-mitigation workflows and incident prevention protocols, reducing operational violations and improving fleet reliability.</li>
+ <li data-i18n="expBullet3">Coordinated cross-functional safety reporting and quantitative performance tracking for dispatch and leadership teams.</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </article>
+ </section>
 
-        <!-- Education & Core Competencies -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-5 reveal-scroll">
-          <article class="surface-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span data-i18n="eduBadge" class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md badge-secondary">Education</span>
-                <span class="text-xs font-medium" style="color: var(--text-muted);">Tashkent</span>
-              </div>
-              <h3 data-i18n="eduUniTitle" class="font-serif-editorial text-lg font-bold leading-snug">Westminster International University in Tashkent (WIUT)</h3>
-              <p data-i18n="eduDegree" class="mt-1.5 text-sm" style="color: var(--text-secondary);">Business Administration & Analytical Systems</p>
-            </div>
-            <p data-i18n="eduNote" class="mt-4 pt-3 border-t text-xs leading-relaxed" style="border-color: var(--border-subtle); color: var(--text-muted);">Focus on quantitative modeling, organizational logic, and socio-economic systems.</p>
-          </article>
+ <!-- Education & Core Competencies -->
+ <section class="grid grid-cols-1 md:grid-cols-2 gap-5 reveal-scroll">
+ <article class="surface-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
+ <div>
+ <div class="flex items-center justify-between gap-2 mb-3">
+ <span data-i18n="eduBadge" class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md badge-secondary">Education</span>
+ <span class="text-xs font-medium" style="color: var(--text-muted);">Tashkent</span>
+ </div>
+ <h3 data-i18n="eduUniTitle" class="font-serif-editorial text-lg font-bold leading-snug">Westminster International University in Tashkent (WIUT)</h3>
+ <p data-i18n="eduDegree" class="mt-1.5 text-sm" style="color: var(--text-secondary);">Business Administration & Analytical Systems</p>
+ </div>
+ <p data-i18n="eduNote" class="mt-4 pt-3 border-t text-xs leading-relaxed" style="border-color: var(--border-subtle); color: var(--text-muted);">Focus on quantitative modeling, organizational logic, and socio-economic systems.</p>
+ </article>
 
-          <article class="surface-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span data-i18n="focusBadge" class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md badge-accent">Core Focus</span>
-                <span class="text-xs font-medium" style="color: var(--text-muted);">Systems</span>
-              </div>
-              <h3 data-i18n="focusTitle" class="font-serif-editorial text-lg font-bold leading-snug">Logic, Compliance & Social Architecture</h3>
-              <p data-i18n="focusDesc" class="mt-1.5 text-sm" style="color: var(--text-secondary);">Bridging quantitative rigor with human-centered institutional design.</p>
-            </div>
-            <div class="mt-4 pt-3 border-t flex flex-wrap gap-1.5" style="border-color: var(--border-subtle);">
-              <span data-i18n="tag1" class="text-xs px-2.5 py-0.5 rounded-full font-medium badge-accent">Quantitative Methods</span>
-              <span data-i18n="tag2" class="text-xs px-2.5 py-0.5 rounded-full font-medium badge-secondary">Operational Compliance</span>
-              <span data-i18n="tag3" class="text-xs px-2.5 py-0.5 rounded-full font-medium badge-neutral">Social Impact</span>
-            </div>
-          </article>
-        </section>
-      </div>
-    </main>
+ <article class="surface-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
+ <div>
+ <div class="flex items-center justify-between gap-2 mb-3">
+ <span data-i18n="focusBadge" class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md badge-accent">Core Focus</span>
+ <span class="text-xs font-medium" style="color: var(--text-muted);">Systems</span>
+ </div>
+ <h3 data-i18n="focusTitle" class="font-serif-editorial text-lg font-bold leading-snug">Logic, Compliance & Social Architecture</h3>
+ <p data-i18n="focusDesc" class="mt-1.5 text-sm" style="color: var(--text-secondary);">Bridging quantitative rigor with human-centered institutional design.</p>
+ </div>
+ <div class="mt-4 pt-3 border-t flex flex-wrap gap-1.5" style="border-color: var(--border-subtle);">
+ <span data-i18n="tag1" class="text-xs px-2.5 py-0.5 rounded-full font-medium badge-accent">Quantitative Methods</span>
+ <span data-i18n="tag2" class="text-xs px-2.5 py-0.5 rounded-full font-medium badge-secondary">Operational Compliance</span>
+ <span data-i18n="tag3" class="text-xs px-2.5 py-0.5 rounded-full font-medium badge-neutral">Social Impact</span>
+ </div>
+ </article>
+ </section>
+ </div>
+ </main>
 
-    <!-- TAB 2: PROJECT (Safe Haven) -->
-    <main id="view-project" class="tab-view hidden">
-      <!-- Project Hero -->
-      <section class="min-h-[48vh] sm:min-h-[52vh] flex flex-col justify-center pt-4 pb-16 sm:pt-8 sm:pb-24">
-        <div class="max-w-3xl">
-          <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">Safe Haven</h1>
-          <p data-i18n="projSubtitle" class="mt-4 text-base sm:text-xl font-semibold leading-snug" style="color: var(--accent);">
-            Breaking systemic poverty through free applied IT education, psychological resilience, and an ethical self-sustaining model.
-          </p>
-          <p data-i18n="projHook" class="mt-6 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
-            Talent is universal, yet opportunity is not. Safe Haven removes financial, housing, and psychological barriers for motivated individuals facing severe socio-economic hardship—transforming them from vulnerable survivors into independent digital professionals who pay opportunity forward.
-          </p>
-        </div>
-      </section>
+ <!-- TAB 2: PROJECT (Safe Haven) -->
+ <main id="view-project" class="tab-view hidden">
+ <!-- Project Hero -->
+ <section class="min-h-[48vh] sm:min-h-[52vh] flex flex-col justify-center pt-4 pb-16 sm:pt-8 sm:pb-24">
+ <div class="max-w-3xl">
+ <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">Safe Haven</h1>
+ <p data-i18n="projSubtitle" class="mt-4 text-base sm:text-xl font-semibold leading-snug" style="color: var(--accent);">
+ Breaking systemic poverty through free applied IT education, psychological resilience, and an ethical self-sustaining model.
+ </p>
+ <p data-i18n="projHook" class="mt-6 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
+ Talent is universal, yet opportunity is not. Safe Haven removes financial, housing, and psychological barriers for motivated individuals facing severe socio-economic hardship—transforming them from vulnerable survivors into independent digital professionals who pay opportunity forward.
+ </p>
+ </div>
+ </section>
 
-      <div class="space-y-10">
-        <!-- 4 Pillars -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 reveal-scroll">
-          <article class="surface-card rounded-2xl p-5 sm:p-6">
-            <h3 data-i18n="pillar1Title" class="font-serif-editorial text-lg font-bold">100% Barrier-Free Entry</h3>
-            <p data-i18n="pillar1Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Zero upfront tuition. Covers living stipends, safe housing, meals, and certified psychological support.</p>
-          </article>
-          <article class="surface-card rounded-2xl p-5 sm:p-6">
-            <h3 data-i18n="pillar2Title" class="font-serif-editorial text-lg font-bold">The "6 + 2" Acceleration Track</h3>
-            <p data-i18n="pillar2Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">6 months of intensive applied IT, followed by 2 months building real commercial software products with mentorship.</p>
-          </article>
-          <article class="surface-card rounded-2xl p-5 sm:p-6">
-            <h3 data-i18n="pillar3Title" class="font-serif-editorial text-lg font-bold">Ethical Recyclable ISA</h3>
-            <p data-i18n="pillar3Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Graduates contribute 10% of salary ONLY after securing employment above $450/month with hardship freeze.</p>
-          </article>
-          <article class="surface-card rounded-2xl p-5 sm:p-6">
-            <h3 data-i18n="pillar4Title" class="font-serif-editorial text-lg font-bold">Intimate Mini-Cohorts</h3>
-            <p data-i18n="pillar4Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Compact 10–12 student hubs targeting 80%+ placement with verified Behavioral & Hard-Skills Profiles.</p>
-          </article>
-        </section>
+ <div class="space-y-10">
+ <!-- 4 Pillars -->
+ <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 reveal-scroll">
+ <article class="surface-card rounded-2xl p-5 sm:p-6">
+ <h3 data-i18n="pillar1Title" class="font-serif-editorial text-lg font-bold">100% Barrier-Free Entry</h3>
+ <p data-i18n="pillar1Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Zero upfront tuition. Covers living stipends, safe housing, meals, and certified psychological support.</p>
+ </article>
+ <article class="surface-card rounded-2xl p-5 sm:p-6">
+ <h3 data-i18n="pillar2Title" class="font-serif-editorial text-lg font-bold">The "6 + 2" Acceleration Track</h3>
+ <p data-i18n="pillar2Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">6 months of intensive applied IT, followed by 2 months building real commercial software products with mentorship.</p>
+ </article>
+ <article class="surface-card rounded-2xl p-5 sm:p-6">
+ <h3 data-i18n="pillar3Title" class="font-serif-editorial text-lg font-bold">Ethical Recyclable ISA</h3>
+ <p data-i18n="pillar3Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Graduates contribute 10% of salary ONLY after securing employment above $450/month with hardship freeze.</p>
+ </article>
+ <article class="surface-card rounded-2xl p-5 sm:p-6">
+ <h3 data-i18n="pillar4Title" class="font-serif-editorial text-lg font-bold">Intimate Mini-Cohorts</h3>
+ <p data-i18n="pillar4Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Compact 10–12 student hubs targeting 80%+ placement with verified Behavioral & Hard-Skills Profiles.</p>
+ </article>
+ </section>
 
-        <!-- CTA Actions -->
-        <section class="surface-card rounded-2xl p-6 sm:p-8 border reveal-scroll" style="border-color: var(--border-strong);">
-          <h2 data-i18n="ctaSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold">Build Safe Haven With Us</h2>
-          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-            <button type="button" data-action="sponsor" class="action-cta-btn cta-primary rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
-              <div data-i18n="btnSponsor" class="font-bold text-sm sm:text-base">Become a Sponsor</div>
-              <div data-i18n="btnSponsorSub" class="text-xs opacity-90 mt-0.5">CSR, grants & equipment partners</div>
-            </button>
-            <button type="button" data-action="donate" class="action-cta-btn pill-control rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
-              <div data-i18n="btnDonate" class="font-bold text-sm sm:text-base">Make a Donation</div>
-              <div data-i18n="btnDonateSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Fund housing, meals & laptops</div>
-            </button>
-            <button type="button" data-action="join" class="action-cta-btn pill-control rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
-              <div data-i18n="btnJoin" class="font-bold text-sm sm:text-base">Join the Team</div>
-              <div data-i18n="btnJoinSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Mentors, educators & psychologists</div>
-            </button>
-          </div>
-          <p data-i18n="projDisclaimerNote" class="mt-5 pt-4 border-t text-xs leading-relaxed" style="border-color: var(--border-subtle); color: var(--text-muted);">
-            Early-stage concept notice: Safe Haven parameters and support pathways are currently in active development and do not constitute a public offer.
-          </p>
-        </section>
-      </div>
-    </main>
+ <!-- CTA Actions -->
+ <section class="surface-card rounded-2xl p-6 sm:p-8 border reveal-scroll" style="border-color: var(--border-strong);">
+ <h2 data-i18n="ctaSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold">Build Safe Haven With Us</h2>
+ <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+ <button type="button" data-action="sponsor" class="action-cta-btn cta-primary rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
+ <div data-i18n="btnSponsor" class="font-bold text-sm sm:text-base">Become a Sponsor</div>
+ <div data-i18n="btnSponsorSub" class="text-xs opacity-90 mt-0.5">CSR, grants & equipment partners</div>
+ </button>
+ <button type="button" data-action="donate" class="action-cta-btn pill-control rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
+ <div data-i18n="btnDonate" class="font-bold text-sm sm:text-base">Make a Donation</div>
+ <div data-i18n="btnDonateSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Fund housing, meals & laptops</div>
+ </button>
+ <button type="button" data-action="join" class="action-cta-btn pill-control rounded-xl p-4 text-start cursor-pointer flex flex-col justify-between">
+ <div data-i18n="btnJoin" class="font-bold text-sm sm:text-base">Join the Team</div>
+ <div data-i18n="btnJoinSub" class="text-xs mt-0.5" style="color: var(--text-muted);">Mentors, educators & psychologists</div>
+ </button>
+ </div>
+ <p data-i18n="projDisclaimerNote" class="mt-5 pt-4 border-t text-xs leading-relaxed" style="border-color: var(--border-subtle); color: var(--text-muted);">
+ Early-stage concept notice: Safe Haven parameters and support pathways are currently in active development and do not constitute a public offer.
+ </p>
+ </section>
+ </div>
+ </main>
 
-    <!-- FOOTER: Legal & Policies + Email (ntolipov.work@gmail.com) -->
-    <footer class="mt-20 pt-6 border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
-      <div>© 2026 Nodirjon Tolipov · Rowan Brook</div>
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <button type="button" data-legal="privacy" data-i18n="legalPrivacyBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Privacy Policy</button>
-        <button type="button" data-legal="terms" data-i18n="legalTermsBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Terms of Use</button>
-        <button type="button" data-legal="concept" data-i18n="legalConceptBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Concept Disclaimer</button>
-        <button type="button" data-legal="support" data-i18n="legalSupportBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Partnership & Donations</button>
-        <span aria-hidden="true" style="opacity: 0.4;">·</span>
-        <a href="mailto:ntolipov.work@gmail.com" data-i18n="footerEmail" class="footer-link font-semibold" style="color: var(--accent);">Email</a>
-      </div>
-    </footer>
-  </div>
+ <!-- FOOTER: Legal & Policies + Email (ntolipov.work@gmail.com) -->
+ <footer class="mt-20 pt-6 border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
+ <div>© 2026 Nodirjon Tolipov · Rowan Brook</div>
+ <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+ <button type="button" data-legal="privacy" data-i18n="legalPrivacyBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Privacy Policy</button>
+ <button type="button" data-legal="terms" data-i18n="legalTermsBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Terms of Use</button>
+ <button type="button" data-legal="concept" data-i18n="legalConceptBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Concept Disclaimer</button>
+ <button type="button" data-legal="support" data-i18n="legalSupportBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Partnership & Donations</button>
+ <span aria-hidden="true" style="opacity: 0.4;">·</span>
+ <a href="mailto:ntolipov.work@gmail.com" data-i18n="footerEmail" class="footer-link font-semibold" style="color: var(--accent);">Email</a>
+ </div>
+ </footer>
+ </div>
 
-  <!-- Mobile Oval Capsule Navigation (for small screens) -->
-  <nav aria-label="Mobile Navigation" class="sm:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center p-1.5 rounded-full nav-oval-capsule shadow-2xl">
-    <div class="nav-oval-glider" aria-hidden="true"></div>
-    <button type="button" data-tab="about" class="tab-btn nav-oval-btn nav-pill-active relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
-      About
-    </button>
-    <button type="button" data-tab="project" class="tab-btn nav-oval-btn nav-pill-inactive relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
-      Project
-    </button>
-  </nav>
+ <!-- Mobile Oval Capsule Navigation (for small screens) -->
+ <nav aria-label="Mobile Navigation" class="sm:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center p-1.5 rounded-full nav-oval-capsule shadow-2xl">
+ <div class="nav-oval-glider" aria-hidden="true"></div>
+ <button type="button" data-tab="about" class="tab-btn nav-oval-btn nav-pill-active relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navAbout">
+ About
+ </button>
+ <button type="button" data-tab="project" class="tab-btn nav-oval-btn nav-pill-inactive relative z-10 px-6 py-2 rounded-full text-xs font-semibold tracking-wide cursor-pointer" data-i18n="navProject">
+ Project
+ </button>
+ </nav>
 
-  <!-- Smooth Animated Modal -->
-  <div id="connectModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65">
-    <div class="modal-card surface-card w-full max-w-md rounded-2xl p-6 relative" style="background: var(--bg-elevated); border-color: var(--border-strong);">
-      <button type="button" id="closeModalBtn" aria-label="Close modal" class="absolute top-4 end-4 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">✕</button>
-      <h3 id="modalTitle" class="font-serif-editorial text-xl font-bold">Become a Sponsor</h3>
-      <div class="mt-4 p-3 rounded-xl flex items-center justify-between gap-2 border" style="background: var(--bg-page); border-color: var(--border-subtle);">
-        <span id="modalEmailText" class="text-xs sm:text-sm font-mono font-semibold select-all" style="color: var(--accent);">safehaven.nco@gmail.com</span>
-        <button type="button" id="copyEmailBtn" class="cta-primary px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer shrink-0"><span id="copyBtnText" data-i18n="copyEmail">Copy Email</span></button>
-      </div>
-      <div class="mt-3">
-        <textarea id="modalTemplate" rows="4" class="w-full rounded-xl p-3 text-xs sm:text-sm border focus:outline-none transition-colors" style="background: var(--bg-page); border-color: var(--border-subtle); color: var(--text-primary);"></textarea>
-      </div>
-      <div class="mt-4 flex items-center justify-end gap-2.5">
-        <a id="openMailtoLink" href="mailto:safehaven.nco@gmail.com" class="cta-primary px-4 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5"><span id="openMailtoLabel" data-i18n="openMailApp">Open Mail App</span> ↗</a>
-      </div>
-    </div>
-  </div>
+ <!-- Smooth Animated Modal -->
+ <div id="connectModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65">
+ <div class="modal-card surface-card w-full max-w-md rounded-2xl p-6 relative" style="background: var(--bg-elevated); border-color: var(--border-strong);">
+ <button type="button" id="closeModalBtn" aria-label="Close modal" class="absolute top-4 end-4 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">✕</button>
+ <h3 id="modalTitle" class="font-serif-editorial text-xl font-bold">Become a Sponsor</h3>
+ <div class="mt-4 p-3 rounded-xl flex items-center justify-between gap-2 border" style="background: var(--bg-page); border-color: var(--border-subtle);">
+ <span id="modalEmailText" class="text-xs sm:text-sm font-mono font-semibold select-all" style="color: var(--accent);">safehaven.nco@gmail.com</span>
+ <button type="button" id="copyEmailBtn" class="cta-primary px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer shrink-0"><span id="copyBtnText" data-i18n="copyEmail">Copy Email</span></button>
+ </div>
+ <div class="mt-3">
+ <textarea id="modalTemplate" rows="4" class="w-full rounded-xl p-3 text-xs sm:text-sm border focus:outline-none transition-colors" style="background: var(--bg-page); border-color: var(--border-subtle); color: var(--text-primary);"></textarea>
+ </div>
+ <div class="mt-4 flex items-center justify-end gap-2.5">
+ <a id="openMailtoLink" href="mailto:safehaven.nco@gmail.com" class="cta-primary px-4 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5"><span id="openMailtoLabel" data-i18n="openMailApp">Open Mail App</span> ↗</a>
+ </div>
+ </div>
+ </div>
 
 
-  <!-- Legal & Policy Reader Modal -->
-  <div id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65">
-    <div class="modal-card surface-card w-full max-w-2xl rounded-2xl p-6 sm:p-7 relative flex flex-col max-h-[85vh]" style="background: var(--bg-elevated); border-color: var(--border-strong);">
-      <div class="flex items-start justify-between gap-3 pb-4 border-b" style="border-color: var(--border-subtle);">
-        <div>
-          <span id="legalModalBadge" class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-md badge-accent mb-1.5">Effective: November 2026</span>
-          <h3 id="legalModalTitle" class="font-serif-editorial text-xl sm:text-2xl font-bold">Privacy Policy</h3>
-        </div>
-        <button type="button" id="closeLegalModalBtn" aria-label="Close document" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer shrink-0">✕</button>
-      </div>
+ <!-- Legal & Policy Reader Modal -->
+ <div id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65">
+ <div class="modal-card surface-card w-full max-w-2xl rounded-2xl p-6 sm:p-7 relative flex flex-col max-h-[85vh]" style="background: var(--bg-elevated); border-color: var(--border-strong);">
+ <div class="flex items-start justify-between gap-3 pb-4 border-b" style="border-color: var(--border-subtle);">
+ <div>
+ <span id="legalModalBadge" class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-md badge-accent mb-1.5">Effective: November 2026</span>
+ <h3 id="legalModalTitle" class="font-serif-editorial text-xl sm:text-2xl font-bold">Privacy Policy</h3>
+ </div>
+ <button type="button" id="closeLegalModalBtn" aria-label="Close document" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer shrink-0">✕</button>
+ </div>
 
-      <!-- Quick Document Switcher Tabs inside Modal -->
-      <div class="flex flex-wrap gap-1.5 pt-3 pb-3 border-b" style="border-color: var(--border-subtle);">
-        <button type="button" data-legal="privacy" data-i18n="legalPrivacyBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Privacy Policy</button>
-        <button type="button" data-legal="terms" data-i18n="legalTermsBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Terms of Use</button>
-        <button type="button" data-legal="concept" data-i18n="legalConceptBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Concept Disclaimer</button>
-        <button type="button" data-legal="support" data-i18n="legalSupportBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Partnership & Donations</button>
-      </div>
+ <!-- Quick Document Switcher Tabs inside Modal -->
+ <div class="flex flex-wrap gap-1.5 pt-3 pb-3 border-b" style="border-color: var(--border-subtle);">
+ <button type="button" data-legal="privacy" data-i18n="legalPrivacyBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Privacy Policy</button>
+ <button type="button" data-legal="terms" data-i18n="legalTermsBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Terms of Use</button>
+ <button type="button" data-legal="concept" data-i18n="legalConceptBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Concept Disclaimer</button>
+ <button type="button" data-legal="support" data-i18n="legalSupportBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Partnership & Donations</button>
+ </div>
 
-      <!-- Scrollable Document Body -->
-      <div id="legalModalBody" class="mt-4 overflow-y-auto overscroll-contain pe-2 space-y-4 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);"></div>
+ <!-- Scrollable Document Body -->
+ <div id="legalModalBody" class="mt-4 overflow-y-auto overscroll-contain pe-2 space-y-4 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);"></div>
 
-      <div class="mt-5 pt-3 border-t flex items-center justify-between gap-3 text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
-        <span data-i18n="legalContactNote">Questions: ntolipov.site.help@gmail.com</span>
-        <button type="button" id="closeLegalDoneBtn" data-i18n="legalCloseBtn" class="cta-primary px-4 py-1.5 rounded-xl text-xs font-semibold cursor-pointer">Close</button>
-      </div>
-    </div>
-  </div>
+ <div class="mt-5 pt-3 border-t flex items-center justify-between gap-3 text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
+ <span data-i18n="legalContactNote">Questions: ntolipov.site.help@gmail.com</span>
+ <button type="button" id="closeLegalDoneBtn" data-i18n="legalCloseBtn" class="cta-primary px-4 py-1.5 rounded-xl text-xs font-semibold cursor-pointer">Close</button>
+ </div>
+ </div>
+ </div>
 
-  <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>

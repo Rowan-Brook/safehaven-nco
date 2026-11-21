@@ -15,7 +15,7 @@ const LANGUAGES = [
 
 const TRANSLATIONS = {
   en: {
-    legalPrivacyBtn: "Privacy Policy", legalTermsBtn: "Terms of Use", legalConceptBtn: "Concept Disclaimer", legalSupportBtn: "Partnership & Donations", projDisclaimerNote: "Early-stage concept notice: Safe Haven parameters and support pathways are currently in active development and do not constitute a public offer.", legalContactNote: "Questions: ntolipovsite.help@gmail.com", legalCloseBtn: "Close",
+    legalPrivacyBtn: "Privacy Policy", legalTermsBtn: "Terms of Use", legalConceptBtn: "Concept Disclaimer", legalSupportBtn: "Partnership & Donations", projDisclaimerNote: "Early-stage concept notice: Safe Haven parameters and support pathways are currently in active development and do not constitute a public offer.", legalContactNote: "Questions: ntolipov.site.help@gmail.com", legalCloseBtn: "Close",
     navAbout: "About", navProject: "Project", themeLight: "Light", themeDark: "Dark", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Settings", settingsThemeTitle: "Theme", settingsLangTitle: "Language", settingsLinksTitle: "Connect & Help",
     heroTitle: "Hi, I'm Nodirjon!", heroSubtitle: "Student at Westminster International University in Tashkent (WIUT)",
     heroLine1: "Interested in logic, patterns, and systemic relationships.",
@@ -24,7 +24,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Professional Experience",
     expRoleTitle: "Road Transport Health and Safety Manager",
     expRoleSub: "Safety & Fleet Department (US Logistics)",
-    expDateRange: "Apr 2026 – Nov 2026",
+    expDateRange: "Apr 2026 - Nov 2026",
     showDetails: "Show details", hideDetails: "Hide details",
     expBullet1: "Oversaw DOT & FMCSA regulatory compliance, driver safety audits, and electronic logging device (ELD) analytics across interstate fleet operations.",
     expBullet2: "Designed structured risk-mitigation workflows and incident prevention protocols, reducing operational violations and improving fleet reliability.",
@@ -51,7 +51,7 @@ const TRANSLATIONS = {
     tplJoin: "Hello Safe Haven Team,\n\nI would love to join the Safe Haven team as a mentor, educator, or specialist."
   },
   ru: {
-    legalPrivacyBtn: "Политика конфиденциальности", legalTermsBtn: "Условия использования", legalConceptBtn: "Дисклеймер проекта", legalSupportBtn: "Партнёрство и пожертвования", projDisclaimerNote: "Примечание о ранней стадии: параметры Safe Haven и форматы участия находятся в разработке и не являются публичной офертой.", legalContactNote: "Вопросы по правилам: ntolipovsite.help@gmail.com", legalCloseBtn: "Закрыть",
+    legalPrivacyBtn: "Политика конфиденциальности", legalTermsBtn: "Условия использования", legalConceptBtn: "Дисклеймер проекта", legalSupportBtn: "Партнёрство и пожертвования", projDisclaimerNote: "Примечание о ранней стадии: параметры Safe Haven и форматы участия находятся в разработке и не являются публичной офертой.", legalContactNote: "Вопросы по правилам: ntolipov.site.help@gmail.com", legalCloseBtn: "Закрыть",
     navAbout: "Обо мне", navProject: "Проект", themeLight: "Светлая", themeDark: "Тёмная", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Настройки", settingsThemeTitle: "Тема", settingsLangTitle: "Язык", settingsLinksTitle: "Ссылки и помощь",
     heroTitle: "Привет, я Нодиржон!", heroSubtitle: "Студент Международного Вестминстерского университета в Ташкенте (WIUT)",
     heroLine1: "Увлечён логикой, закономерностями и системными взаимосвязями.",
@@ -60,7 +60,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Профессиональный опыт",
     expRoleTitle: "Менеджер по безопасности дорожного транспорта",
     expRoleSub: "Департамент безопасности и автопарка (Логистика США)",
-    expDateRange: "Апр 2026 – Ноя 2026",
+    expDateRange: "Апр 2026 - Ноя 2026",
     showDetails: "Подробнее", hideDetails: "Скрыть",
     expBullet1: "Контроль соблюдения стандартов DOT и FMCSA, аудит безопасности водителей и аналитика электронных журналов (ELD).",
     expBullet2: "Разработка структурированных процессов снижения рисков и протоколов предотвращения инцидентов.",
@@ -87,7 +87,7 @@ const TRANSLATIONS = {
     tplJoin: "Здравствуйте, команда Safe Haven!\n\nХотел(а) бы присоединиться к команде проекта в качестве ментора, преподавателя или специалиста."
   },
   uz: {
-    legalPrivacyBtn: "Maxfiylik siyosati", legalTermsBtn: "Foydalanish shartlari", legalConceptBtn: "Loyiha eslatmasi", legalSupportBtn: "Hamkorlik va xayriyalar", projDisclaimerNote: "Dastlabki bosqich eslatmasi: Safe Haven parametrlari va ishtirok etish shartlari ishlab chiqilmoqda va ommaviy oferta hisoblanmaydi.", legalContactNote: "Savollar uchun: ntolipovsite.help@gmail.com", legalCloseBtn: "Yopish",
+    legalPrivacyBtn: "Maxfiylik siyosati", legalTermsBtn: "Foydalanish shartlari", legalConceptBtn: "Loyiha eslatmasi", legalSupportBtn: "Hamkorlik va xayriyalar", projDisclaimerNote: "Dastlabki bosqich eslatmasi: Safe Haven parametrlari va ishtirok etish shartlari ishlab chiqilmoqda va ommaviy oferta hisoblanmaydi.", legalContactNote: "Savollar uchun: ntolipov.site.help@gmail.com", legalCloseBtn: "Yopish",
     navAbout: "Men haqimda", navProject: "Loyiha", themeLight: "Yorug‘", themeDark: "Qorong‘i", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Sozlamalar", settingsThemeTitle: "Mavzu", settingsLangTitle: "Til", settingsLinksTitle: "Havolalar va yordam",
     heroTitle: "Salom, men Nodirjonman!", heroSubtitle: "Toshkentdagi Xalqaro Vestminster Universiteti (WIUT) talabasi",
     heroLine1: "Mantiq, qonuniyatlar va tizimli bog‘liqliklarga qiziqaman.",
@@ -96,7 +96,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Kasbiy tajriba",
     expRoleTitle: "Avtotransport xavfsizligi va mehnat muhofazasi menejeri",
     expRoleSub: "Xavfsizlik va avtopark bo‘limi (AQSh logistikasi)",
-    expDateRange: "Apr 2026 – Noy 2026",
+    expDateRange: "Apr 2026 - Noy 2026",
     showDetails: "Batafsil", hideDetails: "Yashirish",
     expBullet1: "Shtatlararo yuk tashishda DOT va FMCSA talablariga rioya etilishini va ELD tahlillarini nazorat qildim.",
     expBullet2: "Xavflarni kamaytirish va hodisalarning oldini olish protokollarini ishlab chiqdim.",
@@ -123,7 +123,7 @@ const TRANSLATIONS = {
     tplJoin: "Assalomu alaykum, Safe Haven jamoasi!\n\nLoyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchiman."
   },
   es: {
-    legalPrivacyBtn: "Política de privacidad", legalTermsBtn: "Términos de uso", legalConceptBtn: "Aviso del concepto", legalSupportBtn: "Alianzas y donaciones", projDisclaimerNote: "Aviso de etapa inicial: los parámetros de Safe Haven están en desarrollo activo y no constituyen una oferta pública.", legalContactNote: "Consultas: ntolipovsite.help@gmail.com", legalCloseBtn: "Cerrar",
+    legalPrivacyBtn: "Política de privacidad", legalTermsBtn: "Términos de uso", legalConceptBtn: "Aviso del concepto", legalSupportBtn: "Alianzas y donaciones", projDisclaimerNote: "Aviso de etapa inicial: los parámetros de Safe Haven están en desarrollo activo y no constituyen una oferta pública.", legalContactNote: "Consultas: ntolipov.site.help@gmail.com", legalCloseBtn: "Cerrar",
     navAbout: "Sobre mí", navProject: "Proyecto", themeLight: "Claro", themeDark: "Oscuro", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Ajustes", settingsThemeTitle: "Tema", settingsLangTitle: "Idioma", settingsLinksTitle: "Enlaces y ayuda",
     heroTitle: "¡Hola, soy Nodirjon!", heroSubtitle: "Estudiante en la Universidad Internacional de Westminster en Taskent (WIUT)",
     heroLine1: "Me interesan la lógica, los patrones y las relaciones sistémicas.",
@@ -132,7 +132,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Experiencia profesional",
     expRoleTitle: "Gerente de Salud y Seguridad del Transporte Terrestre",
     expRoleSub: "Departamento de Seguridad y Flota (Logística de EE. UU.)",
-    expDateRange: "Abr 2026 – Nov 2026",
+    expDateRange: "Abr 2026 - Nov 2026",
     showDetails: "Mostrar detalles", hideDetails: "Ocultar detalles",
     expBullet1: "Supervisé el cumplimiento normativo de DOT y FMCSA, auditorías de seguridad de conductores y análisis de dispositivos de registro electrónico (ELD) en operaciones interestatales.",
     expBullet2: "Diseñé flujos estructurados de mitigación de riesgos y protocolos de prevención de incidentes, reduciendo infracciones y mejorando la fiabilidad de la flota.",
@@ -159,7 +159,7 @@ const TRANSLATIONS = {
     tplJoin: "Hola equipo de Safe Haven,\n\nMe encantaría unirme al equipo de Safe Haven como mentor, educador o especialista."
   },
   fr: {
-    legalPrivacyBtn: "Confidentialité", legalTermsBtn: "Conditions d’utilisation", legalConceptBtn: "Avertissement projet", legalSupportBtn: "Partenariats et dons", projDisclaimerNote: "Note de phase initiale : les paramètres de Safe Haven sont en cours d’élaboration et ne constituent pas une offre publique.", legalContactNote: "Questions : ntolipovsite.help@gmail.com", legalCloseBtn: "Fermer",
+    legalPrivacyBtn: "Confidentialité", legalTermsBtn: "Conditions d’utilisation", legalConceptBtn: "Avertissement projet", legalSupportBtn: "Partenariats et dons", projDisclaimerNote: "Note de phase initiale : les paramètres de Safe Haven sont en cours d’élaboration et ne constituent pas une offre publique.", legalContactNote: "Questions : ntolipov.site.help@gmail.com", legalCloseBtn: "Fermer",
     navAbout: "À propos", navProject: "Projet", themeLight: "Clair", themeDark: "Sombre", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Paramètres", settingsThemeTitle: "Thème", settingsLangTitle: "Langue", settingsLinksTitle: "Liens et aide",
     heroTitle: "Bonjour, je suis Nodirjon !", heroSubtitle: "Étudiant à l'Université internationale de Westminster à Tachkent (WIUT)",
     heroLine1: "Passionné par la logique, les schémas et les relations systémiques.",
@@ -168,7 +168,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Expérience professionnelle",
     expRoleTitle: "Responsable Santé et Sécurité du Transport Routier",
     expRoleSub: "Département Sécurité et Flotte (Logistique États-Unis)",
-    expDateRange: "Avr 2026 – Nov 2026",
+    expDateRange: "Avr 2026 - Nov 2026",
     showDetails: "Voir les détails", hideDetails: "Masquer les détails",
     expBullet1: "Supervision de la conformité DOT et FMCSA, des audits de sécurité des conducteurs et des analyses ELD sur les opérations inter-États.",
     expBullet2: "Conception de processus structurés de gestion des risques et de protocoles de prévention des incidents.",
@@ -195,7 +195,7 @@ const TRANSLATIONS = {
     tplJoin: "Bonjour l'équipe Safe Haven,\n\nJe souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spécialiste."
   },
   de: {
-    legalPrivacyBtn: "Datenschutz", legalTermsBtn: "Nutzungsbedingungen", legalConceptBtn: "Konzept-Hinweis", legalSupportBtn: "Partnerschaft & Spenden", projDisclaimerNote: "Hinweis zur Frühphase: Die Parameter von Safe Haven befinden sich in aktiver Entwicklung und stellen kein öffentliches Angebot dar.", legalContactNote: "Fragen: ntolipovsite.help@gmail.com", legalCloseBtn: "Schließen",
+    legalPrivacyBtn: "Datenschutz", legalTermsBtn: "Nutzungsbedingungen", legalConceptBtn: "Konzept-Hinweis", legalSupportBtn: "Partnerschaft & Spenden", projDisclaimerNote: "Hinweis zur Frühphase: Die Parameter von Safe Haven befinden sich in aktiver Entwicklung und stellen kein öffentliches Angebot dar.", legalContactNote: "Fragen: ntolipov.site.help@gmail.com", legalCloseBtn: "Schließen",
     navAbout: "Über mich", navProject: "Projekt", themeLight: "Hell", themeDark: "Dunkel", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Einstellungen", settingsThemeTitle: "Design", settingsLangTitle: "Sprache", settingsLinksTitle: "Links & Hilfe",
     heroTitle: "Hallo, ich bin Nodirjon!", heroSubtitle: "Student an der Westminster International University in Taschkent (WIUT)",
     heroLine1: "Interessiert an Logik, Mustern und systemischen Zusammenhängen.",
@@ -204,7 +204,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Berufserfahrung",
     expRoleTitle: "Manager für Gesundheit und Sicherheit im Straßentransport",
     expRoleSub: "Abteilung Sicherheit & Fuhrpark (US-Logistik)",
-    expDateRange: "Apr 2026 – Nov 2026",
+    expDateRange: "Apr 2026 - Nov 2026",
     showDetails: "Details anzeigen", hideDetails: "Details ausblenden",
     expBullet1: "Verantwortung für DOT- und FMCSA-Compliance, Sicherheitsaudits für Fahrer und ELD-Analysen im bundesstaatenübergreifenden Betrieb.",
     expBullet2: "Entwicklung strukturierter Risikominimierungsprozesse und Präventionsprotokolle zur Reduzierung von Verstößen.",
@@ -231,7 +231,7 @@ const TRANSLATIONS = {
     tplJoin: "Hallo Safe-Haven-Team,\n\nich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterstützen."
   },
   it: {
-    legalPrivacyBtn: "Privacy Policy", legalTermsBtn: "Termini di utilizzo", legalConceptBtn: "Avviso sul progetto", legalSupportBtn: "Partnership e donazioni", projDisclaimerNote: "Nota sulla fase iniziale: i parametri di Safe Haven sono in fase di sviluppo attivo e non costituiscono un’offerta pubblica.", legalContactNote: "Domande: ntolipovsite.help@gmail.com", legalCloseBtn: "Chiudi",
+    legalPrivacyBtn: "Privacy Policy", legalTermsBtn: "Termini di utilizzo", legalConceptBtn: "Avviso sul progetto", legalSupportBtn: "Partnership e donazioni", projDisclaimerNote: "Nota sulla fase iniziale: i parametri di Safe Haven sono in fase di sviluppo attivo e non costituiscono un’offerta pubblica.", legalContactNote: "Domande: ntolipov.site.help@gmail.com", legalCloseBtn: "Chiudi",
     navAbout: "Chi sono", navProject: "Progetto", themeLight: "Chiaro", themeDark: "Scuro", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Impostazioni", settingsThemeTitle: "Tema", settingsLangTitle: "Lingua", settingsLinksTitle: "Link e aiuto",
     heroTitle: "Ciao, sono Nodirjon!", heroSubtitle: "Studente presso la Westminster International University di Tashkent (WIUT)",
     heroLine1: "Interessato a logica, schemi e relazioni sistemiche.",
@@ -240,7 +240,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Esperienza professionale",
     expRoleTitle: "Responsabile Salute e Sicurezza del Trasporto Stradale",
     expRoleSub: "Dipartimento Sicurezza e Flotta (Logistica USA)",
-    expDateRange: "Apr 2026 – Nov 2026",
+    expDateRange: "Apr 2026 - Nov 2026",
     showDetails: "Mostra dettagli", hideDetails: "Nascondi dettagli",
     expBullet1: "Gestione della conformità DOT e FMCSA, audit sulla sicurezza dei conducenti e analisi dei dati ELD sulle flotte interstatali.",
     expBullet2: "Progettazione di flussi strutturati di mitigazione del rischio e protocolli di prevenzione degli incidenti.",
@@ -267,7 +267,7 @@ const TRANSLATIONS = {
     tplJoin: "Ciao team di Safe Haven,\n\nmi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
   },
   zh: {
-    legalPrivacyBtn: "隐私政策", legalTermsBtn: "使用条款", legalConceptBtn: "项目概念声明", legalSupportBtn: "合作与捐赠说明", projDisclaimerNote: "早期概念说明：Safe Haven 的具体参数与参与方式仍在持续完善中，不构成公开要约。", legalContactNote: "相关咨询：ntolipovsite.help@gmail.com", legalCloseBtn: "关闭",
+    legalPrivacyBtn: "隐私政策", legalTermsBtn: "使用条款", legalConceptBtn: "项目概念声明", legalSupportBtn: "合作与捐赠说明", projDisclaimerNote: "早期概念说明：Safe Haven 的具体参数与参与方式仍在持续完善中，不构成公开要约。", legalContactNote: "相关咨询：ntolipov.site.help@gmail.com", legalCloseBtn: "关闭",
     navAbout: "关于我", navProject: "项目", themeLight: "浅色", themeDark: "深色", footerEmail: "Email", footerHelp: "Help", settingsLabel: "设置", settingsThemeTitle: "主题", settingsLangTitle: "语言", settingsLinksTitle: "链接与帮助",
     heroTitle: "你好，我是 Nodirjon！", heroSubtitle: "塔什干威斯敏斯特国际大学（WIUT）在读学生",
     heroLine1: "热衷于逻辑、规律与系统性关联。",
@@ -276,7 +276,7 @@ const TRANSLATIONS = {
     expSectionTitle: "专业经历",
     expRoleTitle: "道路运输健康与安全经理",
     expRoleSub: "安全与车队部门（美国物流）",
-    expDateRange: "2026年4月 – 2026年11月",
+    expDateRange: "2026年4月 - 2026年11月",
     showDetails: "查看详情", hideDetails: "收起详情",
     expBullet1: "负责跨州车队运营的 DOT 与 FMCSA 合规管理、驾驶员安全审计及电子日志（ELD）数据分析。",
     expBullet2: "构建结构化风险缓解决策流程与事故预防规范，降低违规率并提升车队可靠性。",
@@ -303,7 +303,7 @@ const TRANSLATIONS = {
     tplJoin: "你好 Safe Haven 团队：\n\n我希望作为导师、讲师或专业人员加入 Safe Haven 团队。"
   },
   ar: {
-    legalPrivacyBtn: "سياسة الخصوصية", legalTermsBtn: "شروط الاستخدام", legalConceptBtn: "إخلاء مسؤولية المشروع", legalSupportBtn: "الشراكة والتبرعات", projDisclaimerNote: "تنويه المرحلة المبكرة: معايير Safe Haven ومسارات الدعم قيد التطوير النشط ولا تُعد عرضًا عامًا ملزمًا.", legalContactNote: "للاستفسارات: ntolipovsite.help@gmail.com", legalCloseBtn: "إغلاق",
+    legalPrivacyBtn: "سياسة الخصوصية", legalTermsBtn: "شروط الاستخدام", legalConceptBtn: "إخلاء مسؤولية المشروع", legalSupportBtn: "الشراكة والتبرعات", projDisclaimerNote: "تنويه المرحلة المبكرة: معايير Safe Haven ومسارات الدعم قيد التطوير النشط ولا تُعد عرضًا عامًا ملزمًا.", legalContactNote: "للاستفسارات: ntolipov.site.help@gmail.com", legalCloseBtn: "إغلاق",
     navAbout: "نبذة عني", navProject: "المشروع", themeLight: "فاتح", themeDark: "داكن", footerEmail: "Email", footerHelp: "Help", settingsLabel: "الإعدادات", settingsThemeTitle: "المظهر", settingsLangTitle: "اللغة", settingsLinksTitle: "الروابط والمساعدة",
     heroTitle: "مرحبًا، أنا نوديرجون!", heroSubtitle: "طالب في جامعة وستمنستر الدولية في طشقند (WIUT)",
     heroLine1: "مهتم بالمنطق والأنماط والعلاقات النظامية.",
@@ -312,7 +312,7 @@ const TRANSLATIONS = {
     expSectionTitle: "الخبرة المهنية",
     expRoleTitle: "مدير الصحة والسلامة للنقل البري",
     expRoleSub: "قسم السلامة والأسطول (لوجستيات الولايات المتحدة)",
-    expDateRange: "أبريل 2026 – نوفمبر 2026",
+    expDateRange: "أبريل 2026 - نوفمبر 2026",
     showDetails: "عرض التفاصيل", hideDetails: "إخفاء التفاصيل",
     expBullet1: "الإشراف على الامتثال للوائح DOT وFMCSA وتدقيق سلامة السائقين وتحليلات سجلات القيادة الإلكترونية (ELD).",
     expBullet2: "تصميم مسارات منظمة لتقليل المخاطر وبروتوكولات منع الحوادث وتحسين موثوقية الأسطول.",
@@ -339,7 +339,7 @@ const TRANSLATIONS = {
     tplJoin: "مرحبًا فريق Safe Haven،\n\nيسعدني الانضمام إلى فريق Safe Haven كمرشد أو معلم أو متخصص."
   },
   tr: {
-    legalPrivacyBtn: "Gizlilik Politikası", legalTermsBtn: "Kullanım Koşulları", legalConceptBtn: "Konsept Bildirimi", legalSupportBtn: "Ortaklık ve Bağışlar", projDisclaimerNote: "Erken aşama bildirimi: Safe Haven parametreleri ve destek modelleri geliştirme aşamasındadır ve halka açık bağlayıcı bir teklif niteliği taşımaz.", legalContactNote: "Sorularınız için: ntolipovsite.help@gmail.com", legalCloseBtn: "Kapat",
+    legalPrivacyBtn: "Gizlilik Politikası", legalTermsBtn: "Kullanım Koşulları", legalConceptBtn: "Konsept Bildirimi", legalSupportBtn: "Ortaklık ve Bağışlar", projDisclaimerNote: "Erken aşama bildirimi: Safe Haven parametreleri ve destek modelleri geliştirme aşamasındadır ve halka açık bağlayıcı bir teklif niteliği taşımaz.", legalContactNote: "Sorularınız için: ntolipov.site.help@gmail.com", legalCloseBtn: "Kapat",
     navAbout: "Hakkımda", navProject: "Proje", themeLight: "Açık", themeDark: "Koyu", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Ayarlar", settingsThemeTitle: "Tema", settingsLangTitle: "Dil", settingsLinksTitle: "Bağlantılar ve Yardım",
     heroTitle: "Merhaba, ben Nodirjon!", heroSubtitle: "Taşkent Westminster Uluslararası Üniversitesi (WIUT) öğrencisi",
     heroLine1: "Mantık, örüntüler ve sistemsel ilişkilerle ilgileniyorum.",
@@ -348,7 +348,7 @@ const TRANSLATIONS = {
     expSectionTitle: "Mesleki Deneyim",
     expRoleTitle: "Karayolu Taşımacılığı Sağlık ve Güvenlik Müdürü",
     expRoleSub: "Güvenlik ve Filo Departmanı (ABD Lojistiği)",
-    expDateRange: "Nis 2026 – Kas 2026",
+    expDateRange: "Nis 2026 - Kas 2026",
     showDetails: "Detayları göster", hideDetails: "Detayları gizle",
     expBullet1: "Eyaletler arası filo operasyonlarında DOT ve FMCSA mevzuat uyumu, sürücü güvenlik denetimleri ve ELD analizlerini yönettim.",
     expBullet2: "İhlalleri azaltan ve filo güvenilirliğini artıran yapılandırılmış risk azaltma ve olay önleme protokolleri oluşturdum.",
@@ -383,7 +383,7 @@ let activeModalAction = "sponsor";
 
 const LEGAL_DOCS = {
   ru: {
-    badge: "Редакция от ноября 2026 · Действует без печати",
+    badge: "Редакция от ноября 2026 - Действует без печати",
     privacy: {
       title: "Политика конфиденциальности (Privacy Policy)",
       sections: [
@@ -394,8 +394,8 @@ const LEGAL_DOCS = {
         {
           h: "2. Какие данные могут обрабатываться",
           ul: [
-            "Технические данные: при загрузке страницы ваш браузер автоматически передаёт стандартные сетевые параметры (IP-адрес, тип браузера и устройства) хостинг-провайдеру (например, GitHub Pages) и CDN-сервисам шрифтов/стилей исключительно для корректного отображения страницы.",
-            "Данные добровольной переписки: если вы самостоятельно напишете на электронную почту (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com или safehaven.nco@gmail.com) либо перейдёте в мессенджеры и соцсети, мы получаем только те сведения, которые вы добровольно указали в сообщении."
+            "Технические данные - при загрузке страницы ваш браузер автоматически передаёт стандартные сетевые параметры (IP-адрес, тип браузера и устройства) хостинг-провайдеру (например, GitHub Pages) и CDN-сервисам шрифтов/стилей исключительно для корректного отображения страницы.",
+            "Данные добровольной переписки - если вы самостоятельно напишете на электронную почту (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com или safehaven.nco@gmail.com) либо перейдёте в мессенджеры и соцсети, мы получаем только те сведения, которые вы добровольно указали в сообщении."
           ]
         },
         {
@@ -417,7 +417,7 @@ const LEGAL_DOCS = {
         },
         {
           h: "2. Информационный характер материалов",
-          p: "Вся информация на сайте — включая сведения об образовании, профессиональном опыте и концепции проекта Safe Haven — предоставляется исключительно в ознакомительных целях. Материалы сайта не являются публичной офертой, юридической, финансовой или инвестиционной рекомендацией."
+          p: "Вся информация на сайте - включая сведения об образовании, профессиональном опыте и концепции проекта Safe Haven - предоставляется исключительно в ознакомительных целях. Материалы сайта не являются публичной офертой, юридической, финансовой или инвестиционной рекомендацией."
         },
         {
           h: "3. Интеллектуальная собственность и цитирование",
@@ -439,7 +439,7 @@ const LEGAL_DOCS = {
         {
           h: "2. Уточнение параметров программы и модели ISA",
           ul: [
-            "Упомянутые на сайте параметры — включая формат обучения «6 + 2», размер мини-групп (10–12 человек), порог дохода ($450/мес), ставку отчислений (10%) и целевые показатели трудоустройства (80%+) — являются проектными ориентирами.",
+            "Упомянутые на сайте параметры - включая формат обучения «6 + 2», размер мини-групп (10–12 человек), порог дохода ($450/мес), ставку отчислений (10%) и целевые показатели трудоустройства (80%+) - являются проектными ориентирами.",
             "Финальные юридические, финансовые и образовательные условия определяются отдельными индивидуальными соглашениями после официального запуска и институционального оформления проекта."
           ]
         },
@@ -462,13 +462,13 @@ const LEGAL_DOCS = {
         },
         {
           h: "3. Защита от мошенничества",
-          p: "Официальная коммуникация по проекту Safe Haven ведётся только через адрес safehaven.nco@gmail.com, а по личным и рабочим вопросам автора сайта — через ntolipov.work@gmail.com. Пожалуйста, не переводите средства третьим лицам, действующим от имени проекта без подтверждения с указанных адресов."
+          p: "Официальная коммуникация по проекту Safe Haven ведётся только через адрес safehaven.nco@gmail.com, а по личным и рабочим вопросам автора сайта - через ntolipov.work@gmail.com. Пожалуйста, не переводите средства третьим лицам, действующим от имени проекта без подтверждения с указанных адресов."
         }
       ]
     }
   },
   en: {
-    badge: "Effective: November 2026 · Valid without physical seal",
+    badge: "Effective: November 2026 - Valid without physical seal",
     privacy: {
       title: "Privacy Policy",
       sections: [
@@ -479,8 +479,8 @@ const LEGAL_DOCS = {
         {
           h: "2. Information That May Be Processed",
           ul: [
-            "Technical Connection Data: When you load this site, your browser automatically transmits standard network metadata (such as IP address and browser type) to the hosting provider (e.g., GitHub Pages) and font/style CDNs solely to deliver the webpage.",
-            "Voluntary Correspondence Data: If you choose to contact us via email (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com, or safehaven.nco@gmail.com) or external social/messaging platforms, we only receive the information you voluntarily include in your message."
+            "Technical Connection Data - When you load this site, your browser automatically transmits standard network metadata (such as IP address and browser type) to the hosting provider (e.g., GitHub Pages) and font/style CDNs solely to deliver the webpage.",
+            "Voluntary Correspondence Data - If you choose to contact us via email (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com, or safehaven.nco@gmail.com) or external social/messaging platforms, we only receive the information you voluntarily include in your message."
           ]
         },
         {
@@ -502,7 +502,7 @@ const LEGAL_DOCS = {
         },
         {
           h: "2. Informational Purpose Only",
-          p: "All content presented on this website—including academic background, professional experience, and the Safe Haven concept overview—is provided strictly for informational purposes. Nothing on this site constitutes a binding public offer, legal advice, or financial/investment solicitation."
+          p: "All content presented on this website - including academic background, professional experience, and the Safe Haven concept overview - is provided strictly for informational purposes. Nothing on this site constitutes a binding public offer, legal advice, or financial/investment solicitation."
         },
         {
           h: "3. Intellectual Property & Attribution",
@@ -524,7 +524,7 @@ const LEGAL_DOCS = {
         {
           h: "2. Indicative Program & ISA Parameters",
           ul: [
-            "Figures referenced on the site—including the '6 + 2' track duration, 10–12 student cohort size, $450/month income threshold, 10% contribution rate, and 80%+ placement target—are planning benchmarks.",
+            "Figures referenced on the site - including the '6 + 2' track duration, 10–12 student cohort size, $450/month income threshold, 10% contribution rate, and 80%+ placement target - are planning benchmarks.",
             "Final operational, legal, and educational terms will be established through formal individual agreements upon official registration and launch."
           ]
         },
@@ -624,7 +624,7 @@ function syncMailtoLink() {
   const modalTemplate = document.getElementById("modalTemplate");
   const modalTitle = document.getElementById("modalTitle");
   if (!openMailtoLink || !modalTemplate) return;
-  const subject = encodeURIComponent(`${modalTitle ? modalTitle.textContent.trim() : "Safe Haven"} — Safe Haven`);
+  const subject = encodeURIComponent(`${modalTitle ? modalTitle.textContent.trim() : "Safe Haven"} - Safe Haven`);
   const body = encodeURIComponent(modalTemplate.value);
   openMailtoLink.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }
