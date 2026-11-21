@@ -464,7 +464,7 @@ function setLanguage(langCode) {
   document.documentElement.setAttribute("lang", langCode);
   document.documentElement.setAttribute("dir", langObj.dir);
   const legalPageLink = document.getElementById("legalPageLink");
-  if (legalPageLink) legalPageLink.href = langCode === "ru" ? "docs/Legal_and_Policies_RU.pdf" : "docs/Legal_and_Policies_EN.pdf";
+  if (legalPageLink) legalPageLink.href = langCode === "ru" ? "https://drive.google.com/file/d/164WkrYuOAirbKutfYoyNS0X7Sgb86qTt/view?usp=drivesdk" : "https://drive.google.com/file/d/14VP51Jj712ht4Cb5mi_7Nr6xDlNuCAG8/view?usp=drivesdk";
   const currentLangCode = document.getElementById("currentLangCode");
   if (currentLangCode) currentLangCode.textContent = langCode.toUpperCase();
 document.querySelectorAll("[data-i18n]").forEach(el => {
