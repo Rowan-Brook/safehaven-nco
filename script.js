@@ -15,7 +15,7 @@ const LANGUAGES = [
 
 const TRANSLATIONS = {
   en: {
-    legalPrivacyBtn: "Privacy Policy", legalTermsBtn: "Terms of Use", legalConceptBtn: "Concept Disclaimer", legalSupportBtn: "Partnership & Donations", projDisclaimerNote: "Early-stage concept notice: Safe Haven parameters and support pathways are currently in active development and do not constitute a public offer.", legalContactNote: "Questions: ntolipov.site.help@gmail.com", legalCloseBtn: "Close",
+    legalHubLink: "Legal & Policies", projDisclaimerNote: "Early-stage concept notice: Safe Haven parameters and support pathways are currently in active development and do not constitute a public offer.", legalContactNote: "Questions: ntolipov.site.help@gmail.com", legalCloseBtn: "Close",
     navAbout: "About", navProject: "Project", themeLight: "Light", themeDark: "Dark", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Settings", settingsThemeTitle: "Theme", settingsLangTitle: "Language", settingsLinksTitle: "Connect & Help",
     heroTitle: "Hi, I'm Nodirjon!", heroSubtitle: "Student at Westminster International University in Tashkent (WIUT)",
     heroLine1: "Interested in logic, patterns, and systemic relationships.",
@@ -51,7 +51,7 @@ const TRANSLATIONS = {
     tplJoin: "Hello Safe Haven Team,\n\nI would love to join the Safe Haven team as a mentor, educator, or specialist."
   },
   ru: {
-    legalPrivacyBtn: "Политика конфиденциальности", legalTermsBtn: "Условия использования", legalConceptBtn: "Дисклеймер проекта", legalSupportBtn: "Партнёрство и пожертвования", projDisclaimerNote: "Примечание о ранней стадии: параметры Safe Haven и форматы участия находятся в разработке и не являются публичной офертой.", legalContactNote: "Вопросы по правилам: ntolipov.site.help@gmail.com", legalCloseBtn: "Закрыть",
+    legalHubLink: "Правовая информация и политики", projDisclaimerNote: "Примечание о ранней стадии: параметры Safe Haven и форматы участия находятся в разработке и не являются публичной офертой.", legalContactNote: "Вопросы по правилам: ntolipov.site.help@gmail.com", legalCloseBtn: "Закрыть",
     navAbout: "Обо мне", navProject: "Проект", themeLight: "Светлая", themeDark: "Тёмная", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Настройки", settingsThemeTitle: "Тема", settingsLangTitle: "Язык", settingsLinksTitle: "Ссылки и помощь",
     heroTitle: "Привет, я Нодиржон!", heroSubtitle: "Студент Международного Вестминстерского университета в Ташкенте (WIUT)",
     heroLine1: "Увлечён логикой, закономерностями и системными взаимосвязями.",
@@ -87,7 +87,7 @@ const TRANSLATIONS = {
     tplJoin: "Здравствуйте, команда Safe Haven!\n\nХотел(а) бы присоединиться к команде проекта в качестве ментора, преподавателя или специалиста."
   },
   uz: {
-    legalPrivacyBtn: "Maxfiylik siyosati", legalTermsBtn: "Foydalanish shartlari", legalConceptBtn: "Loyiha eslatmasi", legalSupportBtn: "Hamkorlik va xayriyalar", projDisclaimerNote: "Dastlabki bosqich eslatmasi: Safe Haven parametrlari va ishtirok etish shartlari ishlab chiqilmoqda va ommaviy oferta hisoblanmaydi.", legalContactNote: "Savollar uchun: ntolipov.site.help@gmail.com", legalCloseBtn: "Yopish",
+    legalHubLink: "Huquqiy ma’lumotlar va siyosatlar", projDisclaimerNote: "Dastlabki bosqich eslatmasi: Safe Haven parametrlari va ishtirok etish shartlari ishlab chiqilmoqda va ommaviy oferta hisoblanmaydi.", legalContactNote: "Savollar uchun: ntolipov.site.help@gmail.com", legalCloseBtn: "Yopish",
     navAbout: "Men haqimda", navProject: "Loyiha", themeLight: "Yorug‘", themeDark: "Qorong‘i", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Sozlamalar", settingsThemeTitle: "Mavzu", settingsLangTitle: "Til", settingsLinksTitle: "Havolalar va yordam",
     heroTitle: "Salom, men Nodirjonman!", heroSubtitle: "Toshkentdagi Xalqaro Vestminster Universiteti (WIUT) talabasi",
     heroLine1: "Mantiq, qonuniyatlar va tizimli bog‘liqliklarga qiziqaman.",
@@ -123,7 +123,7 @@ const TRANSLATIONS = {
     tplJoin: "Assalomu alaykum, Safe Haven jamoasi!\n\nLoyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchiman."
   },
   es: {
-    legalPrivacyBtn: "Política de privacidad", legalTermsBtn: "Términos de uso", legalConceptBtn: "Aviso del concepto", legalSupportBtn: "Alianzas y donaciones", projDisclaimerNote: "Aviso de etapa inicial: los parámetros de Safe Haven están en desarrollo activo y no constituyen una oferta pública.", legalContactNote: "Consultas: ntolipov.site.help@gmail.com", legalCloseBtn: "Cerrar",
+    legalHubLink: "Información legal y políticas", projDisclaimerNote: "Aviso de etapa inicial: los parámetros de Safe Haven están en desarrollo activo y no constituyen una oferta pública.", legalContactNote: "Consultas: ntolipov.site.help@gmail.com", legalCloseBtn: "Cerrar",
     navAbout: "Sobre mí", navProject: "Proyecto", themeLight: "Claro", themeDark: "Oscuro", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Ajustes", settingsThemeTitle: "Tema", settingsLangTitle: "Idioma", settingsLinksTitle: "Enlaces y ayuda",
     heroTitle: "¡Hola, soy Nodirjon!", heroSubtitle: "Estudiante en la Universidad Internacional de Westminster en Taskent (WIUT)",
     heroLine1: "Me interesan la lógica, los patrones y las relaciones sistémicas.",
@@ -159,7 +159,7 @@ const TRANSLATIONS = {
     tplJoin: "Hola equipo de Safe Haven,\n\nMe encantaría unirme al equipo de Safe Haven como mentor, educador o especialista."
   },
   fr: {
-    legalPrivacyBtn: "Confidentialité", legalTermsBtn: "Conditions d’utilisation", legalConceptBtn: "Avertissement projet", legalSupportBtn: "Partenariats et dons", projDisclaimerNote: "Note de phase initiale : les paramètres de Safe Haven sont en cours d’élaboration et ne constituent pas une offre publique.", legalContactNote: "Questions : ntolipov.site.help@gmail.com", legalCloseBtn: "Fermer",
+    legalHubLink: "Mentions légales et politiques", projDisclaimerNote: "Note de phase initiale : les paramètres de Safe Haven sont en cours d’élaboration et ne constituent pas une offre publique.", legalContactNote: "Questions : ntolipov.site.help@gmail.com", legalCloseBtn: "Fermer",
     navAbout: "À propos", navProject: "Projet", themeLight: "Clair", themeDark: "Sombre", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Paramètres", settingsThemeTitle: "Thème", settingsLangTitle: "Langue", settingsLinksTitle: "Liens et aide",
     heroTitle: "Bonjour, je suis Nodirjon !", heroSubtitle: "Étudiant à l'Université internationale de Westminster à Tachkent (WIUT)",
     heroLine1: "Passionné par la logique, les schémas et les relations systémiques.",
@@ -195,7 +195,7 @@ const TRANSLATIONS = {
     tplJoin: "Bonjour l'équipe Safe Haven,\n\nJe souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spécialiste."
   },
   de: {
-    legalPrivacyBtn: "Datenschutz", legalTermsBtn: "Nutzungsbedingungen", legalConceptBtn: "Konzept-Hinweis", legalSupportBtn: "Partnerschaft & Spenden", projDisclaimerNote: "Hinweis zur Frühphase: Die Parameter von Safe Haven befinden sich in aktiver Entwicklung und stellen kein öffentliches Angebot dar.", legalContactNote: "Fragen: ntolipov.site.help@gmail.com", legalCloseBtn: "Schließen",
+    legalHubLink: "Rechtliches & Richtlinien", projDisclaimerNote: "Hinweis zur Frühphase: Die Parameter von Safe Haven befinden sich in aktiver Entwicklung und stellen kein öffentliches Angebot dar.", legalContactNote: "Fragen: ntolipov.site.help@gmail.com", legalCloseBtn: "Schließen",
     navAbout: "Über mich", navProject: "Projekt", themeLight: "Hell", themeDark: "Dunkel", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Einstellungen", settingsThemeTitle: "Design", settingsLangTitle: "Sprache", settingsLinksTitle: "Links & Hilfe",
     heroTitle: "Hallo, ich bin Nodirjon!", heroSubtitle: "Student an der Westminster International University in Taschkent (WIUT)",
     heroLine1: "Interessiert an Logik, Mustern und systemischen Zusammenhängen.",
@@ -231,7 +231,7 @@ const TRANSLATIONS = {
     tplJoin: "Hallo Safe-Haven-Team,\n\nich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterstützen."
   },
   it: {
-    legalPrivacyBtn: "Privacy Policy", legalTermsBtn: "Termini di utilizzo", legalConceptBtn: "Avviso sul progetto", legalSupportBtn: "Partnership e donazioni", projDisclaimerNote: "Nota sulla fase iniziale: i parametri di Safe Haven sono in fase di sviluppo attivo e non costituiscono un’offerta pubblica.", legalContactNote: "Domande: ntolipov.site.help@gmail.com", legalCloseBtn: "Chiudi",
+    legalHubLink: "Note legali e policy", projDisclaimerNote: "Nota sulla fase iniziale: i parametri di Safe Haven sono in fase di sviluppo attivo e non costituiscono un’offerta pubblica.", legalContactNote: "Domande: ntolipov.site.help@gmail.com", legalCloseBtn: "Chiudi",
     navAbout: "Chi sono", navProject: "Progetto", themeLight: "Chiaro", themeDark: "Scuro", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Impostazioni", settingsThemeTitle: "Tema", settingsLangTitle: "Lingua", settingsLinksTitle: "Link e aiuto",
     heroTitle: "Ciao, sono Nodirjon!", heroSubtitle: "Studente presso la Westminster International University di Tashkent (WIUT)",
     heroLine1: "Interessato a logica, schemi e relazioni sistemiche.",
@@ -267,7 +267,7 @@ const TRANSLATIONS = {
     tplJoin: "Ciao team di Safe Haven,\n\nmi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
   },
   zh: {
-    legalPrivacyBtn: "隐私政策", legalTermsBtn: "使用条款", legalConceptBtn: "项目概念声明", legalSupportBtn: "合作与捐赠说明", projDisclaimerNote: "早期概念说明：Safe Haven 的具体参数与参与方式仍在持续完善中，不构成公开要约。", legalContactNote: "相关咨询：ntolipov.site.help@gmail.com", legalCloseBtn: "关闭",
+    legalHubLink: "法律声明与政策", projDisclaimerNote: "早期概念说明：Safe Haven 的具体参数与参与方式仍在持续完善中，不构成公开要约。", legalContactNote: "相关咨询：ntolipov.site.help@gmail.com", legalCloseBtn: "关闭",
     navAbout: "关于我", navProject: "项目", themeLight: "浅色", themeDark: "深色", footerEmail: "Email", footerHelp: "Help", settingsLabel: "设置", settingsThemeTitle: "主题", settingsLangTitle: "语言", settingsLinksTitle: "链接与帮助",
     heroTitle: "你好，我是 Nodirjon！", heroSubtitle: "塔什干威斯敏斯特国际大学（WIUT）在读学生",
     heroLine1: "热衷于逻辑、规律与系统性关联。",
@@ -303,7 +303,7 @@ const TRANSLATIONS = {
     tplJoin: "你好 Safe Haven 团队：\n\n我希望作为导师、讲师或专业人员加入 Safe Haven 团队。"
   },
   ar: {
-    legalPrivacyBtn: "سياسة الخصوصية", legalTermsBtn: "شروط الاستخدام", legalConceptBtn: "إخلاء مسؤولية المشروع", legalSupportBtn: "الشراكة والتبرعات", projDisclaimerNote: "تنويه المرحلة المبكرة: معايير Safe Haven ومسارات الدعم قيد التطوير النشط ولا تُعد عرضًا عامًا ملزمًا.", legalContactNote: "للاستفسارات: ntolipov.site.help@gmail.com", legalCloseBtn: "إغلاق",
+    legalHubLink: "المعلومات القانونية والسياسات", projDisclaimerNote: "تنويه المرحلة المبكرة: معايير Safe Haven ومسارات الدعم قيد التطوير النشط ولا تُعد عرضًا عامًا ملزمًا.", legalContactNote: "للاستفسارات: ntolipov.site.help@gmail.com", legalCloseBtn: "إغلاق",
     navAbout: "نبذة عني", navProject: "المشروع", themeLight: "فاتح", themeDark: "داكن", footerEmail: "Email", footerHelp: "Help", settingsLabel: "الإعدادات", settingsThemeTitle: "المظهر", settingsLangTitle: "اللغة", settingsLinksTitle: "الروابط والمساعدة",
     heroTitle: "مرحبًا، أنا نوديرجون!", heroSubtitle: "طالب في جامعة وستمنستر الدولية في طشقند (WIUT)",
     heroLine1: "مهتم بالمنطق والأنماط والعلاقات النظامية.",
@@ -339,7 +339,7 @@ const TRANSLATIONS = {
     tplJoin: "مرحبًا فريق Safe Haven،\n\nيسعدني الانضمام إلى فريق Safe Haven كمرشد أو معلم أو متخصص."
   },
   tr: {
-    legalPrivacyBtn: "Gizlilik Politikası", legalTermsBtn: "Kullanım Koşulları", legalConceptBtn: "Konsept Bildirimi", legalSupportBtn: "Ortaklık ve Bağışlar", projDisclaimerNote: "Erken aşama bildirimi: Safe Haven parametreleri ve destek modelleri geliştirme aşamasındadır ve halka açık bağlayıcı bir teklif niteliği taşımaz.", legalContactNote: "Sorularınız için: ntolipov.site.help@gmail.com", legalCloseBtn: "Kapat",
+    legalHubLink: "Yasal Bilgiler ve Politikalar", projDisclaimerNote: "Erken aşama bildirimi: Safe Haven parametreleri ve destek modelleri geliştirme aşamasındadır ve halka açık bağlayıcı bir teklif niteliği taşımaz.", legalContactNote: "Sorularınız için: ntolipov.site.help@gmail.com", legalCloseBtn: "Kapat",
     navAbout: "Hakkımda", navProject: "Proje", themeLight: "Açık", themeDark: "Koyu", footerEmail: "Email", footerHelp: "Help", settingsLabel: "Ayarlar", settingsThemeTitle: "Tema", settingsLangTitle: "Dil", settingsLinksTitle: "Bağlantılar ve Yardım",
     heroTitle: "Merhaba, ben Nodirjon!", heroSubtitle: "Taşkent Westminster Uluslararası Üniversitesi (WIUT) öğrencisi",
     heroLine1: "Mantık, örüntüler ve sistemsel ilişkilerle ilgileniyorum.",
@@ -681,6 +681,8 @@ function setLanguage(langCode) {
 
   document.documentElement.setAttribute("lang", langCode);
   document.documentElement.setAttribute("dir", langObj.dir);
+  const legalPageLink = document.getElementById("legalPageLink");
+  if (legalPageLink) legalPageLink.href = `legal.html?lang=${encodeURIComponent(langCode)}`;
   const currentLangCode = document.getElementById("currentLangCode");
   if (currentLangCode) currentLangCode.textContent = langCode.toUpperCase();
   const currentLangBadge = document.getElementById("currentLangBadge");

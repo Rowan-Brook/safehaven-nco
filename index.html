@@ -274,14 +274,11 @@
  </main>
 
  <!-- FOOTER: Legal & Policies + Email (ntolipov.work@gmail.com) -->
- <footer class="mt-20 pt-6 border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
- <div>© 2026 Nodirjon Tolipov · Rowan Brook</div>
+ <footer class="mt-20 pt-6 border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
+ <div>© 2026 Nodirjon Tolipov - Rowan Brook</div>
  <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
- <button type="button" data-legal="privacy" data-i18n="legalPrivacyBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Privacy Policy</button>
- <button type="button" data-legal="terms" data-i18n="legalTermsBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Terms of Use</button>
- <button type="button" data-legal="concept" data-i18n="legalConceptBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Concept Disclaimer</button>
- <button type="button" data-legal="support" data-i18n="legalSupportBtn" class="legal-trigger-btn footer-link font-medium cursor-pointer bg-transparent border-0 p-0">Partnership & Donations</button>
- <span aria-hidden="true" style="opacity: 0.4;">·</span>
+ <a id="legalPageLink" href="legal.html" data-i18n="legalHubLink" class="footer-link font-medium">Legal & Policies</a>
+ <span aria-hidden="true" style="opacity: 0.4;">-</span>
  <a href="mailto:ntolipov.work@gmail.com" data-i18n="footerEmail" class="footer-link font-semibold" style="color: var(--accent);">Email</a>
  </div>
  </footer>
@@ -317,34 +314,6 @@
  </div>
 
 
- <!-- Legal & Policy Reader Modal -->
- <div id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65">
- <div class="modal-card surface-card w-full max-w-2xl rounded-2xl p-6 sm:p-7 relative flex flex-col max-h-[85vh]" style="background: var(--bg-elevated); border-color: var(--border-strong);">
- <div class="flex items-start justify-between gap-3 pb-4 border-b" style="border-color: var(--border-subtle);">
- <div>
- <span id="legalModalBadge" class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-md badge-accent mb-1.5">Effective: November 2026</span>
- <h3 id="legalModalTitle" class="font-serif-editorial text-xl sm:text-2xl font-bold">Privacy Policy</h3>
- </div>
- <button type="button" id="closeLegalModalBtn" aria-label="Close document" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer shrink-0">✕</button>
- </div>
-
- <!-- Quick Document Switcher Tabs inside Modal -->
- <div class="flex flex-wrap gap-1.5 pt-3 pb-3 border-b" style="border-color: var(--border-subtle);">
- <button type="button" data-legal="privacy" data-i18n="legalPrivacyBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Privacy Policy</button>
- <button type="button" data-legal="terms" data-i18n="legalTermsBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Terms of Use</button>
- <button type="button" data-legal="concept" data-i18n="legalConceptBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Concept Disclaimer</button>
- <button type="button" data-legal="support" data-i18n="legalSupportBtn" class="legal-tab-pill px-3 py-1.5 rounded-lg text-xs font-medium border cursor-pointer">Partnership & Donations</button>
- </div>
-
- <!-- Scrollable Document Body -->
- <div id="legalModalBody" class="mt-4 overflow-y-auto overscroll-contain pe-2 space-y-4 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);"></div>
-
- <div class="mt-5 pt-3 border-t flex items-center justify-between gap-3 text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
- <span data-i18n="legalContactNote">Questions: ntolipov.site.help@gmail.com</span>
- <button type="button" id="closeLegalDoneBtn" data-i18n="legalCloseBtn" class="cta-primary px-4 py-1.5 rounded-xl text-xs font-semibold cursor-pointer">Close</button>
- </div>
- </div>
- </div>
 
  <script src="script.js"></script>
 </body>
