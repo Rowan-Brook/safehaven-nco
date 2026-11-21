@@ -1,3 +1,20 @@
+const LEGAL_DOCS_BY_LANG = {
+  en: "https://drive.google.com/file/d/14VP51Jj712ht4Cb5mi_7Nr6xDlNuCAG8/view?usp=drivesdk",
+  ru: "https://drive.google.com/file/d/164WkrYuOAirbKutfYoyNS0X7Sgb86qTt/view?usp=drivesdk",
+  uz: "https://drive.google.com/file/d/1Gh-QeuknlHx7voUX-ReQM9lLRi_Qovi7/view?usp=drivesdk",
+  es: "https://drive.google.com/file/d/1Rhh9Osbjyl3ITqYDV2ltUdZQTwbv1YNN/view?usp=drivesdk",
+  fr: "https://drive.google.com/file/d/1O1UQGmu8EOfx5kHRyGC0eV1J_qxm6fgw/view?usp=drivesdk",
+  de: "https://drive.google.com/file/d/1pKDaVaCsS5Sj5xjLQ7Q0wqN7QTZ2QbGS/view?usp=drivesdk",
+  it: "https://drive.google.com/file/d/1LVX8QhcuZFFGx2MKNM9G2QVCrg8WvOtt/view?usp=drivesdk",
+  zh: "https://drive.google.com/file/d/1ISUv4Cykl8Tidt7cp0g3XpnnLdGCmNPj/view?usp=drivesdk",
+  ar: "https://drive.google.com/file/d/1V-cbZP6hZufTAdurF7TyNTsh1BZSX-ST/view?usp=drivesdk",
+  tr: "https://drive.google.com/file/d/14WmXhKHgRxip9EgwGkPcR5ijPzHSuWZL/view?usp=drivesdk",
+};
+
+function getLegalDocUrl(langCode = currentLang) {
+  return LEGAL_DOCS_BY_LANG[langCode] || LEGAL_DOCS_BY_LANG.en;
+}
+
 const CONTACT_EMAIL = "safehaven.nco@gmail.com";
 
 const LANGUAGES = [
@@ -464,7 +481,7 @@ function setLanguage(langCode) {
   document.documentElement.setAttribute("lang", langCode);
   document.documentElement.setAttribute("dir", langObj.dir);
   const legalPageLink = document.getElementById("legalPageLink");
-  if (legalPageLink) legalPageLink.href = langCode === "ru" ? "https://drive.google.com/file/d/164WkrYuOAirbKutfYoyNS0X7Sgb86qTt/view?usp=drivesdk" : "https://drive.google.com/file/d/14VP51Jj712ht4Cb5mi_7Nr6xDlNuCAG8/view?usp=drivesdk";
+  if (legalPageLink) legalPageLink.href = getLegalDocUrl(langCode);
   const currentLangCode = document.getElementById("currentLangCode");
   if (currentLangCode) currentLangCode.textContent = langCode.toUpperCase();
 document.querySelectorAll("[data-i18n]").forEach(el => {
