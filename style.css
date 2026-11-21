@@ -205,16 +205,6 @@ body::before {
     inset 0 -1px 0 0 rgba(253, 250, 244, 0.8);
 }
 
-.mobile-bottom-bar {
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border-strong);
-  box-shadow:
-    0 -8px 24px -10px rgba(0, 0, 0, 0.45),
-    0 -2px 0 0 var(--accent-soft);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
 /* Sliding Underline Indicator Under About / Project */
 .nav-underline-glider {
   position: absolute;
@@ -231,7 +221,6 @@ body::before {
   pointer-events: none;
   z-index: 2;
 }
-
 
 /* Mobile Oval Pill Capsule Navigation */
 .nav-oval-capsule {
@@ -506,44 +495,3 @@ body::before {
   }
 }
 
-
-/* Legal Modal Tab Pills & Typography */
-.legal-tab-pill {
-  background: transparent;
-  color: var(--text-secondary);
-  border-color: var(--border-subtle);
-  transition: background-color 0.25s var(--ease-silk), color 0.25s var(--ease-silk), border-color 0.25s var(--ease-silk);
-}
-
-.legal-tab-pill:hover {
-  border-color: var(--accent);
-  color: var(--text-primary);
-}
-
-.legal-tab-pill.active {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--border-strong);
-  font-weight: 600;
-}
-
-.legal-doc-section h4 {
-  color: var(--text-primary);
-  font-weight: 600;
-  font-size: 0.875rem;
-  margin-bottom: 0.35rem;
-}
-
-.legal-doc-section p {
-  margin: 0;
-}
-
-.legal-doc-section ul {
-  margin: 0.35rem 0 0 0;
-  padding-inline-start: 1.25rem;
-  list-style-type: disc;
-}
-
-.legal-doc-section li {
-  margin-bottom: 0.25rem;
-}

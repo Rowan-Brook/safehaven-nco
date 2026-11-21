@@ -381,224 +381,6 @@ let currentTheme = "dark";
 let activeTab = "about";
 let activeModalAction = "sponsor";
 
-const LEGAL_DOCS = {
-  ru: {
-    badge: "Редакция от ноября 2026 - Действует без печати",
-    privacy: {
-      title: "Политика конфиденциальности (Privacy Policy)",
-      sections: [
-        {
-          h: "1. Общие положения и характер сайта",
-          p: "Настоящий веб-сайт является персональной информационной страницей Нодиржона Толипова (Rowan Brook) и презентационной площадкой социальной инициативы Safe Haven. На сайте отсутствуют формы регистрации, личные кабинеты, встроенные платежные шлюзы и скрытые трекеры сбора персональных данных."
-        },
-        {
-          h: "2. Какие данные могут обрабатываться",
-          ul: [
-            "Технические данные - при загрузке страницы ваш браузер автоматически передаёт стандартные сетевые параметры (IP-адрес, тип браузера и устройства) хостинг-провайдеру (например, GitHub Pages) и CDN-сервисам шрифтов/стилей исключительно для корректного отображения страницы.",
-            "Данные добровольной переписки - если вы самостоятельно напишете на электронную почту (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com или safehaven.nco@gmail.com) либо перейдёте в мессенджеры и соцсети, мы получаем только те сведения, которые вы добровольно указали в сообщении."
-          ]
-        },
-        {
-          h: "3. Цели использования и передача третьим лицам",
-          p: "Полученные в переписке контакты и сообщения используются исключительно для ответа на ваш запрос, обсуждения сотрудничества, спонсорства, волонтёрства или вопросов по работе сайта. Мы не продаём, не сдаём в аренду и не передаём ваши персональные данные третьим лицам в рекламных целях."
-        },
-        {
-          h: "4. Внешние сервисы и ваши права",
-          p: "На сайте размещены ссылки на внешние платформы (GitHub, LinkedIn, Instagram, WhatsApp, Facebook). При переходе по ним действуют политики конфиденциальности соответствующих сервисов. Вы вправе в любой момент запросить удаление вашей переписки и контактных данных, написав на ntolipov.site.help@gmail.com."
-        }
-      ]
-    },
-    terms: {
-      title: "Условия использования сайта (Terms of Use)",
-      sections: [
-        {
-          h: "1. Принятие условий",
-          p: "Просматривая данный сайт и используя размещённые на нём материалы, вы соглашаетесь с настоящими Условиями использования. Если вы не согласны с ними, пожалуйста, прекратите использование сайта."
-        },
-        {
-          h: "2. Информационный характер материалов",
-          p: "Вся информация на сайте - включая сведения об образовании, профессиональном опыте и концепции проекта Safe Haven - предоставляется исключительно в ознакомительных целях. Материалы сайта не являются публичной офертой, юридической, финансовой или инвестиционной рекомендацией."
-        },
-        {
-          h: "3. Интеллектуальная собственность и цитирование",
-          p: "Тексты, структура описания концепции Safe Haven, дизайн и авторские материалы принадлежат Нодиржону Толипову (Rowan Brook), если не указано иное. Разрешается цитирование и распространение ссылок на проект в некоммерческих и информационных целях при обязательном указании источника и без искажения смысла."
-        },
-        {
-          h: "4. Ограничение ответственности и применимое право",
-          p: "Сайт предоставляется по принципу «как есть» (as is). Владелец сайта не несёт ответственности за временную недоступность внешних ссылок или сервисов. Настоящие условия регулируются с учётом применимого законодательства Республики Узбекистан и общепринятых норм добросовестного информационного взаимодействия."
-        }
-      ]
-    },
-    concept: {
-      title: "Дисклеймер концепции проекта (Safe Haven)",
-      sections: [
-        {
-          h: "1. Стадия развития инициативы",
-          p: "Safe Haven находится на стадии формирования, академической и организационной проработки. Представленное на сайте описание отражает целевую модель и архитектурное видение проекта на текущем этапе."
-        },
-        {
-          h: "2. Уточнение параметров программы и модели ISA",
-          ul: [
-            "Упомянутые на сайте параметры - включая формат обучения «6 + 2», размер мини-групп (10–12 человек), порог дохода ($450/мес), ставку отчислений (10%) и целевые показатели трудоустройства (80%+) - являются проектными ориентирами.",
-            "Финальные юридические, финансовые и образовательные условия определяются отдельными индивидуальными соглашениями после официального запуска и институционального оформления проекта."
-          ]
-        },
-        {
-          h: "3. Отсутствие гарантий приёма и трудоустройства",
-          p: "Публикация концепции на сайте не является открытым набором студентов и не создаёт автоматических обязательств по зачислению, предоставлению жилья, стипендий или гарантированному трудоустройству."
-        }
-      ]
-    },
-    support: {
-      title: "Уведомление о партнёрстве и пожертвованиях",
-      sections: [
-        {
-          h: "1. Отсутствие приёма онлайн-платежей на сайте",
-          p: "Данный веб-сайт не осуществляет автоматический приём денежных средств, банковских переводов или криптовалютных платежей. Кнопки «Become a Sponsor», «Make a Donation» и «Join the Team» формируют шаблон письма для прямой связи с командой инициативы."
-        },
-        {
-          h: "2. Индивидуальное согласование поддержки",
-          p: "Любое спонсорское участие, грантовая поддержка, передача оборудования или целевая помощь обсуждаются исключительно в индивидуальном порядке в переписке по официальному адресу safehaven.nco@gmail.com и оформляются прозрачными договорённостями в соответствии с применимым законодательством."
-        },
-        {
-          h: "3. Защита от мошенничества",
-          p: "Официальная коммуникация по проекту Safe Haven ведётся только через адрес safehaven.nco@gmail.com, а по личным и рабочим вопросам автора сайта - через ntolipov.work@gmail.com. Пожалуйста, не переводите средства третьим лицам, действующим от имени проекта без подтверждения с указанных адресов."
-        }
-      ]
-    }
-  },
-  en: {
-    badge: "Effective: November 2026 - Valid without physical seal",
-    privacy: {
-      title: "Privacy Policy",
-      sections: [
-        {
-          h: "1. General Scope & Nature of the Website",
-          p: "This website is the personal informational portfolio of Nodirjon Tolipov (Rowan Brook) and the public overview page for the Safe Haven initiative. The site contains no user registration forms, accounts, payment gateways, or hidden behavioral tracking scripts."
-        },
-        {
-          h: "2. Information That May Be Processed",
-          ul: [
-            "Technical Connection Data - When you load this site, your browser automatically transmits standard network metadata (such as IP address and browser type) to the hosting provider (e.g., GitHub Pages) and font/style CDNs solely to deliver the webpage.",
-            "Voluntary Correspondence Data - If you choose to contact us via email (ntolipov.work@gmail.com, ntolipov.site.help@gmail.com, or safehaven.nco@gmail.com) or external social/messaging platforms, we only receive the information you voluntarily include in your message."
-          ]
-        },
-        {
-          h: "3. Purpose of Use & Non-Disclosure",
-          p: "Contact details and messages received through voluntary correspondence are used solely to respond to your inquiry, discuss collaborations, sponsorships, volunteering, or address website support questions. We do not sell, rent, or trade personal information to third parties."
-        },
-        {
-          h: "4. Third-Party Links & Your Rights",
-          p: "This website links to external services (GitHub, LinkedIn, Instagram, WhatsApp, Facebook), which are governed by their own privacy policies. You may request deletion of your prior email correspondence at any time by contacting ntolipov.site.help@gmail.com."
-        }
-      ]
-    },
-    terms: {
-      title: "Terms of Use",
-      sections: [
-        {
-          h: "1. Acceptance of Terms",
-          p: "By accessing and browsing this website, you acknowledge and agree to these Terms of Use. If you do not agree with these terms, please discontinue use of the site."
-        },
-        {
-          h: "2. Informational Purpose Only",
-          p: "All content presented on this website - including academic background, professional experience, and the Safe Haven concept overview - is provided strictly for informational purposes. Nothing on this site constitutes a binding public offer, legal advice, or financial/investment solicitation."
-        },
-        {
-          h: "3. Intellectual Property & Attribution",
-          p: "Original texts, Safe Haven architectural descriptions, visual layout, and code are the intellectual property of Nodirjon Tolipov (Rowan Brook), unless stated otherwise. Non-commercial sharing and citation are permitted provided clear attribution and a link to the source are included."
-        },
-        {
-          h: "4. Limitation of Liability & Governing Principles",
-          p: "This website is provided on an 'as is' basis without warranties of uninterrupted availability. These terms are governed in alignment with the applicable laws of the Republic of Uzbekistan and standard international principles of good-faith digital communication."
-        }
-      ]
-    },
-    concept: {
-      title: "Safe Haven Concept Disclaimer",
-      sections: [
-        {
-          h: "1. Early-Stage Initiative Status",
-          p: "Safe Haven is currently in an active conceptual, academic, and organizational development phase. The model described on this website represents the intended design and vision of the initiative rather than an already operating institution."
-        },
-        {
-          h: "2. Indicative Program & ISA Parameters",
-          ul: [
-            "Figures referenced on the site - including the '6 + 2' track duration, 10–12 student cohort size, $450/month income threshold, 10% contribution rate, and 80%+ placement target - are planning benchmarks.",
-            "Final operational, legal, and educational terms will be established through formal individual agreements upon official registration and launch."
-          ]
-        },
-        {
-          h: "3. No Enrollment or Employment Guarantee",
-          p: "Publication of this concept overview does not constitute an open admissions call or create binding obligations regarding enrollment, housing stipends, or guaranteed job placement."
-        }
-      ]
-    },
-    support: {
-      title: "Partnership & Donations Notice",
-      sections: [
-        {
-          h: "1. No Direct Online Payment Processing",
-          p: "This website does not collect or process online financial transactions, card payments, or cryptocurrency transfers. Action buttons ('Become a Sponsor', 'Make a Donation', 'Join the Team') simply prepare a draft email to initiate direct conversation."
-        },
-        {
-          h: "2. Individual Agreement Protocol",
-          p: "Any sponsorship, grant funding, equipment contribution, or mentorship collaboration is discussed individually via safehaven.nco@gmail.com and formalized only through transparent written arrangements compliant with applicable law."
-        },
-        {
-          h: "3. Official Communication Channels",
-          p: "Official Safe Haven inquiries are handled exclusively via safehaven.nco@gmail.com, and personal/professional collaborations via ntolipov.work@gmail.com. Do not transfer funds to third parties claiming affiliation without direct confirmation from these addresses."
-        }
-      ]
-    }
-  }
-};
-
-let activeLegalDoc = "privacy";
-
-function renderLegalModalContent(docKey = activeLegalDoc) {
-  activeLegalDoc = docKey || "privacy";
-  const langPack = LEGAL_DOCS[currentLang] || LEGAL_DOCS.en;
-  const doc = langPack[activeLegalDoc] || langPack.privacy;
-
-  const badgeEl = document.getElementById("legalModalBadge");
-  const titleEl = document.getElementById("legalModalTitle");
-  const bodyEl = document.getElementById("legalModalBody");
-
-  if (badgeEl) badgeEl.textContent = langPack.badge;
-  if (titleEl) titleEl.textContent = doc.title;
-
-  if (bodyEl) {
-    bodyEl.innerHTML = doc.sections.map(sec => `
-      <div class="legal-doc-section">
-        <h4>${sec.h}</h4>
-        ${sec.p ? `<p>${sec.p}</p>` : ""}
-        ${sec.ul ? `<ul>${sec.ul.map(item => `<li>${item}</li>`).join("")}</ul>` : ""}
-      </div>
-    `).join("");
-    bodyEl.scrollTop = 0;
-  }
-
-  document.querySelectorAll(".legal-tab-pill").forEach(pill => {
-    pill.classList.toggle("active", pill.getAttribute("data-legal") === activeLegalDoc);
-  });
-}
-
-function openLegalModal(docKey = "privacy") {
-  renderLegalModalContent(docKey);
-  const legalModal = document.getElementById("legalModal");
-  if (legalModal) {
-    legalModal.classList.add("open");
-  }
-}
-
-function closeLegalModal() {
-  const legalModal = document.getElementById("legalModal");
-  if (legalModal) {
-    legalModal.classList.remove("open");
-  }
-}
-
 let copyResetTimer = null;
 
 function getDict(langCode = currentLang) {
@@ -650,7 +432,7 @@ function updateLocalizedDate() {
     const monthDay = new Intl.DateTimeFormat(langObj.locale, { month: "long", day: "numeric" }).format(now);
     liveDateEl.textContent = `${weekday.charAt(0).toUpperCase() + weekday.slice(1)},\n${monthDay.charAt(0).toUpperCase() + monthDay.slice(1)}`;
   } catch (e) {
-    liveDateEl.textContent = "Friday,\nNovember 20";
+    liveDateEl.textContent = "Saturday,\nNovember 21";
   }
 }
 
@@ -682,13 +464,10 @@ function setLanguage(langCode) {
   document.documentElement.setAttribute("lang", langCode);
   document.documentElement.setAttribute("dir", langObj.dir);
   const legalPageLink = document.getElementById("legalPageLink");
-  if (legalPageLink) legalPageLink.href = `legal.html?lang=${encodeURIComponent(langCode)}`;
+  if (legalPageLink) legalPageLink.href = langCode === "ru" ? "docs/Legal_and_Policies_RU.pdf" : "docs/Legal_and_Policies_EN.pdf";
   const currentLangCode = document.getElementById("currentLangCode");
   if (currentLangCode) currentLangCode.textContent = langCode.toUpperCase();
-  const currentLangBadge = document.getElementById("currentLangBadge");
-  if (currentLangBadge) currentLangBadge.textContent = langCode.toUpperCase();
-
-  document.querySelectorAll("[data-i18n]").forEach(el => {
+document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (dict[key]) el.textContent = dict[key];
   });
@@ -708,13 +487,7 @@ function setLanguage(langCode) {
     if (modalTemplate) modalTemplate.value = getTemplateForAction(activeModalAction, langCode);
     syncMailtoLink();
   }
-
-  const legalModal = document.getElementById("legalModal");
-  if (legalModal && legalModal.classList.contains("open")) {
-    renderLegalModalContent(activeLegalDoc);
-  }
-
-  setTheme(currentTheme);
+setTheme(currentTheme);
   updateLocalizedDate();
   renderLanguageOptions();
   requestAnimationFrame(updateNavGlider);
@@ -932,21 +705,7 @@ document.addEventListener("click", async (e) => {
     closeActionModal();
     return;
   }
-
-  // Open or switch Legal Document Modal
-  const legalTrigger = target.closest("[data-legal]");
-  if (legalTrigger) {
-    openLegalModal(legalTrigger.getAttribute("data-legal"));
-    return;
-  }
-
-  // Close Legal Document Modal
-  if (target.closest("#closeLegalModalBtn") || target.closest("#closeLegalDoneBtn") || target.id === "legalModal") {
-    closeLegalModal();
-    return;
-  }
-
-  // Click outside Settings menu
+// Click outside Settings menu
   if (!target.closest("#settingsDropdownWrap")) {
     closeAllDropdowns();
   }
@@ -964,11 +723,7 @@ document.addEventListener("keydown", (e) => {
     if (connectModal && connectModal.classList.contains("open")) {
       closeActionModal();
     }
-    const legalModal = document.getElementById("legalModal");
-    if (legalModal && legalModal.classList.contains("open")) {
-      closeLegalModal();
-    }
-  }
+}
 });
 
 window.addEventListener("resize", updateNavGlider);
