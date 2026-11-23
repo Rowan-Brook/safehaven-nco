@@ -66,7 +66,7 @@ const TRANSLATIONS = {
     projHook: "Talent is universal, yet opportunity is not. Safe Haven removes financial, housing, and psychological barriers for motivated individuals facing severe socio-economic hardship—transforming them from vulnerable survivors into independent digital professionals who pay opportunity forward.",
     pillar1Title: "100% Barrier-Free Entry",
     pillar1Desc: "Zero upfront tuition. Covers living stipends, safe housing, meals, and certified psychological support.",
-    pillar2Title: "The "6 + 2" Acceleration Track",
+    pillar2Title: "The \"6 + 2\" Acceleration Track",
     pillar2Desc: "6 months of intensive applied IT, followed by 2 months building real commercial software products with mentorship.",
     pillar3Title: "Ethical Recyclable ISA",
     pillar3Desc: "Graduates contribute 10% of salary ONLY after securing employment above $450/month with hardship freeze.",
@@ -82,15 +82,9 @@ const TRANSLATIONS = {
     copyEmail: "Copy Email",
     copied: "Copied!",
     openMailApp: "Open Mail App",
-    tplSponsor: "Hello Safe Haven Team,
-
-I would like to explore sponsoring Safe Haven and supporting its students.",
-    tplDonate: "Hello Safe Haven Team,
-
-I would like to make a donation to support student housing, meals, and equipment.",
-    tplJoin: "Hello Safe Haven Team,
-
-I would love to join the Safe Haven team as a mentor, educator, or specialist."
+    tplSponsor: "Hello Safe Haven Team,\n\nI would like to explore sponsoring Safe Haven and supporting its students.",
+    tplDonate: "Hello Safe Haven Team,\n\nI would like to make a donation to support student housing, meals, and equipment.",
+    tplJoin: "Hello Safe Haven Team,\n\nI would love to join the Safe Haven team as a mentor, educator, or specialist."
   },
   ru: {
     legalHubLink: "Правовая информация и политики",
@@ -143,15 +137,9 @@ I would love to join the Safe Haven team as a mentor, educator, or specialist."
     copyEmail: "Копировать Email",
     copied: "Скопировано!",
     openMailApp: "Открыть почту",
-    tplSponsor: "Здравствуйте, команда Safe Haven!
-
-Хотел(а) бы обсудить спонсорство и партнёрство с проектом Safe Haven.",
-    tplDonate: "Здравствуйте, команда Safe Haven!
-
-Хотел(а) бы сделать пожертвование на жильё, питание и оборудование для студентов.",
-    tplJoin: "Здравствуйте, команда Safe Haven!
-
-Хотел(а) бы присоединиться к команде проекта в качестве ментора, преподавателя или специалиста."
+    tplSponsor: "Здравствуйте, команда Safe Haven!\n\nХотел(а) бы обсудить спонсорство и партнёрство с проектом Safe Haven.",
+    tplDonate: "Здравствуйте, команда Safe Haven!\n\nХотел(а) бы сделать пожертвование на жильё, питание и оборудование для студентов.",
+    tplJoin: "Здравствуйте, команда Safe Haven!\n\nХотел(а) бы присоединиться к команде проекта в качестве ментора, преподавателя или специалиста."
   },
   uz: {
     legalHubLink: "Huquqiy ma’lumotlar va siyosatlar",
@@ -204,15 +192,9 @@ I would love to join the Safe Haven team as a mentor, educator, or specialist."
     copyEmail: "Emailni nusxalash",
     copied: "Nusxalandi!",
     openMailApp: "Pochta ilovasini ochish",
-    tplSponsor: "Assalomu alaykum, Safe Haven jamoasi!
-
-Safe Haven loyihasiga homiylik va hamkorlik qilish imkoniyatlarini muhokama qilmoqchiman.",
-    tplDonate: "Assalomu alaykum, Safe Haven jamoasi!
-
-Talabalar uchun turar-joy, ovqatlanish va jihozlarga xayriya qilmoqchiman.",
-    tplJoin: "Assalomu alaykum, Safe Haven jamoasi!
-
-Loyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchiman."
+    tplSponsor: "Assalomu alaykum, Safe Haven jamoasi!\n\nSafe Haven loyihasiga homiylik va hamkorlik qilish imkoniyatlarini muhokama qilmoqchiman.",
+    tplDonate: "Assalomu alaykum, Safe Haven jamoasi!\n\nTalabalar uchun turar-joy, ovqatlanish va jihozlarga xayriya qilmoqchiman.",
+    tplJoin: "Assalomu alaykum, Safe Haven jamoasi!\n\nLoyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchiman."
   },
   es: {
     legalHubLink: "Información legal y políticas",
@@ -249,7 +231,7 @@ Loyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchima
     projHook: "El talento es universal, pero las oportunidades no. Safe Haven elimina las barreras financieras, de vivienda y psicológicas para personas motivadas que enfrentan dificultades socioeconómicas graves.",
     pillar1Title: "Acceso 100% sin barreras",
     pillar1Desc: "Sin matrícula inicial. Cubre estipendio para vivir, vivienda segura, comidas y apoyo psicológico certificado.",
-    pillar2Title: "Programa acelerado "6 + 2"",
+    pillar2Title: "Programa acelerado \"6 + 2\"",
     pillar2Desc: "6 meses de TI práctica intensiva, seguidos de 2 meses creando productos de software comerciales reales con mentoría.",
     pillar3Title: "ISA ético y reciclable",
     pillar3Desc: "Los graduados aportan el 10% de su salario SOLO tras conseguir empleo por encima de $450/mes con pausa por dificultades.",
@@ -265,15 +247,9 @@ Loyiha jamoasiga mentor, o‘qituvchi yoki mutaxassis sifatida qo‘shilmoqchima
     copyEmail: "Copiar correo",
     copied: "¡Copiado!",
     openMailApp: "Abrir correo",
-    tplSponsor: "Hola equipo de Safe Haven,
-
-Me gustaría explorar opciones de patrocinio para Safe Haven y apoyar a sus estudiantes.",
-    tplDonate: "Hola equipo de Safe Haven,
-
-Me gustaría realizar una donación para apoyar la vivienda, alimentación y equipos de los estudiantes.",
-    tplJoin: "Hola equipo de Safe Haven,
-
-Me encantaría unirme al equipo de Safe Haven como mentor, educador o especialista."
+    tplSponsor: "Hola equipo de Safe Haven,\n\nMe gustaría explorar opciones de patrocinio para Safe Haven y apoyar a sus estudiantes.",
+    tplDonate: "Hola equipo de Safe Haven,\n\nMe gustaría realizar una donación para apoyar la vivienda, alimentación y equipos de los estudiantes.",
+    tplJoin: "Hola equipo de Safe Haven,\n\nMe encantaría unirme al equipo de Safe Haven como mentor, educador o especialista."
   },
   fr: {
     legalHubLink: "Mentions légales et politiques",
@@ -310,7 +286,7 @@ Me encantaría unirme al equipo de Safe Haven como mentor, educador o especialis
     projHook: "Le talent est universel, mais les opportunités ne le sont pas. Safe Haven lève les obstacles financiers, de logement et psychologiques pour les personnes motivées en grande difficulté.",
     pillar1Title: "Entrée 100 % sans barrière",
     pillar1Desc: "Aucun frais initial. Couvre allocation de vie, logement sûr, repas et soutien psychologique certifié.",
-    pillar2Title: "Parcours accéléré "6 + 2"",
+    pillar2Title: "Parcours accéléré \"6 + 2\"",
     pillar2Desc: "6 mois d'informatique appliquée intensive, puis 2 mois de création de produits logiciels commerciaux avec mentorat.",
     pillar3Title: "ISA éthique et solidaire",
     pillar3Desc: "Les diplômés versent 10 % de leur salaire UNIQUEMENT après un emploi au-dessus de 450 $/mois avec gel en cas de difficulté.",
@@ -326,15 +302,9 @@ Me encantaría unirme al equipo de Safe Haven como mentor, educador o especialis
     copyEmail: "Copier l'e-mail",
     copied: "Copié !",
     openMailApp: "Ouvrir la messagerie",
-    tplSponsor: "Bonjour l'équipe Safe Haven,
-
-Je souhaiterais échanger sur un parrainage ou partenariat avec Safe Haven.",
-    tplDonate: "Bonjour l'équipe Safe Haven,
-
-Je souhaite faire un don pour soutenir le logement, les repas et l'équipement des étudiants.",
-    tplJoin: "Bonjour l'équipe Safe Haven,
-
-Je souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spécialiste."
+    tplSponsor: "Bonjour l'équipe Safe Haven,\n\nJe souhaiterais échanger sur un parrainage ou partenariat avec Safe Haven.",
+    tplDonate: "Bonjour l'équipe Safe Haven,\n\nJe souhaite faire un don pour soutenir le logement, les repas et l'équipement des étudiants.",
+    tplJoin: "Bonjour l'équipe Safe Haven,\n\nJe souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spécialiste."
   },
   de: {
     legalHubLink: "Rechtliches & Richtlinien",
@@ -371,7 +341,7 @@ Je souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spé
     projHook: "Talent ist weltweit verteilt, Chancen jedoch nicht. Safe Haven baut finanzielle, wohnliche und psychologische Hürden für motivierte Menschen in schwierigen Lebenslagen ab.",
     pillar1Title: "100 % barrierefreier Zugang",
     pillar1Desc: "Keine Vorkosten. Deckt Lebensunterhalt, sichere Unterkunft, Verpflegung und psychologische Begleitung.",
-    pillar2Title: "Das "6 + 2"-Beschleunigungsprogramm",
+    pillar2Title: "Das \"6 + 2\"-Beschleunigungsprogramm",
     pillar2Desc: "6 Monate intensive angewandte IT, gefolgt von 2 Monaten Entwicklung echter kommerzieller Software mit Mentoring.",
     pillar3Title: "Faires, umlaufendes ISA-Modell",
     pillar3Desc: "Absolventen zahlen 10 % des Einkommens NUR bei einem Gehalt über 450 $/Monat mit Härtefallregelung.",
@@ -387,15 +357,9 @@ Je souhaite rejoindre l'équipe Safe Haven en tant que mentor, formateur ou spé
     copyEmail: "E-Mail kopieren",
     copied: "Kopiert!",
     openMailApp: "E-Mail-App öffnen",
-    tplSponsor: "Hallo Safe-Haven-Team,
-
-gerne möchte ich Möglichkeiten für Sponsoring und Partnerschaft mit Safe Haven besprechen.",
-    tplDonate: "Hallo Safe-Haven-Team,
-
-ich möchte eine Spende für Unterkunft, Verpflegung und Ausstattung der Teilnehmenden leisten.",
-    tplJoin: "Hallo Safe-Haven-Team,
-
-ich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterstützen."
+    tplSponsor: "Hallo Safe-Haven-Team,\n\ngerne möchte ich Möglichkeiten für Sponsoring und Partnerschaft mit Safe Haven besprechen.",
+    tplDonate: "Hallo Safe-Haven-Team,\n\nich möchte eine Spende für Unterkunft, Verpflegung und Ausstattung der Teilnehmenden leisten.",
+    tplJoin: "Hallo Safe-Haven-Team,\n\nich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterstützen."
   },
   it: {
     legalHubLink: "Note legali e policy",
@@ -432,7 +396,7 @@ ich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterst�
     projHook: "Il talento è universale, ma le opportunità non lo sono. Safe Haven rimuove barriere economiche, abitative e psicologiche per persone motivate in grave difficoltà.",
     pillar1Title: "Accesso 100% senza barriere",
     pillar1Desc: "Nessuna retta iniziale. Copre indennità di sussistenza, alloggio sicuro, pasti e supporto psicologico.",
-    pillar2Title: "Percorso accelerato "6 + 2"",
+    pillar2Title: "Percorso accelerato \"6 + 2\"",
     pillar2Desc: "6 mesi di informatica applicata intensiva, seguiti da 2 mesi di sviluppo di prodotti software reali con mentoring.",
     pillar3Title: "ISA etico e circolare",
     pillar3Desc: "I diplomati versano il 10% dello stipendio SOLO dopo aver ottenuto un impiego sopra i $450/mese con tutela nei momenti difficili.",
@@ -448,15 +412,9 @@ ich möchte das Safe-Haven-Team als Mentor/in, Lehrkraft oder Fachkraft unterst�
     copyEmail: "Copia email",
     copied: "Copiato!",
     openMailApp: "Apri app email",
-    tplSponsor: "Ciao team di Safe Haven,
-
-vorrei valutare una sponsorizzazione o collaborazione per sostenere gli studenti di Safe Haven.",
-    tplDonate: "Ciao team di Safe Haven,
-
-vorrei effettuare una donazione per sostenere alloggio, pasti e attrezzature degli studenti.",
-    tplJoin: "Ciao team di Safe Haven,
-
-mi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
+    tplSponsor: "Ciao team di Safe Haven,\n\nvorrei valutare una sponsorizzazione o collaborazione per sostenere gli studenti di Safe Haven.",
+    tplDonate: "Ciao team di Safe Haven,\n\nvorrei effettuare una donazione per sostenere alloggio, pasti e attrezzature degli studenti.",
+    tplJoin: "Ciao team di Safe Haven,\n\nmi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
   },
   zh: {
     legalHubLink: "法律声明与政策",
@@ -509,15 +467,9 @@ mi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
     copyEmail: "复制邮箱",
     copied: "已复制！",
     openMailApp: "打开邮件应用",
-    tplSponsor: "你好 Safe Haven 团队：
-
-我希望探讨赞助 Safe Haven 并支持学员发展的合作方式。",
-    tplDonate: "你好 Safe Haven 团队：
-
-我希望捐助支持学员的住宿、餐饮与学习设备。",
-    tplJoin: "你好 Safe Haven 团队：
-
-我希望作为导师、讲师或专业人员加入 Safe Haven 团队。"
+    tplSponsor: "你好 Safe Haven 团队：\n\n我希望探讨赞助 Safe Haven 并支持学员发展的合作方式。",
+    tplDonate: "你好 Safe Haven 团队：\n\n我希望捐助支持学员的住宿、餐饮与学习设备。",
+    tplJoin: "你好 Safe Haven 团队：\n\n我希望作为导师、讲师或专业人员加入 Safe Haven 团队。"
   },
   ar: {
     legalHubLink: "المعلومات القانونية والسياسات",
@@ -570,15 +522,9 @@ mi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
     copyEmail: "نسخ البريد",
     copied: "تم النسخ!",
     openMailApp: "فتح تطبيق البريد",
-    tplSponsor: "مرحبًا فريق Safe Haven،
-
-أود مناقشة إمكانية رعاية Safe Haven ودعم طلابه.",
-    tplDonate: "مرحبًا فريق Safe Haven،
-
-أود تقديم تبرع لدعم سكن الطلاب ووجباتهم وتجهيزاتهم.",
-    tplJoin: "مرحبًا فريق Safe Haven،
-
-يسعدني الانضمام إلى فريق Safe Haven كمرشد أو معلم أو متخصص."
+    tplSponsor: "مرحبًا فريق Safe Haven،\n\nأود مناقشة إمكانية رعاية Safe Haven ودعم طلابه.",
+    tplDonate: "مرحبًا فريق Safe Haven،\n\nأود تقديم تبرع لدعم سكن الطلاب ووجباتهم وتجهيزاتهم.",
+    tplJoin: "مرحبًا فريق Safe Haven،\n\nيسعدني الانضمام إلى فريق Safe Haven كمرشد أو معلم أو متخصص."
   },
   tr: {
     legalHubLink: "Yasal Bilgiler ve Politikalar",
@@ -631,15 +577,9 @@ mi piacerebbe unirmi al team di Safe Haven come mentor, docente o specialista."
     copyEmail: "E-postayı Kopyala",
     copied: "Kopyalandı!",
     openMailApp: "E-posta Uygulamasını Aç",
-    tplSponsor: "Merhaba Safe Haven Ekibi,
-
-Safe Haven'a sponsorluk ve öğrencilere destek olanaklarını görüşmek isterim.",
-    tplDonate: "Merhaba Safe Haven Ekibi,
-
-Öğrencilerin barınma, yemek ve ekipman ihtiyaçlarına bağışta bulunmak isterim.",
-    tplJoin: "Merhaba Safe Haven Ekibi,
-
-Safe Haven ekibine mentor, eğitmen veya uzman olarak katılmak isterim."
+    tplSponsor: "Merhaba Safe Haven Ekibi,\n\nSafe Haven'a sponsorluk ve öğrencilere destek olanaklarını görüşmek isterim.",
+    tplDonate: "Merhaba Safe Haven Ekibi,\n\nÖğrencilerin barınma, yemek ve ekipman ihtiyaçlarına bağışta bulunmak isterim.",
+    tplJoin: "Merhaba Safe Haven Ekibi,\n\nSafe Haven ekibine mentor, eğitmen veya uzman olarak katılmak isterim."
   }
 };
 
@@ -683,7 +623,7 @@ function renderLanguageOptions() {
   langMenu.innerHTML = LANGUAGES.map(lang => `
     <button type="button" data-lang="${lang.code}" class="lang-option w-full text-start px-3 py-2 rounded-xl text-xs font-medium flex items-center justify-between gap-2 cursor-pointer ${lang.code === currentLang ? "font-semibold" : ""}" style="${lang.code === currentLang ? "background: var(--accent-soft); color: var(--accent);" : ""}">
       <span>${lang.label}</span>
-      ${lang.code === currentLang ? '<span>✓</span>' : ""}
+      ${lang.code === currentLang ? "<span>✓</span>" : ""}
     </button>
   `).join("");
 }
@@ -696,15 +636,12 @@ function updateLocalizedDate() {
   try {
     const weekday = new Intl.DateTimeFormat(langObj.locale, { weekday: "long" }).format(now);
     const monthDay = new Intl.DateTimeFormat(langObj.locale, { month: "long", day: "numeric" }).format(now);
-    liveDateEl.textContent = `${weekday.charAt(0).toUpperCase() + weekday.slice(1)},
-${monthDay.charAt(0).toUpperCase() + monthDay.slice(1)}`;
+    liveDateEl.textContent = `${weekday.charAt(0).toUpperCase() + weekday.slice(1)},\n${monthDay.charAt(0).toUpperCase() + monthDay.slice(1)}`;
   } catch (e) {
-    liveDateEl.textContent = "Monday,
-November 23";
+    liveDateEl.textContent = "Monday,\nNovember 23";
   }
 }
 
-/* Position the iOS sliding pill glider on desktop and mobile */
 function updateNavGlider() {
   document.querySelectorAll("nav").forEach(nav => {
     const desktopGlider = nav.querySelector(".nav-desktop-glider");
@@ -894,13 +831,11 @@ function triggerScrollReveals() {
 document.addEventListener("click", async (e) => {
   const target = e.target;
 
-  // Direct iOS Theme toggle
   if (target.closest("#themeToggleBtn")) {
     setTheme(currentTheme === "dark" ? "light" : "dark");
     return;
   }
 
-  // Language popover toggle
   if (target.closest("#langToggleBtn")) {
     e.stopPropagation();
     const langPopover = document.getElementById("langPopover");
@@ -917,7 +852,6 @@ document.addEventListener("click", async (e) => {
     return;
   }
 
-  // Language option select
   const langOption = target.closest(".lang-option");
   if (langOption) {
     setLanguage(langOption.getAttribute("data-lang"));
@@ -925,14 +859,12 @@ document.addEventListener("click", async (e) => {
     return;
   }
 
-  // Tab switch
   const tabBtn = target.closest(".tab-btn");
   if (tabBtn) {
     switchTab(tabBtn.getAttribute("data-tab"));
     return;
   }
 
-  // Experience details accordion
   const expToggle = target.closest("#expDetailsToggle");
   if (expToggle) {
     const expDetailsBody = document.getElementById("expDetailsBody");
@@ -948,14 +880,12 @@ document.addEventListener("click", async (e) => {
     return;
   }
 
-  // CTA Modal open
   const actionBtn = target.closest(".action-cta-btn");
   if (actionBtn) {
     openActionModal(actionBtn.getAttribute("data-action"));
     return;
   }
 
-  // Copy email inside modal
   if (target.closest("#copyEmailBtn")) {
     const modalEmailText = document.getElementById("modalEmailText");
     const copyBtnText = document.getElementById("copyBtnText");
@@ -980,13 +910,11 @@ document.addEventListener("click", async (e) => {
     return;
   }
 
-  // Close modal
   if (target.closest("#closeModalBtn") || target.id === "connectModal") {
     closeActionModal();
     return;
   }
 
-  // Click outside Language popover
   if (!target.closest("#langDropdownWrap")) {
     closeLangPopover();
   }
