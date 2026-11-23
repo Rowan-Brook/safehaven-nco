@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nodirjon Tolipov — Rowan Brook</title>
+  <title>Nodirjon Tolipov - Rowan Brook</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,14 +37,15 @@
 
       <!-- Right: Clean Controls (Theme Toggle + Language Switcher) -->
       <div class="flex items-center gap-2 shrink-0">
+        <!-- When dark theme is active -> show sun icon (light mode icon). When light theme is active -> show moon icon (dark mode icon) -->
         <button
           type="button"
           id="themeToggleBtn"
           aria-label="Toggle theme"
           class="pill-control w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center cursor-pointer"
         >
-          <span id="themeIconSun" class="hidden text-base leading-none" aria-hidden="true">☀️</span>
-          <span id="themeIconMoon" class="text-base leading-none" aria-hidden="true">🌙</span>
+          <span id="themeIconSun" class="text-base leading-none" aria-hidden="true">☀️</span>
+          <span id="themeIconMoon" class="hidden text-base leading-none" aria-hidden="true">🌙</span>
         </button>
 
         <div class="relative" id="langDropdownWrap">
@@ -74,29 +75,21 @@
   <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-28 sm:pb-16">
     <!-- TAB 1: ABOUT -->
     <main id="view-about" class="tab-view tab-view-active">
-      <!-- Editorial Hero: Live & Slightly Ironic -->
-      <section class="min-h-[48vh] sm:min-h-[54vh] flex flex-col justify-center pt-4 pb-16 sm:pt-8 sm:pb-24">
+      <!-- Editorial Hero -->
+      <section class="min-h-[44vh] sm:min-h-[50vh] flex flex-col justify-center pt-4 pb-16 sm:pt-8 sm:pb-24">
         <div class="max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-5 reveal-on-load status-chip" style="--delay: 40ms;">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span data-i18n="heroBadge">Tashkent · Building &amp; questioning things</span>
-          </div>
-
-          <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight reveal-on-load" style="--delay: 100ms;">
+          <h1 class="hero-title font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight reveal-on-load" style="--delay: 60ms;">
             <span data-i18n="heroTitle">Hi, I'm Nodirjon!</span>
             <span class="block mt-1.5 text-lg sm:text-2xl font-normal italic tracking-normal" style="color: var(--text-muted);">Rowan Brook</span>
           </h1>
 
-          <p data-i18n="heroTagline" class="mt-5 text-lg sm:text-2xl font-semibold leading-snug hero-gradient-text reveal-on-load" style="--delay: 180ms;">
+          <p data-i18n="heroTagline" class="mt-5 text-lg sm:text-2xl font-semibold leading-snug hero-gradient-text reveal-on-load" style="--delay: 140ms;">
             Allergic to chaos, addicted to figuring out how things actually work.
           </p>
 
-          <div class="mt-6 space-y-3.5 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
-            <p data-i18n="heroLine1" class="reveal-on-load" style="--delay: 250ms;">
-              I tend to treat almost everything—from interstate freight compliance to early-stage social startups—like a puzzle that just needs cleaner logic.
-            </p>
-            <p data-i18n="heroLine2" class="reveal-on-load" style="--delay: 320ms;">
-              This site started as a spontaneous “why not?”, and now serves as my personal lab for testing ideas, breaking layouts, and keeping track of what I build along the way.
+          <div class="mt-6 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
+            <p data-i18n="heroLine1" class="reveal-on-load" style="--delay: 220ms;">
+              I tend to treat almost everything - from interstate freight compliance to early-stage social startups - like a puzzle that just needs cleaner logic.
             </p>
           </div>
         </div>
@@ -110,14 +103,14 @@
             <h2 data-i18n="expSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold tracking-tight">What I've Been Doing</h2>
           </div>
 
-          <article class="surface-card card-glow-emerald rounded-3xl p-6 sm:p-8">
+          <article class="surface-card card-3d card-glow-emerald rounded-3xl p-6 sm:p-8">
             <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
               <div>
                 <span data-i18n="expTag" class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2.5 badge-accent">Operations &amp; Safety</span>
                 <h3 data-i18n="expRoleTitle" class="font-serif-editorial text-xl sm:text-2xl font-bold">Road Transport Health and Safety Manager</h3>
                 <p data-i18n="expRoleSub" class="mt-1 text-sm font-medium" style="color: var(--text-secondary);">Safety &amp; Fleet Department (US Logistics)</p>
               </div>
-              <span data-i18n="expDateRange" class="self-start inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold shrink-0 badge-warm">Apr 2026 – Nov 2026</span>
+              <span data-i18n="expDateRange" class="self-start inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold shrink-0 badge-warm">Apr 2026 - Nov 2026</span>
             </div>
 
             <div class="mt-5">
@@ -148,7 +141,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <!-- Step 1: WIUT Academic Lyceum -->
-            <article class="surface-card card-glow-amber rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden">
+            <article class="surface-card card-3d card-glow-amber rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-3.5">
                   <span data-i18n="lyceumBadge" class="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full badge-warm">Academic Lyceum</span>
@@ -159,23 +152,29 @@
               </div>
               <div class="mt-5 pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
                 <span data-i18n="lyceumStep">Foundation · Step 01</span>
-                <span style="color: var(--warm);">ALWIUT</span>
+                <a href="https://lyceum.wiut.uz/en/" target="_blank" rel="noopener noreferrer" class="edu-ext-link inline-flex items-center gap-1 font-semibold" style="color: var(--warm);">
+                  <span>ALWIUT</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
               </div>
             </article>
 
             <!-- Step 2: WIUT University -->
-            <article class="surface-card card-glow-indigo rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden">
+            <article class="surface-card card-3d card-glow-indigo rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-3.5">
                   <span data-i18n="eduBadge" class="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full badge-secondary">University</span>
                   <span class="text-xs font-medium" style="color: var(--text-muted);">Tashkent</span>
                 </div>
                 <h3 data-i18n="eduUniTitle" class="font-serif-editorial text-lg sm:text-xl font-bold leading-snug">Westminster International University in Tashkent (WIUT)</h3>
-                <p data-i18n="eduDegree" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Business Administration &amp; Analytical Systems — turning numbers, markets, and logic into practical decisions.</p>
+                <p data-i18n="eduDegree" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Business Administration &amp; Analytical Systems - turning numbers, markets, and logic into practical decisions.</p>
               </div>
               <div class="mt-5 pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
                 <span data-i18n="uniStep">Current · Step 02</span>
-                <span style="color: var(--secondary);">WIUT</span>
+                <a href="https://www.wiut.uz/" target="_blank" rel="noopener noreferrer" class="edu-ext-link inline-flex items-center gap-1 font-semibold" style="color: var(--secondary);">
+                  <span>WIUT</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
               </div>
             </article>
           </div>
@@ -193,7 +192,7 @@
             Breaking systemic poverty through free applied IT education, psychological resilience, and an ethical self-sustaining model.
           </p>
           <p data-i18n="projHook" class="mt-6 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
-            Talent is universal, yet opportunity is not. Safe Haven removes financial, housing, and psychological barriers for motivated individuals facing severe socio-economic hardship—transforming them from vulnerable survivors into independent digital professionals who pay opportunity forward.
+            Talent is universal, yet opportunity is not. Safe Haven removes financial, housing, and psychological barriers for motivated individuals facing severe socio-economic hardship - transforming them from vulnerable survivors into independent digital professionals who pay opportunity forward.
           </p>
         </div>
       </section>
@@ -201,26 +200,26 @@
       <div class="space-y-10">
         <!-- 4 Pillars -->
         <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 reveal-scroll">
-          <article class="surface-card card-glow-emerald rounded-3xl p-6">
+          <article class="surface-card card-3d card-glow-emerald rounded-3xl p-6">
             <h3 data-i18n="pillar1Title" class="font-serif-editorial text-lg font-bold">100% Barrier-Free Entry</h3>
             <p data-i18n="pillar1Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Zero upfront tuition. Covers living stipends, safe housing, meals, and certified psychological support.</p>
           </article>
-          <article class="surface-card card-glow-amber rounded-3xl p-6">
+          <article class="surface-card card-3d card-glow-amber rounded-3xl p-6">
             <h3 data-i18n="pillar2Title" class="font-serif-editorial text-lg font-bold">The "6 + 2" Acceleration Track</h3>
             <p data-i18n="pillar2Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">6 months of intensive applied IT, followed by 2 months building real commercial software products with mentorship.</p>
           </article>
-          <article class="surface-card card-glow-indigo rounded-3xl p-6">
+          <article class="surface-card card-3d card-glow-indigo rounded-3xl p-6">
             <h3 data-i18n="pillar3Title" class="font-serif-editorial text-lg font-bold">Ethical Recyclable ISA</h3>
             <p data-i18n="pillar3Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Graduates contribute 10% of salary ONLY after securing employment above $450/month with hardship freeze.</p>
           </article>
-          <article class="surface-card card-glow-rose rounded-3xl p-6">
+          <article class="surface-card card-3d card-glow-rose rounded-3xl p-6">
             <h3 data-i18n="pillar4Title" class="font-serif-editorial text-lg font-bold">Intimate Mini-Cohorts</h3>
-            <p data-i18n="pillar4Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Compact 10–12 student hubs targeting 80%+ placement with verified Behavioral &amp; Hard-Skills Profiles.</p>
+            <p data-i18n="pillar4Desc" class="mt-2 text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">Compact 10 - 12 student hubs targeting 80%+ placement with verified Behavioral &amp; Hard-Skills Profiles.</p>
           </article>
         </section>
 
         <!-- CTA Actions -->
-        <section class="surface-card rounded-3xl p-6 sm:p-8 border reveal-scroll" style="border-color: var(--border-strong);">
+        <section class="surface-card card-3d rounded-3xl p-6 sm:p-8 border reveal-scroll" style="border-color: var(--border-strong);">
           <h2 data-i18n="ctaSectionTitle" class="font-serif-editorial text-2xl sm:text-3xl font-bold">Build Safe Haven With Us</h2>
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
             <button type="button" data-action="sponsor" class="action-cta-btn cta-primary rounded-2xl p-4 text-start cursor-pointer flex flex-col justify-between">
@@ -243,26 +242,64 @@
       </div>
     </main>
 
-    <!-- FOOTER: Social Links + Legal & Policies + Email -->
+    <!-- FOOTER: Icon-only Social Links + Email (swapped with Help) + Legal & Policies + Help -->
     <footer class="mt-20 pt-6 border-t space-y-4 text-xs reveal-scroll" style="border-color: var(--border-subtle); color: var(--text-muted);">
       <div class="flex flex-wrap items-center justify-between gap-3">
+        <!-- Social & Email Icons Only -->
         <div class="flex flex-wrap items-center gap-2">
-          <a href="https://github.com/Rowan-Brook" target="_blank" rel="noopener noreferrer" class="footer-chip">GitHub</a>
-          <a href="https://www.linkedin.com/in/nodirjontolipov-finance-accounting238" target="_blank" rel="noopener noreferrer" class="footer-chip">LinkedIn</a>
-          <a href="https://www.instagram.com/ridont_1?rpxt=MXNyMWthampiNTV1bg==" target="_blank" rel="noopener noreferrer" class="footer-chip">Instagram</a>
-          <a href="https://wa.me/qr/2EMGCNN7VPV6G1" target="_blank" rel="noopener noreferrer" class="footer-chip">WhatsApp</a>
-          <a href="https://www.facebook.com/share/1Ez2abHntJ/" target="_blank" rel="noopener noreferrer" class="footer-chip">Facebook</a>
-          <a href="mailto:ntolipov.site.help@gmail.com" data-i18n="footerHelp" class="footer-chip">Help</a>
+          <!-- GitHub -->
+          <a href="https://github.com/Rowan-Brook" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" class="footer-icon-chip">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/nodirjontolipov-finance-accounting238" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" class="footer-icon-chip">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ridont_1?rpxt=MXNyMWthampiNTV1bg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="footer-icon-chip">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+            </svg>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/qr/2EMGCNN7VPV6G1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" class="footer-icon-chip">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.32a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.13.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.21-.57.21-1.06.15-1.16-.06-.1-.23-.16-.47-.29-.25-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47z" />
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/share/1Ez2abHntJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="footer-icon-chip">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z" />
+            </svg>
+          </a>
+
+          <!-- Work Email (Icon only, swapped into chip group) -->
+          <a href="mailto:ntolipov.work@gmail.com" aria-label="Email" title="ntolipov.work@gmail.com" class="footer-icon-chip footer-email-icon" style="color: var(--accent);">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="3" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
         </div>
 
+        <!-- Right side: Legal & Policies + Help (swapped from Email) -->
         <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
           <a id="legalPageLink" href="https://drive.google.com/file/d/14VP51Jj712ht4Cb5mi_7Nr6xDlNuCAG8/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" data-i18n="legalHubLink" class="footer-link font-medium">Legal &amp; Policies</a>
           <span aria-hidden="true" style="opacity: 0.4;">·</span>
-          <a href="mailto:ntolipov.work@gmail.com" data-i18n="footerEmail" class="footer-link font-semibold" style="color: var(--accent);">Email</a>
+          <a href="mailto:ntolipov.site.help@gmail.com" data-i18n="footerHelp" class="footer-link font-semibold" style="color: var(--accent);">Help</a>
         </div>
       </div>
 
-      <div>© 2026 Nodirjon Tolipov — Rowan Brook</div>
+      <div>© 2026 Nodirjon Tolipov - Rowan Brook</div>
     </footer>
   </div>
 
