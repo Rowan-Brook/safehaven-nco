@@ -735,3 +735,17 @@ main, header, footer {
 [data-theme="light"] .edu-ext-link:hover {
   background: rgba(25, 29, 27, 0.05);
 }
+
+.logo-mark-3d {
+  filter:
+    drop-shadow(0 8px 16px rgba(16, 185, 129, 0.28))
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+  transition: transform 0.38s var(--ease-ios-spring), filter 0.38s var(--ease-silk);
+}
+
+.logo-mark-3d:hover {
+  transform: translate3d(0, -3px, 10px) scale(1.05);
+  filter:
+    drop-shadow(0 14px 24px rgba(16, 185, 129, 0.40))
+    drop-shadow(0 6px 12px rgba(0, 0, 0, 0.55));
+}
